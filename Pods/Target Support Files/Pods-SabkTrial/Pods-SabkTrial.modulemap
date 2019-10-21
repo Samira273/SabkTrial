@@ -1,0 +1,6 @@
+module Pods_SabkTrial {
+  umbrella header "Pods-SabkTrial-umbrella.h"
+
+  export *
+  module * { export * }
+}
