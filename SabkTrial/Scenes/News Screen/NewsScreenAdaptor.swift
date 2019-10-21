@@ -11,6 +11,9 @@ import UIKit
 
 class NewsScreenAdaptor : NSObject, UITableViewDataSource{
     
+    var slidersData : [Slider] = []
+    var matrialsData : [Materials] = []
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionType = Sections(rawValue: section)!
         switch sectionType {

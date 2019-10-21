@@ -9,6 +9,23 @@
 import Foundation
 
 class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
+    
+    private var materials : [Materials] = []
+    private var sliders : [Slider] = []
+    
+    func loadData(){
+        getNews(compelation: {result in
+            switch result{
+            case .success(let response):
+                let data = response as? SliderMaterialResponse
+                self.sliders = data?.slider ?? []
+                self.materials = data?.materials ?? []
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
+    }
+    
     func getNews(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getNews(completion: {result, status in
             switch result{

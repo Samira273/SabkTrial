@@ -14,26 +14,17 @@ class NewsScreenPresenter : BasePresenter, NewsScreenPresenterProtocol, NewsScre
     var model: NewsScreenModel
     
     required init(view: NewsScreenViewController, model: NewsScreenModel) {
-        self.view = view
         self.model = model
+        self.view = view
     }
-    
-  
     
     typealias View = NewsScreenViewController
     
     typealias Model = NewsScreenModel
-    
+
     func loadData(){
-        model.getNews(compelation: {result in
-            switch result{
-            case .success(let response):
-                    let data = response as? SliderMaterialResponse
-                print(data?.code ?? 0)
-            case .failure(let error):
-            self.view?.showErrorMessage(title: error.localizedDescription , message: "Network error")
-            }
-        })
+        model.loadData()
     }
     
+   
 }
