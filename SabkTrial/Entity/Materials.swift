@@ -45,7 +45,7 @@ struct Materials : Codable {
 	let authors : [String]?
 	let images : [Images]?
 	let videos : [Videos]?
-	let attachements : [String]?
+	let attachements : [Attachments]?
 	let tags : [Tags]?
 	let updates : [String]?
 	let relatedMaterials : [String]?
@@ -138,7 +138,7 @@ struct Materials : Codable {
 		authors = try values.decodeIfPresent([String].self, forKey: .authors)
 		images = try values.decodeIfPresent([Images].self, forKey: .images)
 		videos = try values.decodeIfPresent([Videos].self, forKey: .videos)
-		attachements = try values.decodeIfPresent([String].self, forKey: .attachements)
+		attachements = try values.decodeIfPresent([Attachments].self, forKey: .attachements)
 		tags = try values.decodeIfPresent([Tags].self, forKey: .tags)
 		updates = try values.decodeIfPresent([String].self, forKey: .updates)
 		relatedMaterials = try values.decodeIfPresent([String].self, forKey: .relatedMaterials)

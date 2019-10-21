@@ -43,10 +43,10 @@ struct Slider : Codable {
 	let isEdit : Bool?
 	let hasRelatedMaterials : Bool?
 	let authors : [String]?
-	let images : [String]?
-	let videos : [String]?
-	let attachements : [String]?
-	let tags : [String]?
+	let images : [Images]?
+	let videos : [Videos]?
+	let attachements : [Attachments]?
+	let tags : [Tags]?
 	let updates : [String]?
 	let relatedMaterials : [String]?
 	let matarialDisplayed : String?
@@ -136,10 +136,10 @@ struct Slider : Codable {
 		isEdit = try values.decodeIfPresent(Bool.self, forKey: .isEdit)
 		hasRelatedMaterials = try values.decodeIfPresent(Bool.self, forKey: .hasRelatedMaterials)
 		authors = try values.decodeIfPresent([String].self, forKey: .authors)
-		images = try values.decodeIfPresent([String].self, forKey: .images)
-		videos = try values.decodeIfPresent([String].self, forKey: .videos)
-		attachements = try values.decodeIfPresent([String].self, forKey: .attachements)
-		tags = try values.decodeIfPresent([String].self, forKey: .tags)
+		images = try values.decodeIfPresent([Images].self, forKey: .images)
+		videos = try values.decodeIfPresent([Videos].self, forKey: .videos)
+		attachements = try values.decodeIfPresent([Attachments].self, forKey: .attachements)
+		tags = try values.decodeIfPresent([Tags].self, forKey: .tags)
 		updates = try values.decodeIfPresent([String].self, forKey: .updates)
 		relatedMaterials = try values.decodeIfPresent([String].self, forKey: .relatedMaterials)
 		matarialDisplayed = try values.decodeIfPresent(String.self, forKey: .matarialDisplayed)

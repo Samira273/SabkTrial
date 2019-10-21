@@ -25,11 +25,11 @@ class NetworkManager {
     init(config: NetworkDefaults = NetworkDefaults.defaults) {
         self.networkConfig = config
         
-        let headerPlugin = StaticHeaderPlugin(
-            headers: [:])
-        
-        provider = MoyaProvider<MultiTarget>(//manager: ,
-            plugins: [headerPlugin, NetworkLoggerPlugin(verbose: true)])
+//        let headerPlugin = StaticHeaderPlugin(
+//            headers: [:])
+        provider = MoyaProvider<MultiTarget>()
+//        provider = MoyaProvider<MultiTarget>(//manager: ,
+//            plugins: [headerPlugin, NetworkLoggerPlugin(verbose: true)])
      
     }
     

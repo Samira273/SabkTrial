@@ -8,7 +8,8 @@
 
 import UIKit
 
-class NewsScreenViewController: UIViewController , UITableViewDelegate{
+
+class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , UITableViewDelegate , NewsScreenViewProtocol{
     
     @IBOutlet weak var newsTable: UITableView!
     let newsScreenAdaptor = NewsScreenAdaptor()
@@ -18,7 +19,8 @@ class NewsScreenViewController: UIViewController , UITableViewDelegate{
         super.viewDidLoad()
         newsTable.delegate = self
         newsTable.dataSource = newsScreenAdaptor
-        
+        presenter = NewsScreenPresenter(view: self, model: NewsScreenModel())
+        presenter.loadData()
         //registering custome cells
         newsTable.register(UINib(nibName: "SliderSectionCell", bundle: nil), forCellReuseIdentifier: "SliderSectionCell")
         newsTable.register(UINib(nibName: "NewsSectionCell", bundle: nil), forCellReuseIdentifier: "NewsSectionCell")
@@ -42,7 +44,9 @@ class NewsScreenViewController: UIViewController , UITableViewDelegate{
         
 
     }
-
+    func showErrorMessage(title: String?, message: String?) {
+        
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let sectionType = Sections(rawValue: indexPath.section)!
