@@ -1,21 +1,150 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HeaderSliderCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderSliderCell" id="gTV-IL-0wX" customClass="HeaderSliderCell" customModule="SabkTrial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfo-JM-OKD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="&quot;أديب&quot; يحاول أن يفهم محمد بن سلمان.. هنا تختفي ابتسامته وهذا ما ينتظر إيران بعد &quot;الفجيرة&quot;" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcD-Xw-44d">
+                                <rect key="frame" x="20" y="256" width="375" height="58.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_slider" translatesAutoresizingMaskIntoConstraints="NO" id="Sea-hX-AIZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="241"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-L8-bbC">
+                                <rect key="frame" x="20" y="333.5" width="374" height="50.5"/>
+                                <string key="text">في مقال مطول حاول الكاتب المصري الشهير عماد الدين أديب رسم صورة عن قرب لولي العهد الأمير محمد بن سلمان، عارضاً رؤيته للمشهد السعودي الحالي، ومحاولاً أن يضع نقاطاً محددة تحدد ملامح شخصية الأمير الذي قال عنه: "يحسن الإنصات والاستماع والتعلم والاستشارة، وتزعجه 3 أمور، ويسابق الزمن بشكل مستمر مؤمناً بأن زمن السعودية المجاملة يجب أن ينتقل من المساندة من الخطوط الخلفية إلى صدر المواجهات في العلن، فهو يعمل 18 ساعة يومياً يصل الليل بالنهار، يقطع المنطقة والعالم ذهاباً وإياباً من أجل النجاح، وتحقيق ثقة مليك البلاد فيه، وثقة الأب في الابن، والشعب في ولي العهد.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHs-yQ-VTC">
+                                <rect key="frame" x="0.0" y="400" width="414" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_time" translatesAutoresizingMaskIntoConstraints="NO" id="khx-Zq-4Ct">
+                                        <rect key="frame" x="387" y="16" width="15" height="15"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="منذ ساعة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpJ-ad-doi">
+                                        <rect key="frame" x="330" y="16" width="49" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.69291073964049776" green="0.69291073964049776" blue="0.69291073964049776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_views_icon_hot" translatesAutoresizingMaskIntoConstraints="NO" id="i2h-8b-7XA">
+                                        <rect key="frame" x="285" y="14" width="11" height="20"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-qQ-nmi">
+                                        <rect key="frame" x="234" y="16" width="39" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.69291073960000005" green="0.69291073960000005" blue="0.69291073960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اختيار المحرر" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqk-wu-Adp">
+                                        <rect key="frame" x="306" y="65" width="96" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المزيد" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka5-gm-hWv">
+                                        <rect key="frame" x="21" y="65" width="47" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.2267199168" green="0.3943655116" blue="0.95508824479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_save" translatesAutoresizingMaskIntoConstraints="NO" id="3OJ-Tj-oyp">
+                                        <rect key="frame" x="28" y="11" width="17" height="21"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GpJ-ad-doi" firstAttribute="leading" secondItem="i2h-8b-7XA" secondAttribute="trailing" constant="34" id="845-le-dPJ"/>
+                                    <constraint firstItem="khx-Zq-4Ct" firstAttribute="leading" secondItem="GpJ-ad-doi" secondAttribute="trailing" constant="8" id="8Gf-ad-zIF"/>
+                                    <constraint firstItem="GpJ-ad-doi" firstAttribute="leading" secondItem="i2h-8b-7XA" secondAttribute="trailing" constant="34" id="AgH-8h-xCV"/>
+                                    <constraint firstItem="khx-Zq-4Ct" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="GGO-tC-5Ed"/>
+                                    <constraint firstItem="wqk-wu-Adp" firstAttribute="top" secondItem="GpJ-ad-doi" secondAttribute="bottom" constant="33" id="HTR-8b-Css"/>
+                                    <constraint firstItem="wqk-wu-Adp" firstAttribute="leading" secondItem="Ka5-gm-hWv" secondAttribute="trailing" constant="238" id="Hf3-U1-80Z"/>
+                                    <constraint firstItem="khx-Zq-4Ct" firstAttribute="leading" secondItem="GpJ-ad-doi" secondAttribute="trailing" constant="8" id="JTb-bw-wSL"/>
+                                    <constraint firstItem="3OJ-Tj-oyp" firstAttribute="leading" secondItem="dHs-yQ-VTC" secondAttribute="leading" constant="28" id="RJj-qq-qsa"/>
+                                    <constraint firstItem="i2h-8b-7XA" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="14" id="ZeO-Wp-YCU"/>
+                                    <constraint firstAttribute="trailing" secondItem="khx-Zq-4Ct" secondAttribute="trailing" constant="12" id="bR5-8s-nrC"/>
+                                    <constraint firstItem="GpJ-ad-doi" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="eKM-X5-HUX"/>
+                                    <constraint firstItem="GjM-qQ-nmi" firstAttribute="leading" secondItem="3OJ-Tj-oyp" secondAttribute="trailing" constant="189" id="eNy-EI-x2H"/>
+                                    <constraint firstItem="Ka5-gm-hWv" firstAttribute="top" secondItem="3OJ-Tj-oyp" secondAttribute="bottom" constant="33" id="gKM-pT-ebp"/>
+                                    <constraint firstAttribute="bottom" secondItem="GjM-qQ-nmi" secondAttribute="bottom" constant="68" id="gjy-xI-55m"/>
+                                    <constraint firstItem="wqk-wu-Adp" firstAttribute="top" secondItem="khx-Zq-4Ct" secondAttribute="bottom" constant="34" id="jae-Dq-pGC"/>
+                                    <constraint firstItem="Ka5-gm-hWv" firstAttribute="leading" secondItem="dHs-yQ-VTC" secondAttribute="leading" constant="21" id="oCb-gi-MBJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ka5-gm-hWv" secondAttribute="bottom" constant="14" id="oIc-5X-Enf"/>
+                                    <constraint firstItem="3OJ-Tj-oyp" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="11" id="t6z-kH-qEr"/>
+                                    <constraint firstItem="i2h-8b-7XA" firstAttribute="leading" secondItem="GjM-qQ-nmi" secondAttribute="trailing" constant="12" id="vYR-nU-FxG"/>
+                                    <constraint firstItem="GjM-qQ-nmi" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="yYS-MB-bhL"/>
+                                    <constraint firstAttribute="bottom" secondItem="i2h-8b-7XA" secondAttribute="bottom" constant="66" id="zlW-R6-a32"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsg-6s-f2L">
+                                <rect key="frame" x="0.0" y="497" width="414" height="2.5"/>
+                                <color key="backgroundColor" red="0.2267199168" green="0.3943655116" blue="0.95508824479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vsg-6s-f2L" firstAttribute="top" secondItem="Uhk-L8-bbC" secondAttribute="bottom" constant="113" id="0F8-LV-JDN"/>
+                            <constraint firstAttribute="trailing" secondItem="gcD-Xw-44d" secondAttribute="trailing" constant="19" id="1aK-cG-dfb"/>
+                            <constraint firstItem="vsg-6s-f2L" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" id="70m-6R-23e"/>
+                            <constraint firstAttribute="trailing" secondItem="Uhk-L8-bbC" secondAttribute="trailing" constant="20" id="89E-ER-jdX"/>
+                            <constraint firstAttribute="bottom" secondItem="Sea-hX-AIZ" secondAttribute="bottom" constant="259" id="ItV-NK-1Tg"/>
+                            <constraint firstItem="dHs-yQ-VTC" firstAttribute="top" secondItem="Uhk-L8-bbC" secondAttribute="bottom" constant="16" id="KM4-oN-VKi"/>
+                            <constraint firstItem="Sea-hX-AIZ" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" id="Wp4-Bm-tfD"/>
+                            <constraint firstItem="Uhk-L8-bbC" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" constant="20" id="XQP-aG-LxC"/>
+                            <constraint firstItem="Uhk-L8-bbC" firstAttribute="top" secondItem="gcD-Xw-44d" secondAttribute="bottom" constant="19" id="YYe-hB-p9H"/>
+                            <constraint firstItem="gcD-Xw-44d" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" constant="20" id="Zji-M8-lV9"/>
+                            <constraint firstItem="dHs-yQ-VTC" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" id="apb-jR-Kvr"/>
+                            <constraint firstAttribute="bottom" secondItem="vsg-6s-f2L" secondAttribute="bottom" constant="0.5" id="fev-fm-0cU"/>
+                            <constraint firstAttribute="trailing" secondItem="dHs-yQ-VTC" secondAttribute="trailing" id="g89-LZ-8WO"/>
+                            <constraint firstAttribute="bottom" secondItem="Uhk-L8-bbC" secondAttribute="bottom" constant="116" id="iV9-lK-hoD"/>
+                            <constraint firstItem="Sea-hX-AIZ" firstAttribute="top" secondItem="Tfo-JM-OKD" secondAttribute="top" id="nMC-cv-sqX"/>
+                            <constraint firstItem="gcD-Xw-44d" firstAttribute="top" secondItem="Sea-hX-AIZ" secondAttribute="bottom" constant="15" id="ssl-T5-YW9"/>
+                            <constraint firstAttribute="trailing" secondItem="vsg-6s-f2L" secondAttribute="trailing" id="u7i-0e-pMb"/>
+                            <constraint firstAttribute="bottom" secondItem="dHs-yQ-VTC" secondAttribute="bottom" id="wHs-TY-Jcf"/>
+                            <constraint firstAttribute="trailing" secondItem="Sea-hX-AIZ" secondAttribute="trailing" id="zRl-pT-CIx"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="Tfo-JM-OKD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4dg-7q-Vjh"/>
+                <constraint firstItem="Tfo-JM-OKD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eaq-40-BRW"/>
+                <constraint firstAttribute="trailing" secondItem="Tfo-JM-OKD" secondAttribute="trailing" id="hua-SE-Vg8"/>
+                <constraint firstAttribute="bottom" secondItem="Tfo-JM-OKD" secondAttribute="bottom" id="sqQ-v2-bGF"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="414" height="499"/>
+            <point key="canvasLocation" x="15.942028985507248" y="175.44642857142856"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="ic_save" width="17" height="21"/>
+        <image name="ic_time" width="15" height="15"/>
+        <image name="ic_views_icon_hot" width="11" height="15"/>
+        <image name="img_slider" width="375" height="241"/>
+    </resources>
 </document>

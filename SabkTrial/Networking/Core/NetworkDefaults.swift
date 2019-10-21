@@ -7,3 +7,12 @@
 //
 
 import Foundation
+struct NetworkDefaults {
+    var baseUrl: String = ""
+    var apiKey: String = ""
+    var language : String = ""
+    static var `defaults` : NetworkDefaults {
+        let instance = NetworkDefaults()
+        return instance
+    }
+}

@@ -7,3 +7,10 @@
 //
 
 import Foundation
+extension AppDelegate {
+    
+    func setupNetworking(){
+        NetworkManager.shared = NetworkManager(config: NetworkDefaults())
+    }
+    
+}

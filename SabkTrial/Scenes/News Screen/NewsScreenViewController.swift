@@ -19,8 +19,10 @@ class NewsScreenViewController: UIViewController , UITableViewDelegate{
         newsTable.delegate = self
         newsTable.dataSource = newsScreenAdaptor
         
-        let headerNib = UINib.init(nibName: "NewsTableHeader", bundle: Bundle.main)
-        newsTable.register(headerNib, forHeaderFooterViewReuseIdentifier: "NewsTableHeader")
+        //registering custome cells
+        newsTable.register(UINib(nibName: "SliderSectionCell", bundle: nil), forCellReuseIdentifier: "SliderSectionCell")
+        newsTable.register(UINib(nibName: "NewsSectionCell", bundle: nil), forCellReuseIdentifier: "NewsSectionCell")
+        
         
 //right bar button item
         let button = UIButton(type: .custom)
@@ -41,14 +43,18 @@ class NewsScreenViewController: UIViewController , UITableViewDelegate{
 
     }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "NewsTableHeader") as! NewsTableHeader
-        
-        return headerView
-    }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 600
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let sectionType = Sections(rawValue: indexPath.section)!
+        switch sectionType {
+        case .sliderSection:
+            return 550
+        case .firstNewsSection:
+            return 120
+        default:
+            return 50
+        }
+        
     }
 
 }
