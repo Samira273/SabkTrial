@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController_Extensions: UIViewController {
+class ViewControllerExtensions: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
