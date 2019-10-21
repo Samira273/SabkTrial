@@ -2,29 +2,27 @@
 //  BaseViewController.swift
 //  SabkTrial
 //
-//  Created by Samira.Marassy on 10/17/19.
+//  Created by Samira.Marassy on 10/21/19.
 //  Copyright © 2019 Samira.Marassy. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class BaseViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+class BaseViewController<Presenter:BasePresenterProtocol>: UIViewController, BaseViewProtocol {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Public Variables
+    
+    // MARK: - Private Variables
+    
+    var presenter:Presenter!
+    
+    // MARK: - Computed Variables
+    
+    // MARK: - IBOutlets
+    
+    
+    public func setPresenter (presenter: Presenter) {
+        self.presenter = presenter
     }
-    */
-
 }
