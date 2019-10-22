@@ -20,9 +20,9 @@ class NewsScreenAdaptor : NSObject, UITableViewDataSource{
         case .sliderSection :
             return self.slidersData.isEmpty ? 0 : 1
         case .firstNewsSection:
-            return 4
+            return self.matrialsData.isEmpty ? 0 : 4
         default:
-         return 10
+            return 0
         }
     }
     
@@ -37,9 +37,20 @@ class NewsScreenAdaptor : NSObject, UITableViewDataSource{
             let cell : SliderSectionCell = tableView.dequeueReusableCell(withIdentifier: "SliderSectionCell", for: indexPath) as! SliderSectionCell
             cell.slidersData = slidersData
             return cell
+            
         case .firstNewsSection:
             let cell : NewsSectionCell = tableView.dequeueReusableCell(withIdentifier: "NewsSectionCell", for: indexPath) as! NewsSectionCell
+            let article = matrialsData[indexPath.row]
+            cell.title.text = article.title
+            cell.noOfViews.text = "\(article.noOfViews ?? 0)"
+            cell.newsImage.sd_setImage(with: URL(string: article.coverPhoto ?? ""), placeholderImage: UIImage(named: "img_placeholder"))
+            if let videosCount = article.videosCount{
+                if (videosCount != 0){
+                    cell.videoPlay.isHidden = false
+                }
+            }
             return cell
+            
         default:
             return UITableViewCell()
         }

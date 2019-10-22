@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class SliderSectionCell: UITableViewCell , UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
@@ -19,6 +21,8 @@ class SliderSectionCell: UITableViewCell , UICollectionViewDataSource, UICollect
         let slider = slidersData[indexPath.row]
         cell.title.text = slider.title
         cell.discriptionText.text = slider.description?.html2String
+        cell.coverPhoto.sd_setImage(with: URL(string: slider.coverPhoto ?? ""), placeholderImage: UIImage(named: "img_placeholder"))
+        cell.hotviewsNumberLabel.text = "\(slider.noOfViews ?? 0)"
         return cell
     }
     

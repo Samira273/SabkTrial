@@ -62,7 +62,7 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , UITabl
         case .sliderSection:
             return 400
         default:
-            return 120
+            return 100
         }
     }
 }

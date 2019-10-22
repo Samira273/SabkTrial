@@ -23,12 +23,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="447"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="&quot;أديب&quot; يحاول أن يفهم محمد بن سلمان.. هنا تختفي ابتسامته وهذا ما ينتظر إيران بعد &quot;الفجيرة&quot;" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcD-Xw-44d">
-                                <rect key="frame" x="20" y="256" width="375" height="64.5"/>
+                                <rect key="frame" x="20" y="263.5" width="375" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_slider" translatesAutoresizingMaskIntoConstraints="NO" id="Sea-hX-AIZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_slider" translatesAutoresizingMaskIntoConstraints="NO" id="Sea-hX-AIZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="241"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-L8-bbC">
@@ -89,17 +89,17 @@
                             <constraint firstAttribute="trailing" secondItem="Uhk-L8-bbC" secondAttribute="trailing" constant="20" id="89E-ER-jdX"/>
                             <constraint firstItem="gcD-Xw-44d" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" constant="20" id="Mag-cb-wlO"/>
                             <constraint firstAttribute="trailing" secondItem="dHs-yQ-VTC" secondAttribute="trailing" id="VPF-6k-WDU"/>
-                            <constraint firstItem="Sea-hX-AIZ" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" id="Wp4-Bm-tfD"/>
                             <constraint firstItem="Uhk-L8-bbC" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" constant="20" id="XQP-aG-LxC"/>
                             <constraint firstAttribute="trailing" secondItem="dHs-yQ-VTC" secondAttribute="trailing" id="acf-mM-TCa"/>
                             <constraint firstItem="dHs-yQ-VTC" firstAttribute="top" secondItem="Uhk-L8-bbC" secondAttribute="bottom" constant="10" id="bCj-bh-EKV"/>
                             <constraint firstItem="dHs-yQ-VTC" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" id="bjS-7Z-z0S"/>
+                            <constraint firstAttribute="bottom" secondItem="Sea-hX-AIZ" secondAttribute="bottom" constant="206" id="bpl-Qj-K6O"/>
                             <constraint firstItem="Uhk-L8-bbC" firstAttribute="top" secondItem="gcD-Xw-44d" secondAttribute="bottom" constant="15" id="eQY-qb-hWa"/>
                             <constraint firstItem="dHs-yQ-VTC" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" id="hy6-Nw-oDM"/>
-                            <constraint firstItem="Sea-hX-AIZ" firstAttribute="top" secondItem="Tfo-JM-OKD" secondAttribute="top" id="nMC-cv-sqX"/>
-                            <constraint firstItem="gcD-Xw-44d" firstAttribute="top" secondItem="Sea-hX-AIZ" secondAttribute="bottom" constant="15" id="sXJ-5w-deC"/>
+                            <constraint firstAttribute="trailing" secondItem="Sea-hX-AIZ" secondAttribute="trailing" id="qkc-uG-HkK"/>
+                            <constraint firstItem="Sea-hX-AIZ" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" id="tIb-lj-zgQ"/>
                             <constraint firstAttribute="trailing" secondItem="gcD-Xw-44d" secondAttribute="trailing" constant="19" id="wTv-1c-pBa"/>
-                            <constraint firstAttribute="trailing" secondItem="Sea-hX-AIZ" secondAttribute="trailing" id="zRl-pT-CIx"/>
+                            <constraint firstItem="Sea-hX-AIZ" firstAttribute="top" secondItem="Tfo-JM-OKD" secondAttribute="top" id="yMs-dy-Eh2"/>
                         </constraints>
                     </view>
                 </subviews>

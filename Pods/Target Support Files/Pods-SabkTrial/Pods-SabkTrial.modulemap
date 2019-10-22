@@ -1,4 +1,4 @@
-module Pods_SabkTrial {
+framework module Pods_SabkTrial {
   umbrella header "Pods-SabkTrial-umbrella.h"
 
   export *
