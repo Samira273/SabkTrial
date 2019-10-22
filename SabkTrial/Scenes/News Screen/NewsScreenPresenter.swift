@@ -7,24 +7,31 @@
 //
 
 import Foundation
-class NewsScreenPresenter : BasePresenter, NewsScreenPresenterProtocol, NewsScreenPresenterAssembable{
+class NewsScreenPresenter : BasePresenter, NewsScreenPresenterProtocol{
     
-    var view: NewsScreenViewController?
     
-    var model: NewsScreenModel
     
-    required init(view: NewsScreenViewController, model: NewsScreenModel) {
-        self.model = model
+    typealias View = NewsScreenViewProtocol
+    
+    typealias Model = NewsScreenModelProtocol
+    
+    private var view : View
+    private var model : Model
+    
+    init(view: View, model: Model)  {
         self.view = view
+        self.model = model
     }
     
-    typealias View = NewsScreenViewController
-    
-    typealias Model = NewsScreenModel
-
     func loadData(){
-        model.loadData()
+        model.fetchData(compelation: {success in
+            if success{
+                self.view.setSliders(sliders: self.model.bringsliders())
+                self.view.setMaterials(materials: self.model.bringMaterials())
+            }else {
+                print("fetcing data failed")
+            }
+        })
     }
-    
-   
 }
+

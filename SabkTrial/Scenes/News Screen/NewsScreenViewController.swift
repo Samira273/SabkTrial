@@ -10,10 +10,9 @@ import UIKit
 
 
 class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , UITableViewDelegate , NewsScreenViewProtocol{
-    
+ 
     @IBOutlet weak var newsTable: UITableView!
     let newsScreenAdaptor = NewsScreenAdaptor()
-    
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,18 +47,23 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , UITabl
         
     }
     
+    func setSliders(sliders: [Slider]) {
+        self.newsScreenAdaptor.slidersData = sliders
+        self.newsTable.reloadData()
+    }
+    func setMaterials(materials: [Materials]) {
+        self.newsScreenAdaptor.matrialsData = materials
+        self.newsTable.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let sectionType = Sections(rawValue: indexPath.section)!
         switch sectionType {
         case .sliderSection:
-            return 550
-        case .firstNewsSection:
-            return 120
+            return 400
         default:
-            return 50
+            return 120
         }
-        
     }
-
 }
 
