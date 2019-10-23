@@ -11,6 +11,8 @@ import Moya
 
 enum  NewsService {
     case slider
+    case images
+    case videos
 }
 
 extension NewsService: TargetType {
@@ -22,6 +24,10 @@ extension NewsService: TargetType {
         switch self {
         case .slider:
             return "material/homepage-light-version/"
+        case .images:
+            return "studio/list-studio/"
+        case .videos:
+            return "studio/list-studio/"
         }
     }
     
@@ -29,12 +35,21 @@ extension NewsService: TargetType {
         switch self {
         case .slider:
             return .get
+        case .images:
+            return .get
+        case .videos:
+            return .get
         }
+        
     }
     
     var sampleData: Data {
         switch self {
         case .slider:
+            return Data()
+        case .images:
+            return Data()
+        case .videos:
             return Data()
         }
     }
@@ -43,6 +58,10 @@ extension NewsService: TargetType {
         switch self {
         case .slider :
             return .requestParameters(parameters: ["" : ""], encoding: URLEncoding.default)
+        case .images :
+            return .requestParameters(parameters: ["type" : "image"], encoding: URLEncoding.default)
+        case .videos :
+            return .requestParameters(parameters: ["type" : "video"], encoding: URLEncoding.default)
         }
     }
     

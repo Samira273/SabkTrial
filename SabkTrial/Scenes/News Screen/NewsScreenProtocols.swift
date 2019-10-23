@@ -17,12 +17,18 @@ protocol NewsScreenPresenterProtocol: BasePresenterProtocol {
 protocol NewsScreenViewProtocol:BaseViewProtocol {
     func setSliders(sliders : [Slider]) -> Void
     func setMaterials(materials : [Materials]) -> Void
+    func setVideos(videos : [Comics]) -> Void
+    func setImages(images: [Comics]) -> Void
 }
 
 protocol NewsScreenModelProtocol:BaseModelProtocol {
-    func fetchData(compelation: @escaping (Bool) -> Void)
-    func bringsliders() -> [Slider]
+    func fetchNewsData(compelation: @escaping (Bool) -> Void)
+    func fetchVideosData(compelation: @escaping (Bool) -> Void)
+    func fetchImagesData(compelation: @escaping (Bool) -> Void)
+    func bringSliders() -> [Slider]
     func bringMaterials() -> [Materials]
+    func bringVideos() -> [Comics]
+    func bringImages() -> [Comics]
 }
 
 //protocol NewsScreenPresenterAssembable : BasePresenterAssembable{

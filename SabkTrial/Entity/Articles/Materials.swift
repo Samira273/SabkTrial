@@ -56,6 +56,7 @@ struct Materials : Codable {
 	let commentsEnabled : Bool?
 	let commentsMinCharacters : Int?
 	let commentsMaxCharacters : Int?
+    var type = "news"
 
 	enum CodingKeys: String, CodingKey {
 
@@ -103,6 +104,53 @@ struct Materials : Codable {
 		case commentsMinCharacters = "commentsMinCharacters"
 		case commentsMaxCharacters = "commentsMaxCharacters"
 	}
+    
+    init(type : String) {
+         self.type = type
+         id = "id"
+         title = "title"
+         secondaryTitle = "secondaryTitle"
+         description = "description"
+         publishDate = "publishDate"
+         publishDateHijryDate = "publishDateHijryDate"
+         updateDate = "updateDate"
+         updateDateHijryDate = "updateDateHijryDate"
+         categoryName = "categoryName"
+         parentCategoryName = "parentCategoryName"
+         coverPhoto = "coverPhoto"
+         coverPhotoCaption = "coverPhotoCaption"
+         authorName = "authorName"
+         url = "url"
+         materialType = "materialType"
+         authorImg = "authorImg"
+         authorCity = "authorCity"
+         multipleAuthors = false
+         imagesCount = 0
+         videosCount = 0
+         noOfLikes = 0
+         noOfShares = 0
+         noOfViews = 0
+         noOfComments = 0
+         liked = false
+         readLater = false
+         materialUpdated = false
+         isEdit = false
+         hasRelatedMaterials = false
+         authors = []
+         images = []
+         videos = []
+         attachements = []
+         tags = []
+         updates = []
+         relatedMaterials = []
+         matarialDisplayed = "matarialDisplayed"
+         comments = []
+         descriptionString = "descriptionString"
+         city = "city"
+         commentsEnabled = false
+         commentsMinCharacters = 0
+         commentsMaxCharacters = 0
+    }
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -149,6 +197,7 @@ struct Materials : Codable {
 		commentsEnabled = try values.decodeIfPresent(Bool.self, forKey: .commentsEnabled)
 		commentsMinCharacters = try values.decodeIfPresent(Int.self, forKey: .commentsMinCharacters)
 		commentsMaxCharacters = try values.decodeIfPresent(Int.self, forKey: .commentsMaxCharacters)
+       
 	}
 
 }
