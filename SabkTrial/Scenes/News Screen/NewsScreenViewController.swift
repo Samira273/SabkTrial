@@ -10,7 +10,7 @@ import UIKit
 
 
 class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , NewsScreenViewProtocol{
-    
+   
     
     @IBOutlet weak var newsTable: UITableView!
     let newsScreenAdaptor = NewsScreenAdaptor()
@@ -28,6 +28,7 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , NewsSc
         newsTable.register(UINib(nibName: "NewsSectionCell", bundle: nil), forCellReuseIdentifier: "NewsSectionCell")
         newsTable.register(UINib(nibName: "VideosCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
         newsTable.register(UINib(nibName: "ImagesCell", bundle: nil), forCellReuseIdentifier: "ImagesCell")
+        newsTable.register(UINib(nibName: "ArticlesCell", bundle: nil), forCellReuseIdentifier: "ArticlesCell")
         
         
         //right bar button item
@@ -67,6 +68,10 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , NewsSc
     
     func setImages(images: [Comics]) {
         self.newsScreenAdaptor.imagesData = images
+        self.newsTable.reloadData()
+    }
+    func setArticles(articles: [Materials]) {
+        self.newsScreenAdaptor.articlesData = articles
         self.newsTable.reloadData()
     }
     

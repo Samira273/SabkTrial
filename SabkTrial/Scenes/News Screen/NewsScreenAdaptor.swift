@@ -15,7 +15,7 @@ class NewsScreenAdaptor : NSObject, UITableViewDataSource, UITableViewDelegate{
     var matrialsData : [Materials] = []
     var videosData : [Comics] = []
     var imagesData : [Comics] = []
-    
+    var articlesData : [Materials] = []
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionType = Sections(rawValue: section)!
         switch sectionType {
@@ -37,10 +37,9 @@ class NewsScreenAdaptor : NSObject, UITableViewDataSource, UITableViewDelegate{
             let cell : SliderSectionCell = tableView.dequeueReusableCell(withIdentifier: "SliderSectionCell", for: indexPath) as! SliderSectionCell
             cell.slidersData = slidersData
             return cell
-            
         case .firstNewsSection:
             let article = matrialsData[indexPath.row]
-            if (article.type == "news"){
+            if (article.type == Materialtypes.news){
                 let cell : NewsSectionCell = tableView.dequeueReusableCell(withIdentifier: "NewsSectionCell", for: indexPath) as! NewsSectionCell
                 
                 cell.title.text = article.title
@@ -53,17 +52,22 @@ class NewsScreenAdaptor : NSObject, UITableViewDataSource, UITableViewDelegate{
                 }
                 return cell
             }
-            if (article.type == "videos"){
+            if (article.type == Materialtypes.videos){
                 let cell : VideosCell = tableView.dequeueReusableCell(withIdentifier: "VideosCell", for: indexPath) as! VideosCell
                 
                //i will use the videos array now
                 cell.videosAdaptor.videos = videosData
                 return cell
             }
-            
-            if(article.type == "images"){
+            if(article.type == Materialtypes.images){
                 let cell : ImagesCell = tableView.dequeueReusableCell(withIdentifier: "ImagesCell", for: indexPath) as! ImagesCell
                 cell.imagesAdaptor.images = imagesData
+                return cell
+            }
+            if(article.type == Materialtypes.articles){
+                let cell : ArticlesCell = tableView.dequeueReusableCell(withIdentifier: "ArticlesCell", for: indexPath) as! ArticlesCell
+                cell.articlesAdaptor.articles = articlesData
+                return cell
             }
         }
         return UITableViewCell()
@@ -75,13 +79,26 @@ class NewsScreenAdaptor : NSObject, UITableViewDataSource, UITableViewDelegate{
         case .sliderSection:
             return 400
         case .firstNewsSection:
-            if(matrialsData[indexPath.row].type == "videos"){
+//            if(matrialsData[indexPath.row].type == "videos"){
+//                return 400
+//            }
+//            if(matrialsData[indexPath.row].type == "images"){
+//                return 400
+//            }
+//            if(matrialsData[indexPath.row].type == "articles"){
+//                return 300
+//            }
+            let cellType = matrialsData[indexPath.row].type
+            switch cellType{
+            case .news:
+                return UITableView.automaticDimension
+            case .images:
+                return 400
+            case .articles:
+                return 300
+            case .videos:
                 return 400
             }
-            if(matrialsData[indexPath.row].type == "images"){
-                return 400
-            }
-            return UITableView.automaticDimension
         }
     }
 }

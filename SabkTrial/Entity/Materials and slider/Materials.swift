@@ -56,7 +56,7 @@ struct Materials : Codable {
 	let commentsEnabled : Bool?
 	let commentsMinCharacters : Int?
 	let commentsMaxCharacters : Int?
-    var type = "news"
+    var type = Materialtypes.news
 
 	enum CodingKeys: String, CodingKey {
 
@@ -105,8 +105,8 @@ struct Materials : Codable {
 		case commentsMaxCharacters = "commentsMaxCharacters"
 	}
     
-    init(type : String) {
-         self.type = type
+    init(type : Materialtypes) {
+        self.type = type
          id = "id"
          title = "title"
          secondaryTitle = "secondaryTitle"
@@ -200,4 +200,11 @@ struct Materials : Codable {
        
 	}
 
+}
+
+enum Materialtypes : String{
+    case news = "news"
+    case images = "images"
+    case articles = "articles"
+    case videos = "videos"
 }

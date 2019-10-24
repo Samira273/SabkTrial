@@ -13,6 +13,7 @@ enum  NewsService {
     case slider
     case images
     case videos
+    case articles
 }
 
 extension NewsService: TargetType {
@@ -28,6 +29,8 @@ extension NewsService: TargetType {
             return "studio/list-studio/"
         case .videos:
             return "studio/list-studio/"
+        case .articles:
+            return "material/articles"
         }
     }
     
@@ -38,6 +41,8 @@ extension NewsService: TargetType {
         case .images:
             return .get
         case .videos:
+            return .get
+        case .articles:
             return .get
         }
         
@@ -51,6 +56,8 @@ extension NewsService: TargetType {
             return Data()
         case .videos:
             return Data()
+        case .articles:
+            return Data()
         }
     }
     
@@ -62,6 +69,8 @@ extension NewsService: TargetType {
             return .requestParameters(parameters: ["type" : "image"], encoding: URLEncoding.default)
         case .videos :
             return .requestParameters(parameters: ["type" : "video"], encoding: URLEncoding.default)
+        case .articles:
+            return .requestParameters(parameters: ["" : ""], encoding: URLEncoding.default)
         }
     }
     

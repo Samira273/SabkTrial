@@ -20,17 +20,17 @@ class ImagesAdaptor : NSObject , UICollectionViewDataSource, UITableViewDelegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : ImagesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImagesCollectionViewCell", for: indexPath) as! ImagesCollectionViewCell
         cell.imageTitle.text = images[indexPath.row].title
-        cell.image.sd_setImage(with: URL(string: images[indexPath.row].authorImg ?? ""), placeholderImage: UIImage(named: "img_placeholder"))
+        cell.image.sd_setImage(with: URL(string: images[indexPath.row].coverPhoto ?? ""), placeholderImage: UIImage(named: "img_placeholder"))
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: 0.5 * collectionView.frame.size.width, height: collectionView.frame.size.height)
+        return CGSize(width: 0.75 * collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 45
     }
     
 }

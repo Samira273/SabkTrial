@@ -50,6 +50,14 @@ class NewsScreenPresenter : BasePresenter, NewsScreenPresenterProtocol{
             }
         })
         
+        model.fetchArticlesData(compelation: {success in
+            if success{
+                self.view.setArticles(articles: self.model.bringArticles())
+            }else {
+                print("fetcing articles failed")
+            }
+        })
+        
     }
 }
 
