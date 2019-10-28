@@ -5,6 +5,9 @@ use_frameworks!
 target 'SabkTrial' do
   pod 'Moya'
   pod 'SDWebImage'
+  pod 'DateToolsSwift'
+  pod 'Localize-Swift'
+  pod 'SwiftDate'
 
   target 'SabkTrialTests' do
     inherit! :search_paths

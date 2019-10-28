@@ -9,16 +9,16 @@
 import UIKit
 
 class ArticlesCell: UITableViewCell {
-    
+
     @IBOutlet weak var articlesCollection: UICollectionView!
     let articlesAdaptor = ArticlesAdaptor()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-       articlesCollection.register(UINib(nibName: "ArticlesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArticlesCollectionViewCell")
+        articlesCollection.register(UINib(nibName: "ArticlesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArticlesCollectionViewCell")
         articlesCollection.dataSource = articlesAdaptor
         articlesCollection.delegate = articlesAdaptor
-        
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,5 +26,5 @@ class ArticlesCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

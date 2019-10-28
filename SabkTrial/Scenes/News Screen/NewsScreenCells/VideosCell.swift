@@ -9,11 +9,10 @@
 import UIKit
 
 class VideosCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    
-    @IBOutlet weak var videosCollection : UICollectionView!
+
+    @IBOutlet weak var videosCollection: UICollectionView!
     var videosAdaptor = VideosAdaptor()
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,15 +26,12 @@ class VideosCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDel
 
         // Configure the view for the selected state
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-    {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 0.6 * collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
-    
-    
+
 }

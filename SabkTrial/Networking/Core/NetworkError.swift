@@ -15,21 +15,21 @@ enum `Type`:String, Codable {
     case mapping
 }
 struct NetworkError: Codable, Error {
-    
+
     //enum (busineess , system , mapping) will know from moya error by (type / status code)
     var code: Int?
     var message: String?
     var type: Type?
     //    var userInfo: [String: Any] = [:]
-    
+
     init () {
-        
+
     }
-    
+
     init(error: MoyaError) {
         self.code = error.errorCode
         self.message = error.errorDescription
-        
+
         switch error {
         case .underlying(let error, _):
             self.type = .system

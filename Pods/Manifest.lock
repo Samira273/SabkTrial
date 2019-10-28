@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.9.0)
+  - DateToolsSwift (4.0.0)
+  - Localize-Swift (3.0.0)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
@@ -9,24 +11,34 @@ PODS:
   - SDWebImage (5.1.1):
     - SDWebImage/Core (= 5.1.1)
   - SDWebImage/Core (5.1.1)
+  - SwiftDate (6.1.0)
 
 DEPENDENCIES:
+  - DateToolsSwift
+  - Localize-Swift
   - Moya
   - SDWebImage
+  - SwiftDate
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - DateToolsSwift
+    - Localize-Swift
     - Moya
     - Result
     - SDWebImage
+    - SwiftDate
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
+  Localize-Swift: 1363ec008c6972dced79a80ac72c71d14e98db44
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
 
-PODFILE CHECKSUM: bb3bb64b46e28aa9d924406a8ff09cf653ff58e9
+PODFILE CHECKSUM: 08c5f66c3ab7f0ddca82d8a6b56082c1be532f95
 
 COCOAPODS: 1.7.5

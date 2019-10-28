@@ -9,40 +9,40 @@
 import Foundation
 
 class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
- 
-    private var materials : [Materials] = []
-    private var sliders : [Slider] = []
-    private var images : [Comics] = []
-    private var videos : [Comics] = []
-    private var articles : [Materials] = []
 
-    func fetchNewsData(compelation: @escaping (Bool) -> Void){
+    private var materials: [Materials] = []
+    private var sliders: [Slider] = []
+    private var images: [Comics] = []
+    private var videos: [Comics] = []
+    private var articles: [Materials] = []
+
+    func fetchNewsData(compelation: @escaping (Bool) -> Void) {
         getNews(compelation: {result in
-            switch result{
+            switch result {
             case .success(let response):
                 let data = response as? SliderMaterialResponse
-                if let dataReturned = data{
-                    if let slid = dataReturned.slider{
+                if let dataReturned = data {
+                    if let slid = dataReturned.slider {
                         self.sliders = slid
-                    }else {
+                    } else {
                         print("ERROR : sliders arent available")
                     }
-                    if let material = dataReturned.materials{
+                    if let material = dataReturned.materials {
                         self.materials = material
-                        if(!self.videos.isEmpty){
+                        if(!self.videos.isEmpty) {
                             self.materials.insert(Materials(type: Materialtypes.videos), at: 4)
                         }
-                        if(!self.images.isEmpty){
+                        if(!self.images.isEmpty) {
                             self.materials.insert(Materials(type: Materialtypes.images), at: 9)
                         }
-                        if(!self.articles.isEmpty){
+                        if(!self.articles.isEmpty) {
                             self.materials.insert(Materials(type: Materialtypes.articles), at: 13)
                         }
-                    }else{
+                    } else {
                         print("ERROR: Materials arent available")
                     }
                     compelation(true)
-                }else {
+                } else {
                     compelation(false)
                 }
             case .failure(let error):
@@ -51,10 +51,10 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-    
+
     func getNews(compelation: @escaping (Result<Any, Error>) -> Void) {
-        NetworkManager.shared.getNews(completion: {result, status in
-            switch result{
+        NetworkManager.shared.getNews(completion: {result, _ in
+            switch result {
             case .success(let response):
                 print(response.code ?? 0)
                 compelation(.success(response))
@@ -63,33 +63,33 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-    
+
     func bringSliders() -> [Slider] {
         return sliders
     }
-    
+
     func bringMaterials() -> [Materials] {
         return materials
     }
-    
-    func fetchVideosData(compelation: @escaping (Bool) -> Void){
+
+    func fetchVideosData(compelation: @escaping (Bool) -> Void) {
         getVideos(compelation: {result in
-            switch result{
+            switch result {
             case .success(let response):
                 let data = response as? VideosAndImagesResponse
-                if let dataReturned = data{
-                    if let videosComics = dataReturned.comics{
+                if let dataReturned = data {
+                    if let videosComics = dataReturned.comics {
                         self.videos = videosComics
-                        if(!self.materials.isEmpty){
-                            if(self.materials[4].type != Materialtypes.videos){
+                        if(!self.materials.isEmpty) {
+                            if(self.materials[4].type != Materialtypes.videos) {
                                 self.materials.insert(Materials(type: Materialtypes.videos), at: 4)
                             }
                         }
-                    }else {
+                    } else {
                         print("ERROR : videos arent available")
                     }
                     compelation(true)
-                }else {
+                } else {
                     compelation(false)
                 }
             case .failure(let error):
@@ -98,10 +98,10 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-    
+
     func getVideos(compelation: @escaping (Result<Any, Error>) -> Void) {
-        NetworkManager.shared.getVideos(completion: {result, status in
-            switch result{
+        NetworkManager.shared.getVideos(completion: {result, _ in
+            switch result {
             case .success(let response):
                 print(response.code ?? 0)
                 compelation(.success(response))
@@ -110,30 +110,30 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-    
-    func bringVideos() -> [Comics]{
+
+    func bringVideos() -> [Comics] {
         return videos
     }
-    
-    func fetchImagesData(compelation: @escaping (Bool) -> Void){
+
+    func fetchImagesData(compelation: @escaping (Bool) -> Void) {
         getImages(compelation: {result in
-            switch result{
+            switch result {
             case .success(let response):
                 let data = response as? VideosAndImagesResponse
-                if let dataReturned = data{
-                    if let imagesComics = dataReturned.comics{
+                if let dataReturned = data {
+                    if let imagesComics = dataReturned.comics {
                         self.images = imagesComics
-                        if(!self.materials.isEmpty){
+                        if(!self.materials.isEmpty) {
                             //check if the 9th element is of type images
-                            if(self.materials[9].type != Materialtypes.images){
+                            if(self.materials[9].type != Materialtypes.images) {
                                 self.materials.insert(Materials(type: Materialtypes.images), at: 9)
                             }
                         }
-                    }else {
+                    } else {
                         print("ERROR : images arent available")
                     }
                     compelation(true)
-                }else {
+                } else {
                     compelation(false)
                 }
             case .failure(let error):
@@ -142,10 +142,10 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-    
+
     func getImages(compelation: @escaping (Result<Any, Error>) -> Void) {
-        NetworkManager.shared.getImages(completion: {result, status in
-            switch result{
+        NetworkManager.shared.getImages(completion: {result, _ in
+            switch result {
             case .success(let response):
                 print(response.code ?? 0)
                 compelation(.success(response))
@@ -154,29 +154,29 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-    
-    func bringImages() -> [Comics]{
+
+    func bringImages() -> [Comics] {
         return images
     }
-    
-    func fetchArticlesData(compelation: @escaping (Bool) -> Void){
+
+    func fetchArticlesData(compelation: @escaping (Bool) -> Void) {
         getArticles(compelation: {result in
-            switch result{
+            switch result {
             case .success(let response):
                 let data = response as? ArticlesResponse
-                if let dataReturned = data{
-                    if let articlesMaterial = dataReturned.materials{
+                if let dataReturned = data {
+                    if let articlesMaterial = dataReturned.materials {
                         self.articles = articlesMaterial
-                        if(!self.materials.isEmpty){
-                            if(self.materials[13].type != Materialtypes.articles){
+                        if(!self.materials.isEmpty) {
+                            if(self.materials[13].type != Materialtypes.articles) {
                                 self.materials.insert(Materials(type: Materialtypes.articles), at: 13)
                             }
                         }
-                    }else {
+                    } else {
                         print("ERROR : articles arent available")
                     }
                     compelation(true)
-                }else {
+                } else {
                     compelation(false)
                 }
             case .failure(let error):
@@ -185,10 +185,10 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-    
+
     func getArticles(compelation: @escaping (Result<Any, Error>) -> Void) {
-        NetworkManager.shared.getArticles(completion: {result, status in
-            switch result{
+        NetworkManager.shared.getArticles(completion: {result, _ in
+            switch result {
             case .success(let response):
                 print(response.code ?? 0)
                 compelation(.success(response))
@@ -197,10 +197,8 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-    
-    func bringArticles() -> [Materials]{
+
+    func bringArticles() -> [Materials] {
         return articles
     }
 }
-
-

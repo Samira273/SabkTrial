@@ -10,7 +10,7 @@ import UIKit
 
 class VideosCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var videoTime: UILabel!
-    
+
     @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var videoImage: UIImageView!
     override func awakeFromNib() {

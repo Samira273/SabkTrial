@@ -8,11 +8,11 @@
 
 import Foundation
 struct Attachments: Codable {
-    let name : String?
-    let url : String?
-    let caption : String?
-    let type : String?
-    let downloadCount : Int?
+    let name: String?
+    let url: String?
+    let caption: String?
+    let type: String?
+    let downloadCount: Int?
     enum CodingKeys: String, CodingKey {
         case name = "name"
         case url = "url"

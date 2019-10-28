@@ -8,19 +8,18 @@
 
 import UIKit
 
-
 class HeaderSliderCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var title: UITextView!
     @IBOutlet weak var timingLabel: UILabel!
     @IBOutlet weak var hotviewsNumberLabel: UILabel!
     @IBOutlet weak var discriptionText: UILabel!
     @IBOutlet weak var coverPhoto: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+
     }
 
 }

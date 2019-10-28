@@ -8,6 +8,6 @@
 
 import Foundation
 
-class BasePresenter: NSObject,BasePresenterProtocol {
-    
+class BasePresenter: NSObject, BasePresenterProtocol {
+
 }

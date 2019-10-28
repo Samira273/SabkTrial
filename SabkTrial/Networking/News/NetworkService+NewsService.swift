@@ -9,12 +9,12 @@
 import Foundation
 import Moya
 
-extension NetworkManager{
+extension NetworkManager {
     func getNews(completion: @escaping (
         _ result: Swift.Result<SliderMaterialResponse, NetworkError>,
         _ statusCode: StatusCode?
         ) -> Void) {
-        
+
         provider.request(MultiTarget(NewsService.slider)) { (result) in
             switch result {
             case .success(let response):
@@ -35,20 +35,20 @@ extension NetworkManager{
                         completion(.failure(NetworkError.parseError), response.statusCode)
                     }
                 }
-                
+
             case .failure(let error):
                 let customError = NetworkError(error: error)
                 completion(.failure(customError), nil)
             }
         }
-        
+
     }
-    
+
     func getVideos(completion: @escaping (
         _ result: Swift.Result<VideosAndImagesResponse, NetworkError>,
         _ statusCode: StatusCode?
         ) -> Void) {
-        
+
         provider.request(MultiTarget(NewsService.videos)) { (result) in
             switch result {
             case .success(let response):
@@ -69,20 +69,20 @@ extension NetworkManager{
                         completion(.failure(NetworkError.parseError), response.statusCode)
                     }
                 }
-                
+
             case .failure(let error):
                 let customError = NetworkError(error: error)
                 completion(.failure(customError), nil)
             }
         }
-        
+
     }
-    
+
     func getImages(completion: @escaping (
         _ result: Swift.Result<VideosAndImagesResponse, NetworkError>,
         _ statusCode: StatusCode?
         ) -> Void) {
-        
+
         provider.request(MultiTarget(NewsService.images)) { (result) in
             switch result {
             case .success(let response):
@@ -103,20 +103,20 @@ extension NetworkManager{
                         completion(.failure(NetworkError.parseError), response.statusCode)
                     }
                 }
-                
+
             case .failure(let error):
                 let customError = NetworkError(error: error)
                 completion(.failure(customError), nil)
             }
         }
-        
+
     }
-    
+
     func getArticles(completion: @escaping (
         _ result: Swift.Result<ArticlesResponse, NetworkError>,
         _ statusCode: StatusCode?
         ) -> Void) {
-        
+
         provider.request(MultiTarget(NewsService.articles)) { (result) in
             switch result {
             case .success(let response):
@@ -137,12 +137,12 @@ extension NetworkManager{
                         completion(.failure(NetworkError.parseError), response.statusCode)
                     }
                 }
-                
+
             case .failure(let error):
                 let customError = NetworkError(error: error)
                 completion(.failure(customError), nil)
             }
         }
-        
+
     }
 }

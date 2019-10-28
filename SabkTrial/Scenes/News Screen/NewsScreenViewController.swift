@@ -8,13 +8,11 @@
 
 import UIKit
 
+class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScreenViewProtocol {
 
-class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , NewsScreenViewProtocol{
-   
-    
     @IBOutlet weak var newsTable: UITableView!
     let newsScreenAdaptor = NewsScreenAdaptor()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         newsTable.delegate = newsScreenAdaptor
@@ -29,11 +27,10 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , NewsSc
         newsTable.register(UINib(nibName: "VideosCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
         newsTable.register(UINib(nibName: "ImagesCell", bundle: nil), forCellReuseIdentifier: "ImagesCell")
         newsTable.register(UINib(nibName: "ArticlesCell", bundle: nil), forCellReuseIdentifier: "ArticlesCell")
-        
-        
+
         //right bar button item
         let button = UIButton(type: .custom)
-        button.setImage(UIImage (named: "notification_icon"), for: .normal)
+        button.setImage(UIImage(named: "notification_icon"), for: .normal)
         button.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
         //button.addTarget(target, action: nil, for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: button)
@@ -44,15 +41,14 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , NewsSc
         let image = UIImage(named: "img_logo")
         imageView.image = image
         self.navigationItem.titleView = imageView
-        
+
         //Make: add left bar button item
-        
-        
+
     }
     func showErrorMessage(title: String?, message: String?) {
-        
+
     }
-    
+
     func setSliders(sliders: [Slider]) {
         self.newsScreenAdaptor.slidersData = sliders
         self.newsTable.reloadData()
@@ -65,7 +61,7 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , NewsSc
         self.newsScreenAdaptor.videosData = videos
         self.newsTable.reloadData()
     }
-    
+
     func setImages(images: [Comics]) {
         self.newsScreenAdaptor.imagesData = images
         self.newsTable.reloadData()
@@ -74,7 +70,5 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter> , NewsSc
         self.newsScreenAdaptor.articlesData = articles
         self.newsTable.reloadData()
     }
-    
-    
-}
 
+}
