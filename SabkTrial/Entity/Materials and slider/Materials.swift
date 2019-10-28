@@ -60,51 +60,51 @@ struct Materials: Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case id = "id"
-        case title = "title"
-        case secondaryTitle = "secondaryTitle"
-        case description = "description"
-        case publishDate = "publishDate"
-        case publishDateHijryDate = "publishDateHijryDate"
-        case updateDate = "updateDate"
-        case updateDateHijryDate = "updateDateHijryDate"
-        case categoryName = "categoryName"
-        case parentCategoryName = "parentCategoryName"
-        case coverPhoto = "coverPhoto"
-        case coverPhotoCaption = "coverPhotoCaption"
-        case authorName = "authorName"
-        case url = "url"
-        case materialType = "materialType"
-        case authorImg = "authorImg"
-        case authorCity = "authorCity"
-        case multipleAuthors = "multipleAuthors"
-        case imagesCount = "imagesCount"
-        case videosCount = "videosCount"
-        case noOfLikes = "noOfLikes"
-        case noOfShares = "noOfShares"
-        case noOfViews = "noOfViews"
-        case noOfComments = "noOfComments"
-        case liked = "liked"
-        case readLater = "readLater"
-        case materialUpdated = "materialUpdated"
-        case isEdit = "isEdit"
-        case hasRelatedMaterials = "hasRelatedMaterials"
-        case authors = "authors"
-        case images = "images"
-        case videos = "videos"
-        case attachements = "attachements"
-        case tags = "tags"
-        case updates = "updates"
-        case relatedMaterials = "relatedMaterials"
-        case matarialDisplayed = "matarialDisplayed"
-        case comments = "comments"
-        case descriptionString = "descriptionString"
-        case city = "city"
-        case commentsEnabled = "commentsEnabled"
-        case commentsMinCharacters = "commentsMinCharacters"
-        case commentsMaxCharacters = "commentsMaxCharacters"
+        case id
+        case title
+        case secondaryTitle
+        case description
+        case publishDate
+        case publishDateHijryDate
+        case updateDate
+        case updateDateHijryDate
+        case categoryName
+        case parentCategoryName
+        case coverPhoto
+        case coverPhotoCaption
+        case authorName
+        case url
+        case materialType
+        case authorImg
+        case authorCity
+        case multipleAuthors
+        case imagesCount
+        case videosCount
+        case noOfLikes
+        case noOfShares
+        case noOfViews
+        case noOfComments
+        case liked
+        case readLater
+        case materialUpdated
+        case isEdit
+        case hasRelatedMaterials
+        case authors
+        case images
+        case videos
+        case attachements
+        case tags
+        case updates
+        case relatedMaterials
+        case matarialDisplayed
+        case comments
+        case descriptionString
+        case city
+        case commentsEnabled
+        case commentsMinCharacters
+        case commentsMaxCharacters
     }
-
+//    swiftlint:disable function_body_length
     init(type: Materialtypes) {
         self.type = type
         id = "id"
@@ -151,7 +151,7 @@ struct Materials: Codable {
         commentsMinCharacters = 0
         commentsMaxCharacters = 0
     }
-
+//    swiftlint:disable function_body_length
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(String.self, forKey: .id)
@@ -203,8 +203,8 @@ struct Materials: Codable {
 }
 
 enum Materialtypes: String {
-    case news = "news"
-    case images = "images"
-    case articles = "articles"
-    case videos = "videos"
+    case news
+    case images
+    case articles
+    case videos 
 }

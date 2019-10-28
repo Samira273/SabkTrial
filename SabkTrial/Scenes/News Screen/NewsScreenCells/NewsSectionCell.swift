@@ -10,10 +10,10 @@ import UIKit
 
 class NewsSectionCell: UITableViewCell {
 
-    @IBOutlet weak var noOfViews: UILabel!
-    @IBOutlet weak var videoPlay: UIImageView!
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet private weak var noOfViews: UILabel!
+    @IBOutlet private weak var videoPlay: UIImageView!
+    @IBOutlet private weak var newsImage: UIImageView!
+    @IBOutlet private weak var title: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +23,21 @@ class NewsSectionCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func setNoOfViews(text: String) {
+        noOfViews.text = text
+    }
+    
+    func setImage(imageUrl: String) {
+        newsImage.sd_setImage(with: URL(
+            string: imageUrl), placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
+    }
+    func setTitle(text: String) {
+        title.text = text
+    }
+    
+    func shwoVideoImage(show: Bool) {
+        videoPlay.isHidden = show
     }
 
 }

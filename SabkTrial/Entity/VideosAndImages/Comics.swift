@@ -47,37 +47,37 @@ struct Comics: Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case id = "id"
-        case title = "title"
-        case secondaryTitle = "secondaryTitle"
-        case description = "description"
-        case publishDate = "publishDate"
-        case publishDateHijryDate = "publishDateHijryDate"
-        case updateDate = "updateDate"
-        case updateDateHijryDate = "updateDateHijryDate"
-        case coverPhoto = "coverPhoto"
-        case coverPhotoCaption = "coverPhotoCaption"
-        case authorName = "authorName"
-        case authorImg = "authorImg"
-        case authorCity = "authorCity"
-        case imagesCount = "imagesCount"
-        case noOfLikes = "noOfLikes"
-        case noOfShares = "noOfShares"
-        case noOfViews = "noOfViews"
-        case noOfComments = "noOfComments"
-        case liked = "liked"
-        case readLater = "readLater"
-        case isEdit = "isEdit"
-        case url = "url"
-        case images = "images"
-        case tags = "tags"
-        case comicsType = "comicsType"
-        case vid = "vid"
-        case videoCaption = "videoCaption"
-        case comments = "comments"
-        case commentsEnabled = "commentsEnabled"
-        case commentsMinCharacters = "commentsMinCharacters"
-        case commentsMaxCharacters = "commentsMaxCharacters"
+        case id
+        case title
+        case secondaryTitle
+        case description
+        case publishDate
+        case publishDateHijryDate
+        case updateDate
+        case updateDateHijryDate
+        case coverPhoto
+        case coverPhotoCaption
+        case authorName
+        case authorImg
+        case authorCity
+        case imagesCount
+        case noOfLikes
+        case noOfShares
+        case noOfViews
+        case noOfComments
+        case liked
+        case readLater
+        case isEdit
+        case url
+        case images
+        case tags
+        case comicsType
+        case vid
+        case videoCaption 
+        case comments
+        case commentsEnabled
+        case commentsMinCharacters
+        case commentsMaxCharacters
     }
 
     init(from decoder: Decoder) throws {

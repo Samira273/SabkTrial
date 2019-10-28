@@ -10,15 +10,19 @@ import UIKit
 
 class ImagesCell: UITableViewCell {
 
-    @IBOutlet weak var imagesCollection: UICollectionView!
+    @IBOutlet private weak var imagesCollection: UICollectionView!
     let imagesAdaptor = ImagesAdaptor()
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        imagesCollection.register(UINib(nibName: "ImagesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImagesCollectionViewCell")
+        imagesCollection.register(
+            UINib(nibName: "ImagesCollectionViewCell", bundle: nil),
+            forCellWithReuseIdentifier: "ImagesCollectionViewCell")
         imagesCollection.delegate = imagesAdaptor
         imagesCollection.dataSource = imagesAdaptor
+        imagesCollection.showsHorizontalScrollIndicator = false
+        imagesCollection.showsVerticalScrollIndicator = false
 
     }
 

@@ -10,7 +10,7 @@ import UIKit
 
 class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScreenViewProtocol {
 
-    @IBOutlet weak var newsTable: UITableView!
+    @IBOutlet private weak var newsTable: UITableView!
     let newsScreenAdaptor = NewsScreenAdaptor()
 
     override func viewDidLoad() {
@@ -22,15 +22,25 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
         newsTable.estimatedRowHeight = 100
         newsTable.rowHeight = UITableView.automaticDimension
         //registering custome cells
-        newsTable.register(UINib(nibName: "SliderSectionCell", bundle: nil), forCellReuseIdentifier: "SliderSectionCell")
-        newsTable.register(UINib(nibName: "NewsSectionCell", bundle: nil), forCellReuseIdentifier: "NewsSectionCell")
-        newsTable.register(UINib(nibName: "VideosCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
-        newsTable.register(UINib(nibName: "ImagesCell", bundle: nil), forCellReuseIdentifier: "ImagesCell")
-        newsTable.register(UINib(nibName: "ArticlesCell", bundle: nil), forCellReuseIdentifier: "ArticlesCell")
+        newsTable.register(
+            UINib(nibName: "SliderSectionCell", bundle: nil),
+            forCellReuseIdentifier: "SliderSectionCell")
+        newsTable.register(
+            UINib(nibName: "NewsSectionCell", bundle: nil),
+            forCellReuseIdentifier: "NewsSectionCell")
+        newsTable.register(
+            UINib(nibName: "VideosCell", bundle: nil),
+            forCellReuseIdentifier: "VideosCell")
+        newsTable.register(
+            UINib(nibName: "ImagesCell", bundle: nil),
+            forCellReuseIdentifier: "ImagesCell")
+        newsTable.register(
+            UINib(nibName: "ArticlesCell", bundle: nil),
+            forCellReuseIdentifier: "ArticlesCell")
 
         //right bar button item
         let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: "notification_icon"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "notification_icon"), for: .normal)
         button.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
         //button.addTarget(target, action: nil, for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: button)
@@ -38,7 +48,7 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
         //central image in bar
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
         imageView.contentMode = .scaleAspectFit
-        let image = UIImage(named: "img_logo")
+        let image = #imageLiteral(resourceName: "img_logo")
         imageView.image = image
         self.navigationItem.titleView = imageView
 

@@ -42,19 +42,19 @@
                                 <rect key="frame" x="0.0" y="396" width="414" height="51"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_time" translatesAutoresizingMaskIntoConstraints="NO" id="khx-Zq-4Ct">
-                                        <rect key="frame" x="387" y="16" width="15" height="15"/>
+                                        <rect key="frame" x="353" y="16" width="15" height="15"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="منذ ساعة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpJ-ad-doi">
-                                        <rect key="frame" x="330" y="16" width="49" height="16"/>
+                                        <rect key="frame" x="296" y="16" width="49" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.69291073964049776" green="0.69291073964049776" blue="0.69291073964049776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_views_icon_hot" translatesAutoresizingMaskIntoConstraints="NO" id="i2h-8b-7XA">
-                                        <rect key="frame" x="236" y="14" width="11" height="20"/>
+                                        <rect key="frame" x="181" y="14" width="11" height="20"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-qQ-nmi">
-                                        <rect key="frame" x="185" y="16" width="39" height="16"/>
+                                        <rect key="frame" x="134" y="16" width="39" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.69291073960000005" green="0.69291073960000005" blue="0.69291073960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -68,17 +68,17 @@
                                     <constraint firstAttribute="bottom" secondItem="i2h-8b-7XA" secondAttribute="bottom" constant="17" id="32f-48-sFH"/>
                                     <constraint firstItem="i2h-8b-7XA" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="14" id="5Ad-Rf-ohv"/>
                                     <constraint firstAttribute="bottom" secondItem="GpJ-ad-doi" secondAttribute="bottom" constant="19" id="9pY-9z-FjO"/>
+                                    <constraint firstAttribute="trailing" secondItem="khx-Zq-4Ct" secondAttribute="trailing" constant="46" id="Cia-49-ljI"/>
                                     <constraint firstItem="3OJ-Tj-oyp" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="11" id="Cjk-p8-ptF"/>
                                     <constraint firstItem="3OJ-Tj-oyp" firstAttribute="leading" secondItem="dHs-yQ-VTC" secondAttribute="leading" constant="28" id="EZE-1t-Ene"/>
                                     <constraint firstAttribute="bottom" secondItem="GjM-qQ-nmi" secondAttribute="bottom" constant="19" id="I16-DK-AG6"/>
                                     <constraint firstAttribute="bottom" secondItem="3OJ-Tj-oyp" secondAttribute="bottom" constant="19" id="L2L-uc-ZPf"/>
-                                    <constraint firstAttribute="trailing" secondItem="khx-Zq-4Ct" secondAttribute="trailing" constant="12" id="NTu-9X-xJM"/>
-                                    <constraint firstItem="GpJ-ad-doi" firstAttribute="leading" secondItem="i2h-8b-7XA" secondAttribute="trailing" constant="83" id="VMP-UE-yWo"/>
+                                    <constraint firstItem="GjM-qQ-nmi" firstAttribute="leading" secondItem="3OJ-Tj-oyp" secondAttribute="trailing" constant="89" id="O1m-ZC-3Zu"/>
                                     <constraint firstItem="GjM-qQ-nmi" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="cbR-bM-hnm"/>
                                     <constraint firstAttribute="bottom" secondItem="khx-Zq-4Ct" secondAttribute="bottom" constant="20" id="ga8-iO-r56"/>
                                     <constraint firstItem="khx-Zq-4Ct" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="pAF-sP-uty"/>
                                     <constraint firstItem="khx-Zq-4Ct" firstAttribute="leading" secondItem="GpJ-ad-doi" secondAttribute="trailing" constant="8" id="pys-Dt-cdo"/>
-                                    <constraint firstItem="i2h-8b-7XA" firstAttribute="leading" secondItem="GjM-qQ-nmi" secondAttribute="trailing" constant="12" id="vYR-nU-FxG"/>
+                                    <constraint firstItem="i2h-8b-7XA" firstAttribute="leading" secondItem="GjM-qQ-nmi" secondAttribute="trailing" constant="8" id="vYR-nU-FxG"/>
                                     <constraint firstItem="GpJ-ad-doi" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="yKP-9a-Pe3"/>
                                 </constraints>
                             </view>

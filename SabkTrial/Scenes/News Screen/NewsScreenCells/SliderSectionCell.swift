@@ -9,31 +9,42 @@
 import UIKit
 import SDWebImage
 
-class SliderSectionCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SliderSectionCell: UITableViewCell,
+    UICollectionViewDataSource,
+UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return slidersData.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: HeaderSliderCell = sliderCollection.dequeueReusableCell(withReuseIdentifier: "HeaderSliderCell", for: indexPath) as! HeaderSliderCell
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "HeaderSliderCell", for: indexPath)
+            as? HeaderSliderCell else {
+                return UICollectionViewCell()
+        }
         let slider = slidersData[indexPath.row]
-        cell.title.text = slider.title
-        cell.discriptionText.text = slider.description?.html2String
-        cell.coverPhoto.sd_setImage(with: URL(string: slider.coverPhoto ?? ""), placeholderImage: UIImage(named: "img_placeholder"))
-        cell.hotviewsNumberLabel.text = "\(slider.noOfViews ?? 0)"
+        cell.setTitle(text: slider.title ?? "")
+        cell.setDescription(text: slider.description?.html2String ?? "")
+        cell.setCoverPhoto(imageURL: slider.coverPhoto ?? "")
+        cell.setHotViewsNumber(text: "\(slider.noOfViews ?? 0)")
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
 
-    @IBOutlet weak var sliderCollection: UICollectionView!
+    @IBOutlet private weak var sliderCollection: UICollectionView!
     var slidersData = [Slider]()
 
     override func awakeFromNib() {

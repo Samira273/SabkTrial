@@ -17,6 +17,7 @@ enum  NewsService {
 }
 
 extension NewsService: TargetType {
+//    swiftlint:disable force_unwrapping
     var baseURL: URL {
         return URL(string: NetworkManager.shared.networkConfig.baseUrl)!
     }

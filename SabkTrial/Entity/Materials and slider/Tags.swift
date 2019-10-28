@@ -18,8 +18,8 @@ struct Tags: Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case id = "id"
-        case name = "name"
+        case id 
+        case name
     }
 
     init(from decoder: Decoder) throws {

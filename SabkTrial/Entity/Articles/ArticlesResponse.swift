@@ -18,8 +18,8 @@ struct ArticlesResponse: Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case materials = "materials"
-        case code = "code"
+        case materials 
+        case code
     }
 
     init(from decoder: Decoder) throws {

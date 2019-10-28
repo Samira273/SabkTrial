@@ -19,9 +19,9 @@ struct SliderMaterialResponse: Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case slider = "slider"
-        case materials = "materials"
-        case code = "code"
+        case slider
+        case materials
+        case code 
     }
 
     init(from decoder: Decoder) throws {

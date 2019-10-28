@@ -10,12 +10,22 @@ import UIKit
 
 class ImagesCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var imageTitle: UILabel!
-    @IBOutlet weak var imageTiming: UILabel!
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet private weak var imageTitle: UILabel!
+    @IBOutlet private weak var imageTiming: UILabel!
+    @IBOutlet private weak var image: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setImageTitle(text: String) {
+        imageTitle.text = text
+    }
+    
+    func setImage(imageUrl: String) {
+        image.sd_setImage(
+            with: URL(string: imageUrl),
+            placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
     }
 
 }

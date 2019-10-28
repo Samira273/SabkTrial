@@ -10,14 +10,18 @@ import UIKit
 
 class ArticlesCell: UITableViewCell {
 
-    @IBOutlet weak var articlesCollection: UICollectionView!
+    @IBOutlet private weak var articlesCollection: UICollectionView!
     let articlesAdaptor = ArticlesAdaptor()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        articlesCollection.register(UINib(nibName: "ArticlesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ArticlesCollectionViewCell")
+        articlesCollection.register(
+            UINib(nibName: "ArticlesCollectionViewCell", bundle: nil),
+            forCellWithReuseIdentifier: "ArticlesCollectionViewCell")
         articlesCollection.dataSource = articlesAdaptor
         articlesCollection.delegate = articlesAdaptor
+        articlesCollection.showsHorizontalScrollIndicator = false
+        articlesCollection.showsVerticalScrollIndicator = false
 
     }
 

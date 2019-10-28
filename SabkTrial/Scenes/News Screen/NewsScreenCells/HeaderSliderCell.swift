@@ -10,16 +10,33 @@ import UIKit
 
 class HeaderSliderCell: UICollectionViewCell {
 
-    @IBOutlet weak var title: UITextView!
-    @IBOutlet weak var timingLabel: UILabel!
-    @IBOutlet weak var hotviewsNumberLabel: UILabel!
-    @IBOutlet weak var discriptionText: UILabel!
-    @IBOutlet weak var coverPhoto: UIImageView!
+    @IBOutlet private weak var title: UITextView!
+    @IBOutlet private weak var timingLabel: UILabel!
+    @IBOutlet private weak var hotviewsNumberLabel: UILabel!
+    @IBOutlet private weak var discriptionText: UILabel!
+    @IBOutlet private weak var coverPhoto: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
 
     }
+    
+    func setTitle(text: String) {
+        title.text = text
+    }
+    
+    func setHotViewsNumber(text: String) {
+        hotviewsNumberLabel.text = text
+    }
 
+    func setDescription(text: String) {
+        discriptionText.text = text
+    }
+    
+    func setCoverPhoto(imageURL: String) {
+       coverPhoto.sd_setImage(
+            with: URL(string: imageURL),
+            placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
+    }
 }

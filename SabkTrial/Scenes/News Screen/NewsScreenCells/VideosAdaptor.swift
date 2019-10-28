@@ -17,11 +17,15 @@ class VideosAdaptor: NSObject, UICollectionViewDataSource {
         return 5
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell: VideosCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideosCollectionViewCell", for: indexPath) as! VideosCollectionViewCell
-        cell.videoTitle.text = videos[indexPath.row].title
-        cell.videoImage.sd_setImage(with: URL(string: videos[indexPath.row].authorImg ?? ""), placeholderImage: UIImage(named: "img_placeholder"))
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "VideosCollectionViewCell", for: indexPath) as? VideosCollectionViewCell else {
+                return UICollectionViewCell()
+        }
+        cell.setVideoTitle(text: videos[indexPath.row].title ?? "")
+        cell.setVideoImage(imageURL: videos[indexPath.row].authorImg ?? "")
         return cell
     }
 

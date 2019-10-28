@@ -19,9 +19,9 @@ struct VideosAndImagesResponse: Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case materials = "materials"
-        case comics = "comics"
-        case code = "code"
+        case materials
+        case comics
+        case code 
     }
 
     init(from decoder: Decoder) throws {

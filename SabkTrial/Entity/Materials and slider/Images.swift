@@ -18,8 +18,8 @@ struct Images: Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case url = "url"
-        case caption = "caption"
+        case url 
+        case caption
     }
 
     init(from decoder: Decoder) throws {

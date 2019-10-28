@@ -18,8 +18,8 @@ struct Videos: Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case vid = "vid"
-        case caption = "caption"
+        case vid
+        case caption 
     }
 
     init(from decoder: Decoder) throws {

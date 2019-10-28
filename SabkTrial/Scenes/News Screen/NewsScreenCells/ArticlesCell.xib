@@ -19,8 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="396" height="369.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Esi-Mo-m9q">
-                        <rect key="frame" x="0.0" y="91" width="396" height="221.5"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Esi-Mo-m9q">
+                        <rect key="frame" x="0.0" y="108" width="396" height="221.5"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="URz-N2-ory">
                             <size key="itemSize" width="50" height="50"/>
@@ -29,15 +29,29 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المقالات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaB-Ik-ya9">
+                        <rect key="frame" x="306" y="24" width="70" height="23"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                        <color key="textColor" red="0.21026731260000001" green="0.43625397539999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المزيد" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0p-df-qfa">
+                        <rect key="frame" x="20" y="24" width="52" height="23"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                        <color key="textColor" red="0.21026731260000001" green="0.43625397539999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Esi-Mo-m9q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4Z6-h0-dET"/>
-                    <constraint firstItem="Esi-Mo-m9q" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.6" id="GRR-nS-3WF"/>
-                    <constraint firstItem="Esi-Mo-m9q" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="aD7-Kk-aJO"/>
-                    <constraint firstItem="Esi-Mo-m9q" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="hSP-jn-ks1"/>
-                    <constraint firstAttribute="bottom" secondItem="Esi-Mo-m9q" secondAttribute="bottom" constant="57" id="pwd-mn-jsV"/>
-                    <constraint firstAttribute="trailing" secondItem="Esi-Mo-m9q" secondAttribute="trailing" id="yjb-jj-kLd"/>
+                    <constraint firstItem="Esi-Mo-m9q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1da-HC-cgL"/>
+                    <constraint firstItem="M0p-df-qfa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="3gl-DW-xp9"/>
+                    <constraint firstAttribute="bottom" secondItem="Esi-Mo-m9q" secondAttribute="bottom" constant="40" id="7ag-Sk-tUm"/>
+                    <constraint firstItem="M0p-df-qfa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="S7e-DU-y7h"/>
+                    <constraint firstItem="Esi-Mo-m9q" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.6" id="UYg-sf-TNd"/>
+                    <constraint firstItem="KaB-Ik-ya9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="boe-2r-Ypm"/>
+                    <constraint firstAttribute="trailing" secondItem="Esi-Mo-m9q" secondAttribute="trailing" id="pHq-ri-iXH"/>
+                    <constraint firstAttribute="trailing" secondItem="KaB-Ik-ya9" secondAttribute="trailing" constant="20" id="qbH-dL-Q1n"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
