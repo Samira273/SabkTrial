@@ -24,5 +24,8 @@ class VideosCollectionViewCell: UICollectionViewCell {
     func setVideoImage(imageURL: String) {
       videoImage.sd_setImage(with: URL(string: imageURL), placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
     }
-
+    
+    func setTimeApart(text: String) {
+        videoTime.text = text
+    }
 }

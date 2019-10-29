@@ -56,6 +56,7 @@ struct Slider: Codable {
     let commentsEnabled: Bool?
     let commentsMinCharacters: Int?
     let commentsMaxCharacters: Int?
+    var timeApart: String?
 
     enum CodingKeys: String, CodingKey {
 

@@ -27,5 +27,8 @@ class ImagesCollectionViewCell: UICollectionViewCell {
             with: URL(string: imageUrl),
             placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
     }
+    func setTimeApart(text: String) {
+        imageTiming.text = text
+    }
 
 }

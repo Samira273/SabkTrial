@@ -29,6 +29,7 @@ UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         cell.setDescription(text: slider.description?.html2String ?? "")
         cell.setCoverPhoto(imageURL: slider.coverPhoto ?? "")
         cell.setHotViewsNumber(text: "\(slider.noOfViews ?? 0)")
+        cell.setTimeApart(text: slider.timeApart ?? "unknown")
         return cell
     }
 

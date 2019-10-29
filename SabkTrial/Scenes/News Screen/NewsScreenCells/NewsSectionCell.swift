@@ -14,6 +14,7 @@ class NewsSectionCell: UITableViewCell {
     @IBOutlet private weak var videoPlay: UIImageView!
     @IBOutlet private weak var newsImage: UIImageView!
     @IBOutlet private weak var title: UILabel!
+    @IBOutlet private weak var timeApart: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,6 +27,10 @@ class NewsSectionCell: UITableViewCell {
     }
     func setNoOfViews(text: String) {
         noOfViews.text = text
+    }
+    
+    func setTimeApart(text: String) {
+        timeApart.text = text
     }
     
     func setImage(imageUrl: String) {

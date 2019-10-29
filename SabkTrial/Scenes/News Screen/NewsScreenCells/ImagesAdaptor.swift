@@ -28,21 +28,18 @@ class ImagesAdaptor: NSObject, UICollectionViewDataSource, UITableViewDelegate, 
                     return UICollectionViewCell()
             }
             cell.setImageTitle(text: images[indexPath.row].title ?? "")
-            cell.setImage(imageUrl: images[indexPath.row].authorImg ?? "")
-        
+            cell.setImage(imageUrl: images[indexPath.row].coverPhoto ?? "")
+            cell.setTimeApart(text: images[indexPath.row].timeApart ?? "unknown")
 //            let publishDate = images[indexPath.row].publishDate
-            
-            //      NSInteger yearsApart = [firstDate yearsFrom:secondDate];
-            
-            let dateFormatter: DateFormatter = DateFormatter()
-            dateFormatter.locale = Locale(identifier: "ar")
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm ss"
-            dateFormatter.locale = Locale(identifier: "ar")
+//            let dateFormatter: DateFormatter = DateFormatter()
+//            dateFormatter.locale = Locale(identifier: "ar")
+//            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm ss"
+//            dateFormatter.locale = Locale(identifier: "ar")
 //            let publishingDate: Date = dateFormatter.date(from: publishDate ?? "") ?? Date()
 //            let current: String = dateFormatter.string(from: Date())
 //            let currentDate: Date = dateFormatter.date(from: current) ?? Date()
-            
-            //        let timeApart = TimePeriod(beginning: publishingDate, end: currentDate)
+//
+//                    let timeApart = TimePeriod(beginning: publishingDate, end: currentDate)
             
             //       print( timeApart.years.years.earlier.format(with: "yyyy-MM-dd HH:mm ss", locale: Locale.init(identifier: "ar")) )
             

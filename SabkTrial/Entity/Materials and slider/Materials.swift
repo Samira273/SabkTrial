@@ -57,6 +57,7 @@ struct Materials: Codable {
     let commentsMinCharacters: Int?
     let commentsMaxCharacters: Int?
     var type = Materialtypes.news
+    var timeApart: String?
 
     enum CodingKeys: String, CodingKey {
 

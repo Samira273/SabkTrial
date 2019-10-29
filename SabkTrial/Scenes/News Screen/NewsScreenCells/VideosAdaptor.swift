@@ -26,6 +26,7 @@ class VideosAdaptor: NSObject, UICollectionViewDataSource {
         }
         cell.setVideoTitle(text: videos[indexPath.row].title ?? "")
         cell.setVideoImage(imageURL: videos[indexPath.row].authorImg ?? "")
+        cell.setTimeApart(text: videos[indexPath.row].timeApart ?? "unknown")
         return cell
     }
 

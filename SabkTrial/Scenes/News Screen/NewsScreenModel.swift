@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import DateToolsSwift
 
 class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
-
+    
     private var materials: [Materials] = []
     private var sliders: [Slider] = []
     private var images: [Comics] = []
     private var videos: [Comics] = []
     private var articles: [Materials] = []
-
+    
     func fetchNewsData(compelation: @escaping (Bool) -> Void) {
         getNews(compelation: {result in
             switch result {
@@ -24,11 +25,19 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
                 if let dataReturned = data {
                     if let slid = dataReturned.slider {
                         self.sliders = slid
+                        for index in 0..<self.sliders.count {
+                            self.sliders[index].timeApart =
+                                self.getTimeApart(forPublishDate: self.sliders[index].publishDate ?? "")
+                        }
                     } else {
                         print("ERROR : sliders arent available")
                     }
                     if let material = dataReturned.materials {
                         self.materials = material
+                        for index in 0..<self.materials.count {
+                            self.materials[index].timeApart =
+                                self.getTimeApart(forPublishDate: self.materials[index].publishDate ?? "")
+                        }
                         if(!self.videos.isEmpty) {
                             self.materials.insert(Materials(type: Materialtypes.videos), at: 4)
                         }
@@ -51,7 +60,7 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-
+    
     func getNews(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getNews(completion: {result, _ in
             switch result {
@@ -63,15 +72,15 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-
+    
     func bringSliders() -> [Slider] {
         return sliders
     }
-
+    
     func bringMaterials() -> [Materials] {
         return materials
     }
-
+    
     func fetchVideosData(compelation: @escaping (Bool) -> Void) {
         getVideos(compelation: {result in
             switch result {
@@ -80,6 +89,10 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
                 if let dataReturned = data {
                     if let videosComics = dataReturned.comics {
                         self.videos = videosComics
+                        for index in 0..<self.videos.count {
+                            self.videos[index].timeApart =
+                                self.getTimeApart(forPublishDate: self.videos[index].publishDate ?? "")
+                        }
                         if(!self.materials.isEmpty) {
                             if(self.materials[4].type != Materialtypes.videos) {
                                 self.materials.insert(Materials(type: Materialtypes.videos), at: 4)
@@ -98,7 +111,7 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-
+    
     func getVideos(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getVideos(completion: {result, _ in
             switch result {
@@ -110,11 +123,11 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-
+    
     func bringVideos() -> [Comics] {
         return videos
     }
-
+    
     func fetchImagesData(compelation: @escaping (Bool) -> Void) {
         getImages(compelation: {result in
             switch result {
@@ -123,6 +136,10 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
                 if let dataReturned = data {
                     if let imagesComics = dataReturned.comics {
                         self.images = imagesComics
+                        for index in 0..<self.images.count {
+                            self.images[index].timeApart =
+                                self.getTimeApart(forPublishDate: self.images[index].publishDate ?? "")
+                        }
                         if(!self.materials.isEmpty) {
                             //check if the 9th element is of type images
                             if(self.materials[9].type != Materialtypes.images) {
@@ -142,7 +159,7 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-
+    
     func getImages(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getImages(completion: {result, _ in
             switch result {
@@ -154,11 +171,11 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-
+    
     func bringImages() -> [Comics] {
         return images
     }
-
+    
     func fetchArticlesData(compelation: @escaping (Bool) -> Void) {
         getArticles(compelation: {result in
             switch result {
@@ -185,7 +202,7 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-
+    
     func getArticles(compelation: @escaping (Result<Any, Error>) -> Void) {
         NetworkManager.shared.getArticles(completion: {result, _ in
             switch result {
@@ -197,8 +214,30 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             }
         })
     }
-
+    
     func bringArticles() -> [Materials] {
         return articles
+    }
+    
+    func getTimeApart(forPublishDate: String) -> String {
+        var timeApart = ""
+        if (forPublishDate != "") {
+            let dateFormatter: DateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm ss"
+            let publishingDate: Date = dateFormatter.date(from: forPublishDate ) ?? Date()
+            let current: String = dateFormatter.string(from: Date())
+            let currentDate: Date = dateFormatter.date(from: current) ?? Date()
+            let timeDifference = TimePeriod(beginning: publishingDate, end: currentDate)
+            if(timeDifference.years > 0) {
+                timeApart = timeDifference.years.years.earlier.timeAgoSinceNow
+            } else if (timeDifference.days > 30) {
+                let months = abs(timeDifference.days / 30 )
+                timeApart = months.months.earlier.timeAgoSinceNow
+            } else {
+                timeApart = timeDifference.days.days.earlier.timeAgoSinceNow
+            }
+            
+        }
+        return timeApart
     }
 }

@@ -45,6 +45,7 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
         cell.setTitle(text: article.title ?? "")
         cell.setNoOfViews(text: "\(article.noOfViews ?? 0)")
         cell.setImage(imageUrl: article.coverPhoto ?? "")
+        cell.setTimeApart(text: article.timeApart ?? "unknown")
         if let videosCount = article.videosCount {
             if (videosCount != 0) {
                 cell.shwoVideoImage(show: false)

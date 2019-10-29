@@ -22,6 +22,10 @@ class HeaderSliderCell: UICollectionViewCell {
 
     }
     
+    func setTimeApart(text: String) {
+        timingLabel.text = text
+    }
+    
     func setTitle(text: String) {
         title.text = text
     }
