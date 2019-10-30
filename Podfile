@@ -11,6 +11,7 @@ target 'SabkTrial' do
   pod 'DateToolsSwift'
   pod 'Localize-Swift'
   pod 'SwiftDate'
+  pod 'Windless'
 
   target 'SabkTrialTests' do
     inherit! :search_paths

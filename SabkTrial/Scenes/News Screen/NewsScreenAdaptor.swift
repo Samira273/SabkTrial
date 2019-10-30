@@ -29,10 +29,11 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return Sections.allCases.count
+        return 2//Sections.allCases.count
     }
     
     func constructSliderCell(table: UITableView, index: IndexPath) -> UITableViewCell {
+     
         guard let cell = table.dequeueReusableCell(withIdentifier: "SliderSectionCell", for: index)
             as? SliderSectionCell else { return UITableViewCell() }
         cell.slidersData = slidersData
@@ -83,38 +84,47 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
         cell.articlesAdaptor.articles = articlesData
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
-        if let sectionType = Sections(rawValue: indexPath.section) {
-            switch sectionType {
-            case .sliderSection:
-              return constructSliderCell(table: tableView, index: indexPath)
-            case .firstNewsSection:
-                let article = matrialsData[indexPath.row]
-                if (article.type == Materialtypes.news) {
-                    return constructNewsCell(article: matrialsData[indexPath.row], index: indexPath, table: tableView)
+            
+            if let sectionType = Sections(rawValue: indexPath.section) {
+                switch sectionType {
+                case .sliderSection:
+                    return constructSliderCell(table: tableView, index: indexPath)
+                case .firstNewsSection:
+                        let article = matrialsData[indexPath.row]
+                        if (article.type == Materialtypes.news) {
+                            return constructNewsCell(
+                                article:
+                                matrialsData[indexPath.row],
+                                index: indexPath,
+                                table: tableView)
+                        }
+                        if (article.type == Materialtypes.videos) {
+                            return constructVideosCell(index: indexPath, table: tableView)
+                        }
+                        if(article.type == Materialtypes.images) {
+                            return constructImagesCell(index: indexPath, table: tableView)
+                        }
+                        if(article.type == Materialtypes.articles) {
+                            return constructArticlesCell(index: indexPath, table: tableView)
+                        }
+                    }
                 }
-                if (article.type == Materialtypes.videos) {
-                 return constructVideosCell(index: indexPath, table: tableView)
-                }
-                if(article.type == Materialtypes.images) {
-                   return constructImagesCell(index: indexPath, table: tableView)
-                }
-                if(article.type == Materialtypes.articles) {
-                return constructArticlesCell(index: indexPath, table: tableView)
-                }
-            }
-        }
-        return UITableViewCell()
+            
+            return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if self.matrialsData.isEmpty {
+            return UITableView.automaticDimension
+        }
         if let sectionType = Sections(rawValue: indexPath.section) {
             switch sectionType {
             case .sliderSection:
-                return 400
+                return 450
             case .firstNewsSection:
                 let cellType = matrialsData[indexPath.row].type
                 switch cellType {

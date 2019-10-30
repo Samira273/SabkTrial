@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,14 +22,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FsK-zu-VRJ">
                                 <rect key="frame" x="0.0" y="0.0" width="275" height="249"/>
                             </imageView>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUM-GY-NKk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="block_layer" translatesAutoresizingMaskIntoConstraints="NO" id="Be1-fe-Mwq">
+                                <rect key="frame" x="0.0" y="0.0" width="275" height="249"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUM-GY-NKk">
                                 <rect key="frame" x="0.0" y="174.5" width="275" height="74.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_gallery" translatesAutoresizingMaskIntoConstraints="NO" id="JKt-Ex-BvC">
-                                        <rect key="frame" x="230" y="34.5" width="25" height="25"/>
+                                        <rect key="frame" x="230" y="24.5" width="25" height="25"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xds-Rp-wjz">
-                                        <rect key="frame" x="15" y="39" width="200" height="20.5"/>
+                                        <rect key="frame" x="15" y="34" width="200" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -43,28 +44,31 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="lcA-gg-qfe" firstAttribute="top" secondItem="rUM-GY-NKk" secondAttribute="top" constant="8" id="8PL-Fg-RBH"/>
                                     <constraint firstItem="xds-Rp-wjz" firstAttribute="leading" secondItem="rUM-GY-NKk" secondAttribute="leading" constant="15" id="AI1-AK-pRB"/>
-                                    <constraint firstAttribute="bottom" secondItem="JKt-Ex-BvC" secondAttribute="bottom" constant="15" id="T7x-Sf-pbz"/>
+                                    <constraint firstAttribute="bottom" secondItem="JKt-Ex-BvC" secondAttribute="bottom" constant="25" id="T7x-Sf-pbz"/>
                                     <constraint firstItem="lcA-gg-qfe" firstAttribute="leading" secondItem="rUM-GY-NKk" secondAttribute="leading" constant="42" id="WCG-za-aKt"/>
                                     <constraint firstAttribute="trailing" secondItem="JKt-Ex-BvC" secondAttribute="trailing" constant="20" id="YM1-Hq-dCv"/>
                                     <constraint firstAttribute="trailing" secondItem="lcA-gg-qfe" secondAttribute="trailing" constant="60" id="cwt-O4-JEV"/>
-                                    <constraint firstAttribute="bottom" secondItem="xds-Rp-wjz" secondAttribute="bottom" constant="15" id="exZ-ug-Wtx"/>
+                                    <constraint firstAttribute="bottom" secondItem="xds-Rp-wjz" secondAttribute="bottom" constant="20" id="exZ-ug-Wtx"/>
                                     <constraint firstItem="JKt-Ex-BvC" firstAttribute="leading" secondItem="xds-Rp-wjz" secondAttribute="trailing" constant="15" id="s8F-YP-VdP"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Be1-fe-Mwq" secondAttribute="trailing" id="3fl-ol-S4D"/>
                             <constraint firstAttribute="trailing" secondItem="rUM-GY-NKk" secondAttribute="trailing" id="IaK-0G-KKv"/>
+                            <constraint firstAttribute="bottom" secondItem="Be1-fe-Mwq" secondAttribute="bottom" id="K4U-8z-D7Z"/>
                             <constraint firstItem="rUM-GY-NKk" firstAttribute="height" secondItem="FsK-zu-VRJ" secondAttribute="height" multiplier="0.3" id="PAf-YZ-PsY"/>
                             <constraint firstAttribute="trailing" secondItem="FsK-zu-VRJ" secondAttribute="trailing" id="Qiy-Mn-TWp"/>
                             <constraint firstItem="FsK-zu-VRJ" firstAttribute="top" secondItem="8Hj-8g-VRq" secondAttribute="top" id="VkW-W4-mMD"/>
+                            <constraint firstItem="Be1-fe-Mwq" firstAttribute="top" secondItem="8Hj-8g-VRq" secondAttribute="top" id="cfG-le-IgP"/>
                             <constraint firstAttribute="bottom" secondItem="rUM-GY-NKk" secondAttribute="bottom" id="gMX-Uy-waz"/>
                             <constraint firstAttribute="bottom" secondItem="FsK-zu-VRJ" secondAttribute="bottom" id="hXc-sk-MAS"/>
                             <constraint firstItem="FsK-zu-VRJ" firstAttribute="leading" secondItem="8Hj-8g-VRq" secondAttribute="leading" id="ire-oP-wmD"/>
+                            <constraint firstItem="Be1-fe-Mwq" firstAttribute="leading" secondItem="8Hj-8g-VRq" secondAttribute="leading" id="lFL-yS-6XD"/>
                             <constraint firstItem="rUM-GY-NKk" firstAttribute="leading" secondItem="8Hj-8g-VRq" secondAttribute="leading" id="qWA-cy-8h2"/>
                         </constraints>
                     </view>
@@ -86,6 +90,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="block_layer" width="301" height="349"/>
         <image name="ic_gallery" width="25" height="25"/>
     </resources>
 </document>

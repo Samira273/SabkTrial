@@ -29,7 +29,7 @@ class NewsSectionCell: UITableViewCell {
         noOfViews.text = text
     }
     
-    func setTimeApart(text: String) {
+    func setTimeApart( text: String) {
         timeApart.text = text
     }
     
