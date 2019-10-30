@@ -18,13 +18,8 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
         super.viewDidLoad()
         newsTable.delegate = newsScreenAdaptor
         newsTable.dataSource = newsScreenAdaptor
-        newsTable.windless.apply {
-                          $0.beginTime = 1
-                          $0.pauseDuration = 2
-                          $0.duration = 3
-                          $0.animationLayerOpacity = 0.5
-            }.start()
         presenter = NewsScreenPresenter(view: self, model: NewsScreenModel())
+      //  newsTable.windless.start()
         presenter.loadData()
         newsTable.estimatedRowHeight = 100
        
@@ -65,6 +60,12 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
         newsTable.register(
             UINib(nibName: "ArticlesCell", bundle: nil),
             forCellReuseIdentifier: "ArticlesCell")
+        newsTable.register(
+                   UINib(nibName: "ShimmerNewsTableViewCell", bundle: nil),
+                   forCellReuseIdentifier: "ShimmerNewsTableViewCell")
+        newsTable.register(
+                          UINib(nibName: "ShimmerSliderTableViewCell", bundle: nil),
+                          forCellReuseIdentifier: "ShimmerSliderTableViewCell")
         
     }
     func showErrorMessage(title: String?, message: String?) {
@@ -74,7 +75,6 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
     func setSliders(sliders: [Slider]) {
         self.newsScreenAdaptor.slidersData = sliders
         self.newsTable.reloadData()
-        newsTable.windless.end()
     }
     func setMaterials(materials: [Materials]) {
         self.newsScreenAdaptor.matrialsData = materials

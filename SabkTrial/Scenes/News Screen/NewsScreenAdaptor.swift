@@ -22,9 +22,9 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
         }
         switch sectionType {
         case .sliderSection :
-            return self.slidersData.isEmpty ? 0 : 1
+            return self.slidersData.isEmpty ? 1 : 1
         case .firstNewsSection:
-            return self.matrialsData.isEmpty ? 0 : 20
+            return self.matrialsData.isEmpty ? 10 : 20
         }
     }
     
@@ -33,7 +33,7 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func constructSliderCell(table: UITableView, index: IndexPath) -> UITableViewCell {
-     
+        
         guard let cell = table.dequeueReusableCell(withIdentifier: "SliderSectionCell", for: index)
             as? SliderSectionCell else { return UITableViewCell() }
         cell.slidersData = slidersData
@@ -89,30 +89,51 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
                    cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
             
+            if(matrialsData.isEmpty) {
+                if let shimmerSectionType = Sections(rawValue: indexPath.section) {
+                    switch shimmerSectionType {
+                    case .sliderSection:
+                        guard let cell = tableView.dequeueReusableCell(
+                            withIdentifier: "ShimmerSliderTableViewCell",
+                            for: indexPath) as? ShimmerSliderTableViewCell else {
+                                print("failed to regester cell")
+                                return UITableViewCell()}
+                        return cell
+                    case .firstNewsSection:
+                        guard let cell = tableView.dequeueReusableCell(
+                            withIdentifier: "ShimmerNewsTableViewCell",
+                            for: indexPath) as? ShimmerNewsTableViewCell else {
+                                print("failed to regester cell")
+                                return UITableViewCell()}
+                        return cell
+                    }
+                }
+            }
+ 
             if let sectionType = Sections(rawValue: indexPath.section) {
                 switch sectionType {
                 case .sliderSection:
                     return constructSliderCell(table: tableView, index: indexPath)
                 case .firstNewsSection:
-                        let article = matrialsData[indexPath.row]
-                        if (article.type == Materialtypes.news) {
-                            return constructNewsCell(
-                                article:
-                                matrialsData[indexPath.row],
-                                index: indexPath,
-                                table: tableView)
-                        }
-                        if (article.type == Materialtypes.videos) {
-                            return constructVideosCell(index: indexPath, table: tableView)
-                        }
-                        if(article.type == Materialtypes.images) {
-                            return constructImagesCell(index: indexPath, table: tableView)
-                        }
-                        if(article.type == Materialtypes.articles) {
-                            return constructArticlesCell(index: indexPath, table: tableView)
-                        }
+                    let article = matrialsData[indexPath.row]
+                    if (article.type == Materialtypes.news) {
+                        return constructNewsCell(
+                            article:
+                            matrialsData[indexPath.row],
+                            index: indexPath,
+                            table: tableView)
+                    }
+                    if (article.type == Materialtypes.videos) {
+                        return constructVideosCell(index: indexPath, table: tableView)
+                    }
+                    if(article.type == Materialtypes.images) {
+                        return constructImagesCell(index: indexPath, table: tableView)
+                    }
+                    if(article.type == Materialtypes.articles) {
+                        return constructArticlesCell(index: indexPath, table: tableView)
                     }
                 }
+            }
             
             return UITableViewCell()
     }
