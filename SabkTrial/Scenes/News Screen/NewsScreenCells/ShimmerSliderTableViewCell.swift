@@ -19,26 +19,26 @@ class ShimmerSliderTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
        discrp.windless.apply {
-           $0.beginTime = 1
-           $0.pauseDuration = 2
-           $0.duration = 3
-           $0.animationLayerOpacity = 0.5
+          $0.beginTime = 1
+          $0.pauseDuration = 1
+          $0.duration = 3
+          $0.animationLayerOpacity = 0.8
        }
        .start()
 
         img.windless.apply {
-            $0.beginTime = 1
-            $0.pauseDuration = 2
-            $0.duration = 3
-            $0.animationLayerOpacity = 0.5
+             $0.beginTime = 1
+             $0.pauseDuration = 1
+             $0.duration = 3
+             $0.animationLayerOpacity = 0.8
         }
         .start()
         
         title.windless.apply {
-            $0.beginTime = 1
-            $0.pauseDuration = 2
-            $0.duration = 3
-            $0.animationLayerOpacity = 0.5
+           $0.beginTime = 1
+           $0.pauseDuration = 1
+           $0.duration = 3
+           $0.animationLayerOpacity = 0.8
         }
         .start()
     }

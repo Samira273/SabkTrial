@@ -21,28 +21,21 @@ class ShimmerNewsTableViewCell: UITableViewCell {
         super.awakeFromNib()
       img.windless.apply {
           $0.beginTime = 1
-          $0.pauseDuration = 2
+          $0.pauseDuration = 1
           $0.duration = 3
-          $0.animationLayerOpacity = 0.5
+          $0.animationLayerOpacity = 0.8
       }
       .start()
         
     labelOne.windless.apply {
         $0.beginTime = 1
-        $0.pauseDuration = 2
+        $0.pauseDuration = 1
         $0.duration = 3
-        $0.animationLayerOpacity = 0.5
+        $0.animationLayerOpacity = 0.8
     }
     .start()
-    
-        
-//        labelOne.windless.apply {
-//            $0.beginTime = 1
-//            $0.pauseDuration = 2
-//            $0.duration = 3
-//            $0.animationLayerOpacity = 0.5
-//        }
-//        .start()
+        labelOne.spacing = 5
+      
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

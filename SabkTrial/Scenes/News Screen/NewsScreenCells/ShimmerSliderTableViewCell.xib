@@ -27,7 +27,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;أديب&quot; يحاول أن يفهم محمد بن سلمان.. هنا تختفي ابتسامته وهذا ما ينتظر إيران بعد &quot;الفجيرة&quot;" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJJ-bw-DUk">
-                                <rect key="frame" x="8" y="283" width="401" height="41"/>
+                                <rect key="frame" x="8" y="283" width="399" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,7 +39,10 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-fY-nYO">
-                                <rect key="frame" x="8" y="339" width="401" height="67.5"/>
+                                <rect key="frame" x="8" y="355.5" width="399" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="r4U-9U-JXR"/>
+                                </constraints>
                                 <string key="text">"أديب" يحاول أن يفهم محمد بن سلمان.. هنا تختفي ابتسامته وهذا ما ينتظر إيران بعد "الفجيرة""أديب" يحاول أن يفهم محمد بن سلمان.. هنا تختفي ابتسامته وهذا ما ينتظر إيران بعد "الفجيرة"</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -54,25 +57,24 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5YW-P1-Ksq" firstAttribute="leading" secondItem="Oc3-Rn-7JC" secondAttribute="leading" id="2tf-dd-utu"/>
-                            <constraint firstItem="5YW-P1-Ksq" firstAttribute="height" secondItem="Oc3-Rn-7JC" secondAttribute="height" multiplier="0.6" id="Ec1-1z-JLI"/>
-                            <constraint firstItem="wJJ-bw-DUk" firstAttribute="leading" secondItem="Oc3-Rn-7JC" secondAttribute="leading" constant="8" id="EgO-7c-iPp"/>
-                            <constraint firstItem="wJJ-bw-DUk" firstAttribute="top" secondItem="5YW-P1-Ksq" secondAttribute="bottom" constant="15" id="HFG-ED-O0N"/>
-                            <constraint firstItem="CW3-fY-nYO" firstAttribute="leading" secondItem="Oc3-Rn-7JC" secondAttribute="leading" constant="8" id="MrV-dd-g5J"/>
-                            <constraint firstAttribute="trailing" secondItem="5YW-P1-Ksq" secondAttribute="trailing" id="QW4-Sq-j3v"/>
-                            <constraint firstItem="5YW-P1-Ksq" firstAttribute="top" secondItem="Oc3-Rn-7JC" secondAttribute="top" id="ddL-Ot-zQO"/>
-                            <constraint firstItem="CW3-fY-nYO" firstAttribute="height" secondItem="Oc3-Rn-7JC" secondAttribute="height" multiplier="0.15" id="hSB-kp-Rc7"/>
-                            <constraint firstItem="CW3-fY-nYO" firstAttribute="top" secondItem="wJJ-bw-DUk" secondAttribute="bottom" constant="15" id="ugm-II-xZn"/>
-                            <constraint firstAttribute="trailing" secondItem="wJJ-bw-DUk" secondAttribute="trailing" constant="8" id="y07-cP-NB0"/>
-                            <constraint firstAttribute="trailing" secondItem="CW3-fY-nYO" secondAttribute="trailing" constant="8" id="ybS-mE-Ywy"/>
+                            <constraint firstAttribute="trailing" secondItem="5YW-P1-Ksq" secondAttribute="trailing" id="SFt-va-3Pk"/>
+                            <constraint firstItem="5YW-P1-Ksq" firstAttribute="top" secondItem="Oc3-Rn-7JC" secondAttribute="top" id="Sad-88-cEu"/>
+                            <constraint firstItem="5YW-P1-Ksq" firstAttribute="leading" secondItem="Oc3-Rn-7JC" secondAttribute="leading" id="Tbc-5E-vTi"/>
+                            <constraint firstAttribute="trailing" secondItem="wJJ-bw-DUk" secondAttribute="trailing" constant="10" id="UJl-Cp-XWk"/>
+                            <constraint firstItem="wJJ-bw-DUk" firstAttribute="top" secondItem="5YW-P1-Ksq" secondAttribute="bottom" constant="15" id="Uwg-wO-oKY"/>
+                            <constraint firstAttribute="trailing" secondItem="CW3-fY-nYO" secondAttribute="trailing" constant="10" id="a0f-nb-kpa"/>
+                            <constraint firstItem="wJJ-bw-DUk" firstAttribute="leading" secondItem="Oc3-Rn-7JC" secondAttribute="leading" constant="8" id="hcT-gf-XoA"/>
+                            <constraint firstItem="5YW-P1-Ksq" firstAttribute="height" secondItem="Oc3-Rn-7JC" secondAttribute="height" multiplier="0.6" id="loT-W4-ynl"/>
+                            <constraint firstItem="CW3-fY-nYO" firstAttribute="top" secondItem="wJJ-bw-DUk" secondAttribute="bottom" constant="31.5" id="pcl-28-E3d"/>
+                            <constraint firstItem="CW3-fY-nYO" firstAttribute="leading" secondItem="Oc3-Rn-7JC" secondAttribute="leading" constant="8" id="wJZ-hv-Ua5"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Oc3-Rn-7JC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CRN-K7-PIC"/>
-                    <constraint firstAttribute="bottom" secondItem="Oc3-Rn-7JC" secondAttribute="bottom" id="ON8-I6-WCT"/>
-                    <constraint firstItem="Oc3-Rn-7JC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fYL-Tr-WYH"/>
-                    <constraint firstAttribute="trailing" secondItem="Oc3-Rn-7JC" secondAttribute="trailing" id="swB-mK-alh"/>
+                    <constraint firstAttribute="trailing" secondItem="Oc3-Rn-7JC" secondAttribute="trailing" id="6fu-wi-kjH"/>
+                    <constraint firstItem="Oc3-Rn-7JC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Pw4-LV-JLB"/>
+                    <constraint firstItem="Oc3-Rn-7JC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UKR-FK-tds"/>
+                    <constraint firstAttribute="bottom" secondItem="Oc3-Rn-7JC" secondAttribute="bottom" id="t0q-QU-F0z"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
