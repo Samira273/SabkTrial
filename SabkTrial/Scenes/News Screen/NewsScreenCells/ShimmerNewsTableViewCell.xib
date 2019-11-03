@@ -22,9 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcp-WF-ddW">
-                                <rect key="frame" x="113" y="15" width="286" height="70"/>
+                                <rect key="frame" x="155" y="15" width="244" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="81E-2o-2nY"/>
+                                    <constraint firstAttribute="width" constant="244" id="pUP-pk-5g7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -51,7 +52,6 @@
                             <constraint firstItem="gcp-WF-ddW" firstAttribute="top" secondItem="rVL-Uq-bdH" secondAttribute="top" constant="15" id="F3J-oL-ZOP"/>
                             <constraint firstItem="qaZ-pj-F4T" firstAttribute="top" secondItem="rVL-Uq-bdH" secondAttribute="top" constant="10" id="L9X-mt-hX5"/>
                             <constraint firstItem="qaZ-pj-F4T" firstAttribute="leading" secondItem="rVL-Uq-bdH" secondAttribute="leading" constant="15" id="U1L-hB-5yA"/>
-                            <constraint firstItem="gcp-WF-ddW" firstAttribute="leading" secondItem="qaZ-pj-F4T" secondAttribute="trailing" constant="15" id="cBI-KI-OAr"/>
                             <constraint firstAttribute="bottom" secondItem="qaZ-pj-F4T" secondAttribute="bottom" constant="10" id="h12-5T-UJh"/>
                             <constraint firstAttribute="bottom" secondItem="gcp-WF-ddW" secondAttribute="bottom" constant="15" id="kFU-fg-eXE"/>
                             <constraint firstAttribute="trailing" secondItem="gcp-WF-ddW" secondAttribute="trailing" constant="15" id="p40-fO-rOl"/>

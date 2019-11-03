@@ -80,6 +80,9 @@
                                     <constraint firstItem="i2h-8b-7XA" firstAttribute="leading" secondItem="GpJ-ad-doi" secondAttribute="trailing" constant="61" id="tDR-aq-efo"/>
                                 </constraints>
                             </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-pc-vwc">
+                                <rect key="frame" x="187.5" y="231" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
@@ -88,6 +91,8 @@
                             <constraint firstAttribute="trailing" secondItem="Uhk-L8-bbC" secondAttribute="trailing" constant="20" id="89E-ER-jdX"/>
                             <constraint firstItem="gcD-Xw-44d" firstAttribute="top" secondItem="Sea-hX-AIZ" secondAttribute="bottom" constant="4.5" id="KYn-Sm-rs4"/>
                             <constraint firstItem="gcD-Xw-44d" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" constant="20" id="Mag-cb-wlO"/>
+                            <constraint firstItem="aTf-pc-vwc" firstAttribute="centerX" secondItem="Tfo-JM-OKD" secondAttribute="centerX" id="Nc1-19-GiB"/>
+                            <constraint firstItem="aTf-pc-vwc" firstAttribute="bottom" secondItem="Sea-hX-AIZ" secondAttribute="bottom" id="UiV-DB-qmh"/>
                             <constraint firstAttribute="trailing" secondItem="dHs-yQ-VTC" secondAttribute="trailing" id="VPF-6k-WDU"/>
                             <constraint firstItem="Uhk-L8-bbC" firstAttribute="leading" secondItem="Tfo-JM-OKD" secondAttribute="leading" constant="20" id="XQP-aG-LxC"/>
                             <constraint firstAttribute="trailing" secondItem="dHs-yQ-VTC" secondAttribute="trailing" id="acf-mM-TCa"/>
@@ -114,6 +119,7 @@
                 <outlet property="coverPhoto" destination="Sea-hX-AIZ" id="bQJ-nc-KEK"/>
                 <outlet property="discriptionText" destination="Uhk-L8-bbC" id="eL3-tm-EWX"/>
                 <outlet property="hotviewsNumberLabel" destination="GjM-qQ-nmi" id="Xk5-3b-J2w"/>
+                <outlet property="sliderPager" destination="aTf-pc-vwc" id="FKM-hO-VE7"/>
                 <outlet property="timingLabel" destination="GpJ-ad-doi" id="pko-h5-Im6"/>
                 <outlet property="title" destination="gcD-Xw-44d" id="Gpt-6F-fLJ"/>
             </connections>

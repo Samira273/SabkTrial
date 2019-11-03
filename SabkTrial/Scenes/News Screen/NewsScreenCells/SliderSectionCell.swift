@@ -30,6 +30,7 @@ UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         cell.setCoverPhoto(imageURL: slider.coverPhoto ?? "")
         cell.setHotViewsNumber(text: "\(slider.noOfViews ?? 0)")
         cell.setTimeApart(text: slider.timeApart ?? "unknown")
+        cell.setCurrentPage(page: indexPath.row)
         return cell
     }
 
@@ -54,6 +55,8 @@ UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         let nib = UINib(nibName: "HeaderSliderCell", bundle: nil)
         sliderCollection.register(nib, forCellWithReuseIdentifier: "HeaderSliderCell")
         self.sliderCollection.isPagingEnabled = true
+        self.sliderCollection.showsVerticalScrollIndicator = false
+        self.sliderCollection.showsHorizontalScrollIndicator = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

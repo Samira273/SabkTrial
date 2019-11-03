@@ -19,10 +19,11 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
         newsTable.delegate = newsScreenAdaptor
         newsTable.dataSource = newsScreenAdaptor
         presenter = NewsScreenPresenter(view: self, model: NewsScreenModel())
-      //  newsTable.windless.start()
+        newsTable.showsHorizontalScrollIndicator = false
+        newsTable.showsVerticalScrollIndicator = false
         presenter.loadData()
         newsTable.estimatedRowHeight = 100
-       
+        
         newsTable.rowHeight = UITableView.automaticDimension
         registerTableCells()
         //right bar button item
@@ -61,11 +62,11 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
             UINib(nibName: "ArticlesCell", bundle: nil),
             forCellReuseIdentifier: "ArticlesCell")
         newsTable.register(
-                   UINib(nibName: "ShimmerNewsTableViewCell", bundle: nil),
-                   forCellReuseIdentifier: "ShimmerNewsTableViewCell")
+            UINib(nibName: "ShimmerNewsTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "ShimmerNewsTableViewCell")
         newsTable.register(
-                          UINib(nibName: "ShimmerSliderTableViewCell", bundle: nil),
-                          forCellReuseIdentifier: "ShimmerSliderTableViewCell")
+            UINib(nibName: "ShimmerSliderTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "ShimmerSliderTableViewCell")
         
     }
     func showErrorMessage(title: String?, message: String?) {

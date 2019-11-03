@@ -24,13 +24,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kwx-Jh-vYE">
                                 <rect key="frame" x="20" y="0.0" width="160" height="240"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play" translatesAutoresizingMaskIntoConstraints="NO" id="YIF-jl-Aj9">
-                                <rect key="frame" x="20" y="0.0" width="30" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="Ucw-Cy-7oZ"/>
-                                    <constraint firstAttribute="height" constant="28" id="qSF-rO-No9"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSD-LD-FS2">
                                 <rect key="frame" x="20" y="240" width="160" height="103"/>
                                 <subviews>
@@ -65,20 +58,26 @@
                                     <constraint firstItem="bMo-2T-CDo" firstAttribute="leading" secondItem="uSD-LD-FS2" secondAttribute="leading" constant="8" id="ukD-up-hB4"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play" translatesAutoresizingMaskIntoConstraints="NO" id="YIF-jl-Aj9">
+                                <rect key="frame" x="150" y="0.0" width="30" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="14I-WI-dge"/>
+                                    <constraint firstAttribute="height" constant="28" id="pNo-xF-ilj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="videos_background"/>
                         <constraints>
-                            <constraint firstItem="YIF-jl-Aj9" firstAttribute="leading" secondItem="Kwx-Jh-vYE" secondAttribute="leading" id="1hr-Hj-2UD"/>
                             <constraint firstItem="Kwx-Jh-vYE" firstAttribute="leading" secondItem="NSr-Ff-i6p" secondAttribute="leading" constant="20" id="7Wd-QP-eOk"/>
+                            <constraint firstItem="YIF-jl-Aj9" firstAttribute="top" secondItem="Kwx-Jh-vYE" secondAttribute="top" id="Bw1-ra-Q4z"/>
+                            <constraint firstItem="YIF-jl-Aj9" firstAttribute="trailing" secondItem="Kwx-Jh-vYE" secondAttribute="trailing" id="N6N-w4-xfd"/>
                             <constraint firstAttribute="trailing" secondItem="Kwx-Jh-vYE" secondAttribute="trailing" constant="20" id="a6n-hn-wPz"/>
                             <constraint firstItem="uSD-LD-FS2" firstAttribute="height" secondItem="NSr-Ff-i6p" secondAttribute="height" multiplier="0.3" id="bbS-WA-ggj"/>
-                            <constraint firstItem="YIF-jl-Aj9" firstAttribute="top" secondItem="Kwx-Jh-vYE" secondAttribute="top" id="cdL-Ww-z5b"/>
                             <constraint firstAttribute="trailing" secondItem="uSD-LD-FS2" secondAttribute="trailing" constant="20" id="eak-aV-ki3"/>
                             <constraint firstItem="uSD-LD-FS2" firstAttribute="top" secondItem="Kwx-Jh-vYE" secondAttribute="bottom" id="ic7-Bu-MFk"/>
                             <constraint firstAttribute="bottom" secondItem="uSD-LD-FS2" secondAttribute="bottom" id="j63-j7-s7g"/>
                             <constraint firstItem="Kwx-Jh-vYE" firstAttribute="top" secondItem="NSr-Ff-i6p" secondAttribute="top" id="lsI-DP-lZU"/>
                             <constraint firstItem="uSD-LD-FS2" firstAttribute="leading" secondItem="NSr-Ff-i6p" secondAttribute="leading" constant="20" id="tBs-7n-fKC"/>
-                            <constraint firstItem="YIF-jl-Aj9" firstAttribute="firstBaseline" secondItem="Kwx-Jh-vYE" secondAttribute="firstBaseline" id="y2g-3F-EBV"/>
                             <constraint firstItem="Kwx-Jh-vYE" firstAttribute="centerX" secondItem="NSr-Ff-i6p" secondAttribute="centerX" id="yLS-Jn-MqZ"/>
                         </constraints>
                     </view>

@@ -85,31 +85,36 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func prepareShimmerForSection(index: IndexPath, table: UITableView) -> UITableViewCell {
+        if let shimmerSectionType = Sections(rawValue: index.section) {
+            switch shimmerSectionType {
+            case .sliderSection:
+                guard let cell = table.dequeueReusableCell(
+                    withIdentifier: "ShimmerSliderTableViewCell",
+                    for: index) as? ShimmerSliderTableViewCell else {
+                        print("failed to regester cell")
+                        return UITableViewCell()}
+                return cell
+            case .firstNewsSection:
+                guard let cell = table.dequeueReusableCell(
+                    withIdentifier: "ShimmerNewsTableViewCell",
+                    for: index) as? ShimmerNewsTableViewCell else {
+                        print("failed to regester cell")
+                        return UITableViewCell()}
+                return cell
+            }
+        }
+        return UITableViewCell()
+    }
+    
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
             
             if(matrialsData.isEmpty) {
-                if let shimmerSectionType = Sections(rawValue: indexPath.section) {
-                    switch shimmerSectionType {
-                    case .sliderSection:
-                        guard let cell = tableView.dequeueReusableCell(
-                            withIdentifier: "ShimmerSliderTableViewCell",
-                            for: indexPath) as? ShimmerSliderTableViewCell else {
-                                print("failed to regester cell")
-                                return UITableViewCell()}
-                        return cell
-                    case .firstNewsSection:
-                        guard let cell = tableView.dequeueReusableCell(
-                            withIdentifier: "ShimmerNewsTableViewCell",
-                            for: indexPath) as? ShimmerNewsTableViewCell else {
-                                print("failed to regester cell")
-                                return UITableViewCell()}
-                        return cell
-                    }
-                }
+                return prepareShimmerForSection(index: indexPath, table: tableView)
             }
- 
+            
             if let sectionType = Sections(rawValue: indexPath.section) {
                 switch sectionType {
                 case .sliderSection:

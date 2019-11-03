@@ -27,21 +27,21 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BVQ-zk-VgI">
                                         <rect key="frame" x="12" y="10" width="83" height="80"/>
                                     </imageView>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play" translatesAutoresizingMaskIntoConstraints="NO" id="C2b-mK-Jwq">
-                                        <rect key="frame" x="12" y="10" width="16.5" height="16"/>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_play" translatesAutoresizingMaskIntoConstraints="NO" id="C2b-mK-Jwq">
+                                        <rect key="frame" x="79" y="10" width="16.5" height="16"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="background"/>
                                 <constraints>
-                                    <constraint firstItem="C2b-mK-Jwq" firstAttribute="height" secondItem="BVQ-zk-VgI" secondAttribute="height" multiplier="0.2" id="0iO-CH-ZEf"/>
                                     <constraint firstItem="BVQ-zk-VgI" firstAttribute="width" secondItem="fVd-bh-4mm" secondAttribute="width" multiplier="0.8" id="115-EA-2up"/>
-                                    <constraint firstItem="C2b-mK-Jwq" firstAttribute="leading" secondItem="BVQ-zk-VgI" secondAttribute="leading" id="AFD-Rt-3Kj"/>
                                     <constraint firstItem="BVQ-zk-VgI" firstAttribute="leading" secondItem="fVd-bh-4mm" secondAttribute="leading" constant="12" id="OV0-C4-gI5"/>
-                                    <constraint firstItem="C2b-mK-Jwq" firstAttribute="top" secondItem="BVQ-zk-VgI" secondAttribute="top" id="WUl-by-knZ"/>
                                     <constraint firstItem="BVQ-zk-VgI" firstAttribute="top" secondItem="fVd-bh-4mm" secondAttribute="top" constant="10" id="ZUF-l5-dWV"/>
+                                    <constraint firstItem="C2b-mK-Jwq" firstAttribute="top" secondItem="BVQ-zk-VgI" secondAttribute="top" id="fcU-tU-I35"/>
                                     <constraint firstItem="BVQ-zk-VgI" firstAttribute="height" secondItem="fVd-bh-4mm" secondAttribute="height" multiplier="0.8" id="ido-3R-BBn"/>
-                                    <constraint firstItem="C2b-mK-Jwq" firstAttribute="width" secondItem="BVQ-zk-VgI" secondAttribute="width" multiplier="0.2" id="oLA-h3-7sl"/>
+                                    <constraint firstItem="C2b-mK-Jwq" firstAttribute="width" secondItem="BVQ-zk-VgI" secondAttribute="width" multiplier="0.2" id="ku1-G7-1yc"/>
+                                    <constraint firstItem="C2b-mK-Jwq" firstAttribute="height" secondItem="BVQ-zk-VgI" secondAttribute="height" multiplier="0.2" id="pga-ZM-pVS"/>
                                     <constraint firstAttribute="bottom" secondItem="BVQ-zk-VgI" secondAttribute="bottom" constant="10" id="qUH-Ot-umc"/>
+                                    <constraint firstItem="C2b-mK-Jwq" firstAttribute="trailing" secondItem="BVQ-zk-VgI" secondAttribute="trailing" id="qhZ-J7-Bgo"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6u-b1-3ud">
