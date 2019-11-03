@@ -31,7 +31,7 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
         button.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
         //button.addTarget(target, action: nil, for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: button)
-        self.navigationItem.rightBarButtonItem = barButtonItem
+        self.navigationItem.leftBarButtonItem = barButtonItem
         //central image in bar
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
         imageView.contentMode = .scaleAspectFit
@@ -39,7 +39,7 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
         imageView.image = image
         self.navigationItem.titleView = imageView
         
-        //Make: add left bar button item
+        //Make: add right bar button item
         
     }
     

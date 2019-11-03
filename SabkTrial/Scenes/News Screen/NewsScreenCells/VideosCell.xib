@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Bzy-DQ-aa1">
-                        <rect key="frame" x="0.0" y="54" width="414" height="306"/>
+                        <rect key="frame" x="0.0" y="27" width="414" height="306"/>
                         <color key="backgroundColor" name="videos_background"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fnj-OJ-396">
                             <size key="itemSize" width="50" height="50"/>
@@ -31,23 +31,14 @@
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="umU-xC-EXc"/>
                         </connections>
                     </collectionView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المزيد" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zc-QP-PrZ">
-                        <rect key="frame" x="26" y="16" width="49" height="22"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                        <color key="textColor" red="0.21026731263343035" green="0.43625397536136501" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <color key="backgroundColor" name="videos_background"/>
                 <constraints>
-                    <constraint firstItem="Bzy-DQ-aa1" firstAttribute="top" secondItem="0zc-QP-PrZ" secondAttribute="bottom" constant="16" id="8NS-ab-Vny"/>
                     <constraint firstItem="Bzy-DQ-aa1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gyl-zY-4NJ"/>
-                    <constraint firstAttribute="bottom" secondItem="Bzy-DQ-aa1" secondAttribute="bottom" id="IBZ-Uk-KKu"/>
                     <constraint firstItem="Bzy-DQ-aa1" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="IM9-bs-zUl"/>
                     <constraint firstItem="Bzy-DQ-aa1" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.85" id="Lxb-FL-f0m"/>
                     <constraint firstAttribute="trailing" secondItem="Bzy-DQ-aa1" secondAttribute="trailing" id="RvN-t1-hKW"/>
-                    <constraint firstItem="0zc-QP-PrZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="Wqd-vb-RmH"/>
-                    <constraint firstItem="0zc-QP-PrZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="tfd-vb-E80"/>
+                    <constraint firstAttribute="bottom" secondItem="Bzy-DQ-aa1" secondAttribute="bottom" constant="27" id="kq9-0O-x2C"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

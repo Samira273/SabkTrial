@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfo-JM-OKD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="447"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="&quot;أديب&quot; يحاول أن يفهم محمد بن سلمان.. هنا تختفي ابتسامته وهذا ما ينتظر إيران بعد &quot;الفجيرة&quot;" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcD-Xw-44d">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="&quot;أديب&quot; يحاول أن يفهم محمد بن سلمان.. هنا تختفي ابتسامته وهذا ما ينتظر إيران بعد &quot;الفجيرة&quot;" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcD-Xw-44d">
                                 <rect key="frame" x="20" y="272.5" width="375" height="57"/>
                                 <color key="textColor" name="title_color"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -30,9 +30,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_slider" translatesAutoresizingMaskIntoConstraints="NO" id="Sea-hX-AIZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="268"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-L8-bbC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhk-L8-bbC">
                                 <rect key="frame" x="20" y="344.5" width="374" height="50.5"/>
-                                <mutableString key="text">في مقال مطول حاول الكاتب المصري الشهير عماد الدين أديب رسم صورة عن قرب لولي العهد الأمير محمد بن سلمان، عارضاً رؤيته للمشهد السعودي الحالي، ومحاولاً أن يضع نقاطاً محددة تحدد ملامح شخصية الأمير الذي قال عنه: "يحسن الإنصات والاستماع والتعلم والاستشارة، وتزعجه 3 أمور، ويسابق الزمن بشكل مستمر مؤمناً بأن زمن السعودية المجاملة يجب أن ينتقل من المساندة من الخطوط الخلفية إلى صدر المواجهات في العلن، فهو يعمل 18 ساعة يومياً يصل الليل بالنهار، يقطع المنطقة والعالم ذهاباً وإياباً من أجل النجاح، وتحقيق ثقة مليك البلاد فيه، وثقة الأب في الابن، والشعب في ولي العهد.</mutableString>
+                                <string key="text">في مقال مطول حاول الكاتب المصري الشهير عماد الدين أديب رسم صورة عن قرب لولي العهد الأمير محمد بن سلمان، عارضاً رؤيته للمشهد السعودي الحالي، ومحاولاً أن يضع نقاطاً محددة تحدد ملامح شخصية الأمير الذي قال عنه: "يحسن الإنصات والاستماع والتعلم والاستشارة، وتزعجه 3 أمور، ويسابق الزمن بشكل مستمر مؤمناً بأن زمن السعودية المجاملة يجب أن ينتقل من المساندة من الخطوط الخلفية إلى صدر المواجهات في العلن، فهو يعمل 18 ساعة يومياً يصل الليل بالنهار، يقطع المنطقة والعالم ذهاباً وإياباً من أجل النجاح، وتحقيق ثقة مليك البلاد فيه، وثقة الأب في الابن، والشعب في ولي العهد.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="description_color"/>
                                 <nil key="highlightedColor"/>
@@ -41,44 +41,43 @@
                                 <rect key="frame" x="0.0" y="375" width="414" height="72"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_time" translatesAutoresizingMaskIntoConstraints="NO" id="khx-Zq-4Ct">
-                                        <rect key="frame" x="338" y="16" width="30" height="36"/>
+                                        <rect key="frame" x="21" y="16" width="30" height="36"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="منذ ساعة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpJ-ad-doi">
-                                        <rect key="frame" x="281" y="16" width="49" height="37"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.69291073964049776" green="0.69291073964049776" blue="0.69291073964049776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_views_icon_hot" translatesAutoresizingMaskIntoConstraints="NO" id="i2h-8b-7XA">
-                                        <rect key="frame" x="198" y="14" width="22" height="41"/>
+                                        <rect key="frame" x="178" y="16" width="22" height="41"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-qQ-nmi">
-                                        <rect key="frame" x="151" y="16" width="39" height="37"/>
+                                        <rect key="frame" x="208" y="18" width="39" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.69291073960000005" green="0.69291073960000005" blue="0.69291073960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_save" translatesAutoresizingMaskIntoConstraints="NO" id="3OJ-Tj-oyp">
-                                        <rect key="frame" x="28" y="11" width="34" height="42"/>
+                                        <rect key="frame" x="335" y="18" width="34" height="42"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="منذ ساعة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpJ-ad-doi">
+                                        <rect key="frame" x="68" y="17" width="49" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.69291073964049776" green="0.69291073964049776" blue="0.69291073964049776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="background"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="i2h-8b-7XA" secondAttribute="bottom" constant="17" id="32f-48-sFH"/>
-                                    <constraint firstItem="i2h-8b-7XA" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="14" id="5Ad-Rf-ohv"/>
-                                    <constraint firstAttribute="bottom" secondItem="GpJ-ad-doi" secondAttribute="bottom" constant="19" id="9pY-9z-FjO"/>
-                                    <constraint firstAttribute="trailing" secondItem="khx-Zq-4Ct" secondAttribute="trailing" constant="46" id="Cia-49-ljI"/>
-                                    <constraint firstItem="3OJ-Tj-oyp" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="11" id="Cjk-p8-ptF"/>
-                                    <constraint firstItem="3OJ-Tj-oyp" firstAttribute="leading" secondItem="dHs-yQ-VTC" secondAttribute="leading" constant="28" id="EZE-1t-Ene"/>
-                                    <constraint firstAttribute="bottom" secondItem="GjM-qQ-nmi" secondAttribute="bottom" constant="19" id="I16-DK-AG6"/>
-                                    <constraint firstAttribute="bottom" secondItem="3OJ-Tj-oyp" secondAttribute="bottom" constant="19" id="L2L-uc-ZPf"/>
-                                    <constraint firstItem="GjM-qQ-nmi" firstAttribute="leading" secondItem="3OJ-Tj-oyp" secondAttribute="trailing" constant="89" id="O1m-ZC-3Zu"/>
-                                    <constraint firstItem="GjM-qQ-nmi" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="cbR-bM-hnm"/>
-                                    <constraint firstAttribute="bottom" secondItem="khx-Zq-4Ct" secondAttribute="bottom" constant="20" id="ga8-iO-r56"/>
-                                    <constraint firstItem="khx-Zq-4Ct" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="pAF-sP-uty"/>
-                                    <constraint firstItem="khx-Zq-4Ct" firstAttribute="leading" secondItem="GpJ-ad-doi" secondAttribute="trailing" constant="8" id="pys-Dt-cdo"/>
-                                    <constraint firstItem="i2h-8b-7XA" firstAttribute="leading" secondItem="GjM-qQ-nmi" secondAttribute="trailing" constant="8" id="vYR-nU-FxG"/>
-                                    <constraint firstItem="GpJ-ad-doi" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="yKP-9a-Pe3"/>
+                                    <constraint firstItem="khx-Zq-4Ct" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="2Su-xX-Mm1"/>
+                                    <constraint firstItem="i2h-8b-7XA" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="16" id="2fn-VN-apq"/>
+                                    <constraint firstItem="GpJ-ad-doi" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="17" id="AOs-nl-yuc"/>
+                                    <constraint firstItem="GpJ-ad-doi" firstAttribute="leading" secondItem="khx-Zq-4Ct" secondAttribute="trailing" constant="17" id="COK-Gk-v56"/>
+                                    <constraint firstItem="GjM-qQ-nmi" firstAttribute="leading" secondItem="i2h-8b-7XA" secondAttribute="trailing" constant="8" id="HAO-l8-laR"/>
+                                    <constraint firstItem="3OJ-Tj-oyp" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="18" id="RPu-QD-r3f"/>
+                                    <constraint firstAttribute="trailing" secondItem="3OJ-Tj-oyp" secondAttribute="trailing" constant="45" id="ZA0-vx-0wV"/>
+                                    <constraint firstAttribute="bottom" secondItem="3OJ-Tj-oyp" secondAttribute="bottom" constant="12" id="ZB0-3m-PHf"/>
+                                    <constraint firstAttribute="bottom" secondItem="GjM-qQ-nmi" secondAttribute="bottom" constant="17" id="fQV-j1-Y1M"/>
+                                    <constraint firstAttribute="bottom" secondItem="i2h-8b-7XA" secondAttribute="bottom" constant="15" id="i65-EP-YMs"/>
+                                    <constraint firstItem="GjM-qQ-nmi" firstAttribute="top" secondItem="dHs-yQ-VTC" secondAttribute="top" constant="18" id="mg2-ux-NTA"/>
+                                    <constraint firstItem="khx-Zq-4Ct" firstAttribute="leading" secondItem="dHs-yQ-VTC" secondAttribute="leading" constant="21" id="nyC-kF-7Cs"/>
+                                    <constraint firstAttribute="bottom" secondItem="khx-Zq-4Ct" secondAttribute="bottom" constant="20" id="rXW-Pm-D6s"/>
+                                    <constraint firstItem="i2h-8b-7XA" firstAttribute="leading" secondItem="GpJ-ad-doi" secondAttribute="trailing" constant="61" id="tDR-aq-efo"/>
                                 </constraints>
                             </view>
                         </subviews>

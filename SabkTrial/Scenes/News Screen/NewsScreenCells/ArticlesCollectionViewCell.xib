@@ -21,37 +21,34 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjI-Db-wLh">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="264"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncl-cb-4p8">
-                                <rect key="frame" x="31" y="120.5" width="218" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncl-cb-4p8">
+                                <rect key="frame" x="31" y="100" width="218" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" name="title_color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XaH-y7-seM">
-                                <rect key="frame" x="204" y="192" width="42" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="9hi-C4-JLW"/>
-                                    <constraint firstAttribute="height" constant="40" id="Ogz-95-d6y"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw8-nJ-imc">
-                                <rect key="frame" x="15" y="204.5" width="174" height="19.5"/>
+                                <rect key="frame" x="102" y="196" width="170" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XaH-y7-seM">
+                                <rect key="frame" x="31" y="179" width="56" height="53"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
-                            <constraint firstItem="Gw8-nJ-imc" firstAttribute="leading" secondItem="sjI-Db-wLh" secondAttribute="leading" constant="15" id="4bO-lr-JB2"/>
+                            <constraint firstItem="Gw8-nJ-imc" firstAttribute="leading" secondItem="XaH-y7-seM" secondAttribute="trailing" constant="15" id="0Ou-7F-Xob"/>
                             <constraint firstAttribute="trailing" secondItem="ncl-cb-4p8" secondAttribute="trailing" constant="31" id="4lF-ya-IDb"/>
-                            <constraint firstItem="ncl-cb-4p8" firstAttribute="top" relation="lessThanOrEqual" secondItem="sjI-Db-wLh" secondAttribute="top" constant="120.5" id="A3O-YW-GD3"/>
-                            <constraint firstItem="XaH-y7-seM" firstAttribute="leading" secondItem="Gw8-nJ-imc" secondAttribute="trailing" constant="15" id="B9b-sH-jbi"/>
+                            <constraint firstItem="XaH-y7-seM" firstAttribute="top" secondItem="ncl-cb-4p8" secondAttribute="bottom" constant="57.5" id="C1j-26-6Yf"/>
                             <constraint firstItem="ncl-cb-4p8" firstAttribute="leading" secondItem="sjI-Db-wLh" secondAttribute="leading" constant="31" id="CJC-vL-j2E"/>
-                            <constraint firstAttribute="bottom" secondItem="XaH-y7-seM" secondAttribute="bottom" constant="32" id="LeU-tR-EOI"/>
-                            <constraint firstItem="XaH-y7-seM" firstAttribute="top" secondItem="ncl-cb-4p8" secondAttribute="bottom" constant="50" id="guZ-I2-5Dq"/>
-                            <constraint firstItem="Gw8-nJ-imc" firstAttribute="top" secondItem="ncl-cb-4p8" secondAttribute="bottom" constant="62.5" id="mUm-1E-0Qd"/>
-                            <constraint firstAttribute="trailing" secondItem="XaH-y7-seM" secondAttribute="trailing" constant="34" id="nmX-tr-NAY"/>
+                            <constraint firstAttribute="bottom" secondItem="XaH-y7-seM" secondAttribute="bottom" constant="32" id="OfT-Ln-bVP"/>
+                            <constraint firstItem="XaH-y7-seM" firstAttribute="leading" secondItem="sjI-Db-wLh" secondAttribute="leading" constant="31" id="ZAa-vI-PoD"/>
+                            <constraint firstAttribute="trailing" secondItem="Gw8-nJ-imc" secondAttribute="trailing" constant="8" id="h18-VT-06Y"/>
+                            <constraint firstItem="XaH-y7-seM" firstAttribute="height" secondItem="sjI-Db-wLh" secondAttribute="height" multiplier="0.2" id="jYI-OI-hEw"/>
+                            <constraint firstItem="XaH-y7-seM" firstAttribute="width" secondItem="sjI-Db-wLh" secondAttribute="width" multiplier="0.2" id="tZK-2a-Nfw"/>
+                            <constraint firstItem="Gw8-nJ-imc" firstAttribute="centerY" secondItem="XaH-y7-seM" secondAttribute="centerY" id="wHw-jI-tfV"/>
                         </constraints>
                     </view>
                 </subviews>
