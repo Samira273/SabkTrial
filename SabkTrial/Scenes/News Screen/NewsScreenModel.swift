@@ -25,19 +25,13 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
                 if let dataReturned = data {
                     if let slid = dataReturned.slider {
                         self.sliders = slid
-                        for index in 0..<self.sliders.count {
-                            self.sliders[index].timeApart =
-                                self.getTimeApart(forPublishDate: self.sliders[index].publishDate ?? "")
-                        }
+                        self.setTimeApartForSliders()
                     } else {
                         print("ERROR : sliders arent available")
                     }
                     if let material = dataReturned.materials {
                         self.materials = material
-                        for index in 0..<self.materials.count {
-                            self.materials[index].timeApart =
-                                self.getTimeApart(forPublishDate: self.materials[index].publishDate ?? "")
-                        }
+                        self.setTimeApartForMaterials()
                         if(!self.videos.isEmpty) {
                             self.materials.insert(Materials(type: Materialtypes.videos), at: 4)
                         }
@@ -89,10 +83,7 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
                 if let dataReturned = data {
                     if let videosComics = dataReturned.comics {
                         self.videos = videosComics
-                        for index in 0..<self.videos.count {
-                            self.videos[index].timeApart =
-                                self.getTimeApart(forPublishDate: self.videos[index].publishDate ?? "")
-                        }
+                        self.setTimeApartForVideos()
                         if(!self.materials.isEmpty) {
                             if(self.materials[4].type != Materialtypes.videos) {
                                 self.materials.insert(Materials(type: Materialtypes.videos), at: 4)
@@ -136,10 +127,7 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
                 if let dataReturned = data {
                     if let imagesComics = dataReturned.comics {
                         self.images = imagesComics
-                        for index in 0..<self.images.count {
-                            self.images[index].timeApart =
-                                self.getTimeApart(forPublishDate: self.images[index].publishDate ?? "")
-                        }
+                        self.setTimeApartForImages()
                         if(!self.materials.isEmpty) {
                             //check if the 9th element is of type images
                             if(self.materials[9].type != Materialtypes.images) {
@@ -239,5 +227,33 @@ class NewsScreenModel: BaseModel, NewsScreenModelProtocol {
             
         }
         return timeApart
+    }
+    
+    func setTimeApartForVideos() {
+        for index in 0..<self.videos.count {
+            self.videos[index].timeApart =
+                self.getTimeApart(forPublishDate: self.videos[index].publishDate ?? "")
+        }
+    }
+    
+    func setTimeApartForSliders() {
+        for index in 0..<self.sliders.count {
+            self.sliders[index].timeApart =
+                self.getTimeApart(forPublishDate: self.sliders[index].publishDate ?? "")
+        }
+    }
+    
+    func setTimeApartForMaterials() {
+        for index in 0..<self.materials.count {
+            self.materials[index].timeApart =
+                self.getTimeApart(forPublishDate: self.materials[index].publishDate ?? "")
+        }
+    }
+    
+    func setTimeApartForImages() {
+        for index in 0..<self.images.count {
+            self.images[index].timeApart =
+                self.getTimeApart(forPublishDate: self.images[index].publishDate ?? "")
+        }
     }
 }

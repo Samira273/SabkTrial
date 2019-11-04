@@ -26,9 +26,7 @@ UICollectionViewDelegateFlowLayout {
             as? ArticlesCollectionViewCell else {
                 return UICollectionViewCell()
         }
-        cell.setAuthorName(text: articles[indexPath.row].authorName ?? "")
-        cell.setArticleTitle(text: articles[indexPath.row].title ?? "")
-       cell.setAuthorImage(imageURL: articles[indexPath.row].authorImg ?? "")
+        cell.configureCell(item: articles[indexPath.row])
         return cell
     }
 

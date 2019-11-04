@@ -13,22 +13,24 @@ class ImagesCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var imageTitle: UILabel!
     @IBOutlet private weak var imageTiming: UILabel!
     @IBOutlet private weak var image: UIImageView!
+    
+    var item: Comics? {
+        didSet {
+            configureCell()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func setImageTitle(text: String) {
-        imageTitle.text = text
-    }
-    
-    func setImage(imageUrl: String) {
+     private func configureCell() {
+        imageTitle.text = item?.title ?? ""
         image.sd_setImage(
-            with: URL(string: imageUrl),
+            with: URL(string: item?.coverPhoto ?? ""),
             placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
-    }
-    func setTimeApart(text: String) {
-        imageTiming.text = text
+        imageTiming.text = item?.timeApart ?? ""
     }
 
 }

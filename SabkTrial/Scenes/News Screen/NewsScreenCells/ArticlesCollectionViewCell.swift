@@ -20,17 +20,11 @@ class ArticlesCollectionViewCell: UICollectionViewCell {
         authorImage.layer.cornerRadius = authorImage.bounds.width / 2
     }
     
-    func setAuthorName(text: String) {
-        authorName.text = text
-    }
-    
-    func setArticleTitle(text: String) {
-        articleTitle.text = text
-    }
-    
-    func setAuthorImage(imageURL: String) {
-      authorImage.sd_setImage(
-            with: URL(string: imageURL),
+    func configureCell(item: Materials) {
+        authorName.text = item.authorName
+        articleTitle.text = item.title
+        authorImage.sd_setImage(
+            with: URL(string: item.authorImg ?? ""),
             placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
     }
 }

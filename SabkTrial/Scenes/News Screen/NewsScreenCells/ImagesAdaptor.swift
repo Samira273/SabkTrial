@@ -27,9 +27,7 @@ class ImagesAdaptor: NSObject, UICollectionViewDataSource, UITableViewDelegate, 
                 as? ImagesCollectionViewCell else {
                     return UICollectionViewCell()
             }
-            cell.setImageTitle(text: images[indexPath.row].title ?? "")
-            cell.setImage(imageUrl: images[indexPath.row].coverPhoto ?? "")
-            cell.setTimeApart(text: images[indexPath.row].timeApart ?? "unknown")
+            cell.item = images[indexPath.row]
             return cell
     }
     

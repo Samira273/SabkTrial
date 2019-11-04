@@ -24,13 +24,8 @@ UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
             as? HeaderSliderCell else {
                 return UICollectionViewCell()
         }
-        let slider = slidersData[indexPath.row]
-        cell.setTitle(text: slider.title ?? "")
-        cell.setDescription(text: slider.description?.html2String ?? "")
-        cell.setCoverPhoto(imageURL: slider.coverPhoto ?? "")
-        cell.setHotViewsNumber(text: "\(slider.noOfViews ?? 0)")
-        cell.setTimeApart(text: slider.timeApart ?? "unknown")
-        cell.setCurrentPage(page: indexPath.row)
+        cell.configureCell(item: slidersData[indexPath.row], index: indexPath.row)
+        
         return cell
     }
 

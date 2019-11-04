@@ -14,7 +14,6 @@ extension NetworkManager {
         _ result: Swift.Result<SliderMaterialResponse, NetworkError>,
         _ statusCode: StatusCode?
         ) -> Void) {
-
         provider.request(MultiTarget(NewsService.slider)) { (result) in
             switch result {
             case .success(let response):

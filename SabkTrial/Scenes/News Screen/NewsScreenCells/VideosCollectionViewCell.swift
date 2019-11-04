@@ -17,15 +17,9 @@ class VideosCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setVideoTitle(text: String) {
-        videoTitle.text = text
-    }
-    
-    func setVideoImage(imageURL: String) {
-      videoImage.sd_setImage(with: URL(string: imageURL), placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
-    }
-    
-    func setTimeApart(text: String) {
-        videoTime.text = text
+    func configureCell(item: Comics) {
+        videoTitle.text = item.title
+        videoImage.sd_setImage(with: URL(string: item.authorImg ?? ""), placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
+        videoTime.text = item.timeApart ?? ""
     }
 }

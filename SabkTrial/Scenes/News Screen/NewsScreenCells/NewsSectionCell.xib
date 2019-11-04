@@ -27,8 +27,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BVQ-zk-VgI">
                                         <rect key="frame" x="12" y="10" width="83" height="80"/>
                                     </imageView>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_play" translatesAutoresizingMaskIntoConstraints="NO" id="C2b-mK-Jwq">
-                                        <rect key="frame" x="79" y="10" width="16.5" height="16"/>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play" translatesAutoresizingMaskIntoConstraints="NO" id="C2b-mK-Jwq">
+                                        <rect key="frame" x="78" y="10" width="17" height="16"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="background"/>

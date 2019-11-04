@@ -67,6 +67,7 @@
 		CEF748D423587A680023FD9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF748D223587A680023FD9B /* LaunchScreen.storyboard */; };
 		CEF748DF23587A680023FD9B /* SabkTrialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF748DE23587A680023FD9B /* SabkTrialTests.swift */; };
 		CEF748EA23587A680023FD9B /* SabkTrialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF748E923587A680023FD9B /* SabkTrialUITests.swift */; };
+		CEF98B7E2370237D008295C3 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF98B7D2370237D008295C3 /* BaseResponse.swift */; };
 		CEFE022C2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE022A2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift */; };
 		CEFE022D2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE022B2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib */; };
 		CEFE02302369CECE004A70E7 /* ShimmerSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE022E2369CECE004A70E7 /* ShimmerSliderTableViewCell.swift */; };
@@ -164,6 +165,7 @@
 		CEF748E523587A680023FD9B /* SabkTrialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SabkTrialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF748E923587A680023FD9B /* SabkTrialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabkTrialUITests.swift; sourceTree = "<group>"; };
 		CEF748EB23587A680023FD9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF98B7D2370237D008295C3 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		CEFE022A2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerNewsTableViewCell.swift; sourceTree = "<group>"; };
 		CEFE022B2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShimmerNewsTableViewCell.xib; sourceTree = "<group>"; };
 		CEFE022E2369CECE004A70E7 /* ShimmerSliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerSliderTableViewCell.swift; sourceTree = "<group>"; };
@@ -371,10 +373,10 @@
 		CEB15DE12358905900659D1A /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				CE4D475D235DEF860041B94C /* Entity */,
 				CE4D472A235DE1B60041B94C /* BaseViewController.swift */,
 				CE4D472C235DE1C40041B94C /* BaseModel.swift */,
 				CE4D472E235DE1DC0041B94C /* BasePresenter.swift */,
+				CEF98B7D2370237D008295C3 /* BaseResponse.swift */,
 				CE4D4723235DE1100041B94C /* Base Protocols */,
 			);
 			path = Base;
@@ -439,6 +441,7 @@
 				CEB15DDB23588EB200659D1A /* AppDelegate */,
 				CEB15DE42358908F00659D1A /* Scenes */,
 				CEB15DE12358905900659D1A /* Base */,
+				CE4D475D235DEF860041B94C /* Entity */,
 				CEB15DE02358904500659D1A /* Networking */,
 				CEB15DDE23588F3600659D1A /* Resources */,
 				CEB15DDD23588EF700659D1A /* UI */,
@@ -717,6 +720,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF98B7E2370237D008295C3 /* BaseResponse.swift in Sources */,
 				CE01FD91235DD11200090A0E /* NewsService.swift in Sources */,
 				CE6ADF5D23589A740051C879 /* NetworkManager.swift in Sources */,
 				CE0DB340235F13FB00340A60 /* Extentions.swift in Sources */,

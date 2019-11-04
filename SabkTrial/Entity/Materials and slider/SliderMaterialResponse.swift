@@ -12,20 +12,20 @@
  */
 
 import Foundation
-struct ArticlesResponse: Codable {
+class SliderMaterialResponse: BaseResponse {
+    let slider: [Slider]?
     let materials: [Materials]?
-    let code: Int?
 
     enum CodingKeys: String, CodingKey {
-
-        case materials 
-        case code
+        case slider
+        case materials
     }
 
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        slider = try values.decodeIfPresent([Slider].self, forKey: .slider)
         materials = try values.decodeIfPresent([Materials].self, forKey: .materials)
-        code = try values.decodeIfPresent(Int.self, forKey: .code)
+        try super.init(from: decoder)
     }
 
 }

@@ -24,9 +24,7 @@ class VideosAdaptor: NSObject, UICollectionViewDataSource {
             withReuseIdentifier: "VideosCollectionViewCell", for: indexPath) as? VideosCollectionViewCell else {
                 return UICollectionViewCell()
         }
-        cell.setVideoTitle(text: videos[indexPath.row].title ?? "")
-        cell.setVideoImage(imageURL: videos[indexPath.row].authorImg ?? "")
-        cell.setTimeApart(text: videos[indexPath.row].timeApart ?? "unknown")
+        cell.configureCell(item: videos[indexPath.row])
         return cell
     }
 

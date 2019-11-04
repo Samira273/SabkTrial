@@ -12,23 +12,16 @@
  */
 
 import Foundation
-struct VideosAndImagesResponse: Codable {
-    let materials: [String]?
-    let comics: [Comics]?
-    let code: Int?
-
-    enum CodingKeys: String, CodingKey {
-
+class ArticlesResponse: BaseResponse {
+    let materials: [Materials]?
+    
+    private enum CodingKeys: String, CodingKey {
         case materials
-        case comics
-        case code 
     }
-
-    init(from decoder: Decoder) throws {
+    
+    required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        materials = try values.decodeIfPresent([String].self, forKey: .materials)
-        comics = try values.decodeIfPresent([Comics].self, forKey: .comics)
-        code = try values.decodeIfPresent(Int.self, forKey: .code)
+        materials = try values.decodeIfPresent([Materials].self, forKey: .materials)
+        try super.init(from: decoder)
     }
-
 }

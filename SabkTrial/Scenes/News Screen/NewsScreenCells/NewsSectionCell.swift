@@ -25,24 +25,16 @@ class NewsSectionCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setNoOfViews(text: String) {
-        noOfViews.text = text
-    }
     
-    func setTimeApart( text: String) {
-        timeApart.text = text
-    }
-    
-    func setImage(imageUrl: String) {
+    func configureCell(item: Materials) {
+        noOfViews.text = "\(item.noOfViews ?? 0)"
+        timeApart.text = item.timeApart ?? ""
         newsImage.sd_setImage(with: URL(
-            string: imageUrl), placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
-    }
-    func setTitle(text: String) {
-        title.text = text
-    }
-    
-    func shwoVideoImage(show: Bool) {
-        videoPlay.isHidden = show
+            string: item.coverPhoto ?? ""), placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
+        title.text = item.title
+        if(item.videosCount ?? 0 > 0) {
+                    videoPlay.isHidden = false
+        }
     }
 
 }

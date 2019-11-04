@@ -24,16 +24,15 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
         case .sliderSection :
             return self.slidersData.isEmpty ? 1 : 1
         case .firstNewsSection:
-            return self.matrialsData.isEmpty ? 10 : 20
+            return self.matrialsData.isEmpty ? 5 : 20
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2//Sections.allCases.count
+        return Sections.allCases.count
     }
     
     func constructSliderCell(table: UITableView, index: IndexPath) -> UITableViewCell {
-        
         guard let cell = table.dequeueReusableCell(withIdentifier: "SliderSectionCell", for: index)
             as? SliderSectionCell else { return UITableViewCell() }
         cell.slidersData = slidersData
@@ -43,15 +42,7 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
     func constructNewsCell(article: Materials, index: IndexPath, table: UITableView ) -> UITableViewCell {
         guard let cell = table.dequeueReusableCell(withIdentifier: "NewsSectionCell", for: index)
             as? NewsSectionCell else { return UITableViewCell() }
-        cell.setTitle(text: article.title ?? "")
-        cell.setNoOfViews(text: "\(article.noOfViews ?? 0)")
-        cell.setImage(imageUrl: article.coverPhoto ?? "")
-        cell.setTimeApart(text: article.timeApart ?? "unknown")
-        if let videosCount = article.videosCount {
-            if (videosCount != 0) {
-                cell.shwoVideoImage(show: false)
-            }
-        }
+        cell.configureCell(item: article)
         return cell
     }
     
@@ -92,14 +83,12 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
                 guard let cell = table.dequeueReusableCell(
                     withIdentifier: "ShimmerSliderTableViewCell",
                     for: index) as? ShimmerSliderTableViewCell else {
-                        print("failed to regester cell")
                         return UITableViewCell()}
                 return cell
             case .firstNewsSection:
                 guard let cell = table.dequeueReusableCell(
                     withIdentifier: "ShimmerNewsTableViewCell",
                     for: index) as? ShimmerNewsTableViewCell else {
-                        print("failed to regester cell")
                         return UITableViewCell()}
                 return cell
             }
@@ -150,18 +139,18 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
         if let sectionType = Sections(rawValue: indexPath.section) {
             switch sectionType {
             case .sliderSection:
-                return 450
+                return tableView.frame.size.height * 0.75
             case .firstNewsSection:
                 let cellType = matrialsData[indexPath.row].type
                 switch cellType {
                 case .news:
                     return UITableView.automaticDimension
                 case .images:
-                    return 300
+                    return tableView.frame.size.height * 0.6
                 case .articles:
-                    return 300
+                    return tableView.frame.size.height * 0.5
                 case .videos:
-                    return 400
+                    return tableView.frame.size.height * 0.7
                 }
             }
         }

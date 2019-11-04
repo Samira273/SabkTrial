@@ -17,8 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupApp()
+        return true
+    }
+    
+    func setupApp() {
         setupNetworking()
-
         window = UIWindow(frame: UIScreen.main.bounds)
         let newsScreenView = NewsScreenViewController(nibName: "NewsScreenViewController", bundle: nil)
         let newsScreenNav = UINavigationController(rootViewController: newsScreenView)
@@ -27,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarController.viewControllers = [newsScreenNav]
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
-        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
