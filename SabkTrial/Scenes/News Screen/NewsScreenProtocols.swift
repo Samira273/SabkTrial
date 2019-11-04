@@ -25,9 +25,9 @@ protocol NewsScreenModelProtocol: BaseModelProtocol {
     func fetchVideosData(compelation: @escaping (Bool) -> Void)
     func fetchImagesData(compelation: @escaping (Bool) -> Void)
     func fetchArticlesData(compelation: @escaping (Bool) -> Void)
-    func bringSliders() -> [Slider]
-    func bringMaterials() -> [Materials]
-    func bringVideos() -> [Comics]
+    func getSliders() -> [Slider]
+    func getMaterials() -> [Materials]
+    func getVideos() -> [Comics]
     func bringImages() -> [Comics]
     func bringArticles() -> [Materials]
 }

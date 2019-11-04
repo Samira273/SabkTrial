@@ -16,8 +16,9 @@ class ArticlesCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        authorImage.layer.masksToBounds = true
-        authorImage.layer.cornerRadius = authorImage.bounds.width / 2
+        let radius = authorImage.frame.height / 2
+      authorImage.layer.cornerRadius = radius
+      authorImage.layer.masksToBounds = true
     }
     
     func configureCell(item: Materials) {

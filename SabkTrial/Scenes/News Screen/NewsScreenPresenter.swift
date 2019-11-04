@@ -24,8 +24,8 @@ class NewsScreenPresenter: BasePresenter, NewsScreenPresenterProtocol {
     func loadData() {
         model.fetchNewsData(compelation: {success in
             if success {
-                self.view.setSliders(sliders: self.model.bringSliders())
-                self.view.setMaterials(materials: self.model.bringMaterials())
+                self.view.setSliders(sliders: self.model.getSliders())
+                self.view.setMaterials(materials: self.model.getMaterials())
 
             } else {
                 print("fetcing news failed")
@@ -34,7 +34,7 @@ class NewsScreenPresenter: BasePresenter, NewsScreenPresenterProtocol {
 
         model.fetchVideosData(compelation: {success in
             if success {
-                self.view.setVideos(videos: self.model.bringVideos())
+                self.view.setVideos(videos: self.model.getVideos())
             } else {
                 print("fetcing videos failed")
             }
