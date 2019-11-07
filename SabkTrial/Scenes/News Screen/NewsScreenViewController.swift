@@ -22,9 +22,8 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
         newsTable.showsHorizontalScrollIndicator = false
         newsTable.showsVerticalScrollIndicator = false
         presenter.loadData()
-        newsTable.estimatedRowHeight = 100
-        
-        newsTable.rowHeight = UITableView.automaticDimension
+        //newsTable.estimatedRowHeight = UITableView.automaticDimension
+        //newsTable.rowHeight = UITableView.automaticDimension
         registerTableCells()
         //right bar button item
         let button = UIButton(type: .custom)
@@ -46,6 +45,7 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
     
     func registerTableCells() {
         //registering custome cells
+        newsTable.estimatedRowHeight = 140
         newsTable.register(
             UINib(nibName: "SliderSectionCell", bundle: nil),
             forCellReuseIdentifier: "SliderSectionCell")
@@ -94,5 +94,5 @@ class NewsScreenViewController: BaseViewController<NewsScreenPresenter>, NewsScr
         self.newsScreenAdaptor.articlesData = articles
         self.newsTable.reloadData()
     }
-    
+
 }

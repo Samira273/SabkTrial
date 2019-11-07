@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShimmerSliderTableViewCell" rowHeight="500" id="KGk-i7-Jjw" customClass="ShimmerSliderTableViewCell" customModule="SabkTrial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="417" height="500"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="417" height="500"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oc3-Rn-7JC">
+                        <rect key="frame" x="0.0" y="0.0" width="417" height="500"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_slider" translatesAutoresizingMaskIntoConstraints="NO" id="5YW-P1-Ksq">
+                                <rect key="frame" x="0.0" y="0.0" width="417" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Wpl-Vg-Iwk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isWindlessable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8d-lC-rZy">
+                                <rect key="frame" x="0.0" y="240" width="417" height="260"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" text="jhaedcbhaoduwcvoaijvokamefklvalkenfvlkandsljknakdnlkmasdvlkasdlkvnalfnvajfnfnvalfvvjnafjnvndclkWDnc" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5r-6O-NIp">
+                                        <rect key="frame" x="23" y="21" width="371" height="78"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isWindlessable" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WE-2w-quw">
+                                        <rect key="frame" x="23" y="137" width="371" height="78"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">jhaedcbhaoduwcvoaijvokamefklvalkenfvlkandsljknakdnlkmasdvlkasdlkvnalfnvajfnfnvalfvvjnafjnvndclkWDnclkndjaodknf akdfmv empv kamefpv makefmv lkaenmfbojvnaefojnbaefjnbklaefvnokaefknvaefnvonefv</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isWindlessable" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5WE-2w-quw" secondAttribute="bottom" constant="45" id="8tj-3c-l3K"/>
+                                    <constraint firstItem="5WE-2w-quw" firstAttribute="height" secondItem="Q8d-lC-rZy" secondAttribute="height" multiplier="0.3" id="9Wm-ef-DJk"/>
+                                    <constraint firstItem="m5r-6O-NIp" firstAttribute="height" secondItem="Q8d-lC-rZy" secondAttribute="height" multiplier="0.3" id="BeG-59-VMC"/>
+                                    <constraint firstItem="5WE-2w-quw" firstAttribute="leading" secondItem="Q8d-lC-rZy" secondAttribute="leading" constant="23" id="D3t-SS-nO7"/>
+                                    <constraint firstAttribute="trailing" secondItem="5WE-2w-quw" secondAttribute="trailing" constant="23" id="R7d-NR-z9c"/>
+                                    <constraint firstItem="m5r-6O-NIp" firstAttribute="top" secondItem="Q8d-lC-rZy" secondAttribute="top" constant="21" id="XvT-jO-6wI"/>
+                                    <constraint firstItem="m5r-6O-NIp" firstAttribute="leading" secondItem="Q8d-lC-rZy" secondAttribute="leading" constant="23" id="dbt-HR-XQH"/>
+                                    <constraint firstAttribute="trailing" secondItem="m5r-6O-NIp" secondAttribute="trailing" constant="23" id="wPB-IF-kty"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5YW-P1-Ksq" firstAttribute="top" secondItem="Oc3-Rn-7JC" secondAttribute="top" id="9tX-oY-bsL"/>
+                            <constraint firstAttribute="bottom" secondItem="Q8d-lC-rZy" secondAttribute="bottom" id="Ta7-mY-iww"/>
+                            <constraint firstItem="Q8d-lC-rZy" firstAttribute="leading" secondItem="Oc3-Rn-7JC" secondAttribute="leading" id="UhU-ub-vQP"/>
+                            <constraint firstAttribute="trailing" secondItem="Q8d-lC-rZy" secondAttribute="trailing" id="Wtj-SO-PZ2"/>
+                            <constraint firstAttribute="trailing" secondItem="5YW-P1-Ksq" secondAttribute="trailing" id="eCE-hl-DNe"/>
+                            <constraint firstAttribute="height" constant="500" id="naX-Ln-IIb"/>
+                            <constraint firstItem="5YW-P1-Ksq" firstAttribute="leading" secondItem="Oc3-Rn-7JC" secondAttribute="leading" id="ng4-qR-8Np"/>
+                            <constraint firstItem="Q8d-lC-rZy" firstAttribute="top" secondItem="5YW-P1-Ksq" secondAttribute="bottom" id="uN9-5F-DYe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Oc3-Rn-7JC" secondAttribute="trailing" id="UqE-Fz-e15"/>
+                    <constraint firstAttribute="bottom" secondItem="Oc3-Rn-7JC" secondAttribute="bottom" id="gBu-0Z-vh4"/>
+                    <constraint firstItem="Oc3-Rn-7JC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="owo-Ac-FGc"/>
+                    <constraint firstItem="Oc3-Rn-7JC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zFB-Tt-3zg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="img" destination="5YW-P1-Ksq" id="xfu-PN-W1i"/>
+                <outlet property="tesxtOne" destination="m5r-6O-NIp" id="EGZ-N3-fqy"/>
+                <outlet property="textTwo" destination="5WE-2w-quw" id="kLz-GI-zPB"/>
+            </connections>
+            <point key="canvasLocation" x="110.86956521739131" y="251.78571428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_slider" width="375" height="241"/>
+    </resources>
+</document>

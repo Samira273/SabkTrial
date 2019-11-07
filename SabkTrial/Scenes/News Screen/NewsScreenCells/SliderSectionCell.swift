@@ -25,14 +25,13 @@ UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
                 return UICollectionViewCell()
         }
         cell.configureCell(item: slidersData[indexPath.row], index: indexPath.row)
-        
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
+        return CGSize(width: UIScreen.main.bounds.size.width, height: 450)
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -44,6 +43,7 @@ UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet private weak var sliderCollection: UICollectionView!
     var slidersData = [Slider]()
 
+    @IBOutlet weak private var sliderPager: UIPageControl!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -52,12 +52,20 @@ UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         self.sliderCollection.isPagingEnabled = true
         self.sliderCollection.showsVerticalScrollIndicator = false
         self.sliderCollection.showsHorizontalScrollIndicator = false
+        sliderPager.numberOfPages = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let center = CGPoint(x: scrollView.contentOffset.x + (scrollView.frame.width / 2),
+                             y: (scrollView.frame.height / 2))
+        if let index = sliderCollection.indexPathForItem(at: center) {
+            self.sliderPager.currentPage = index.row
+        }
     }
 
 }

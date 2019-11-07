@@ -24,7 +24,7 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
         case .sliderSection :
             return self.slidersData.isEmpty ? 1 : 1
         case .firstNewsSection:
-            return self.matrialsData.isEmpty ? 5 : 20
+            return self.matrialsData.isEmpty ? 3 : 20
         }
     }
     
@@ -139,18 +139,18 @@ class NewsScreenAdaptor: NSObject, UITableViewDataSource, UITableViewDelegate {
         if let sectionType = Sections(rawValue: indexPath.section) {
             switch sectionType {
             case .sliderSection:
-                return tableView.frame.size.height * 0.75
+                return 500
             case .firstNewsSection:
                 let cellType = matrialsData[indexPath.row].type
                 switch cellType {
                 case .news:
                     return UITableView.automaticDimension
                 case .images:
-                    return tableView.frame.size.height * 0.6
-                case .articles:
                     return tableView.frame.size.height * 0.5
+                case .articles:
+                    return 350
                 case .videos:
-                    return tableView.frame.size.height * 0.7
+                    return tableView.frame.size.height * 0.5
                 }
             }
         }

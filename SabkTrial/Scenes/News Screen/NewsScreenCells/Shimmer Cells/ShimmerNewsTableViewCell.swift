@@ -13,7 +13,8 @@ class ShimmerNewsTableViewCell: UITableViewCell {
     @IBOutlet private weak var img: UIImageView!
 //    @IBOutlet private weak var labelTwo: UILabel!
 //    @IBOutlet private weak var labelThree: UILabel!
-    @IBOutlet private weak var labelOne: UILabel!
+  
+    @IBOutlet weak private var textOne: UITextView!
     
     @IBOutlet private weak var containerView: UIView!
     
@@ -27,15 +28,13 @@ class ShimmerNewsTableViewCell: UITableViewCell {
       }
       .start()
         
-    labelOne.windless.apply {
+    textOne.windless.apply {
         $0.beginTime = 1
         $0.pauseDuration = 1
         $0.duration = 3
         $0.animationLayerOpacity = 0.8
     }
     .start()
-        labelOne.spacing = 5
-      
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

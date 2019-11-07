@@ -11,6 +11,7 @@ import UIKit
 class NewsSectionCell: UITableViewCell {
 
     @IBOutlet private weak var noOfViews: UILabel!
+    @IBOutlet private weak var saveButton: UIButton!
     @IBOutlet private weak var videoPlay: UIImageView!
     @IBOutlet private weak var newsImage: UIImageView!
     @IBOutlet private weak var title: UILabel!
@@ -18,6 +19,8 @@ class NewsSectionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        saveButton.contentMode = .center
+        saveButton.imageView?.contentMode = .scaleAspectFit
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

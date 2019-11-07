@@ -10,15 +10,16 @@ import UIKit
 
 class ShimmerSliderTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var discrp: UILabel!
-    @IBOutlet private weak var title: UILabel!
+    @IBOutlet private weak var tesxtOne: UITextView!
+    @IBOutlet private weak var textTwo: UITextView!
+    
 //    @IBOutlet private weak var monz: UILabel!
     @IBOutlet private weak var img: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-       discrp.windless.apply {
+       tesxtOne.windless.apply {
           $0.beginTime = 1
           $0.pauseDuration = 1
           $0.duration = 3
@@ -34,7 +35,7 @@ class ShimmerSliderTableViewCell: UITableViewCell {
         }
         .start()
         
-        title.windless.apply {
+        textTwo.windless.apply {
            $0.beginTime = 1
            $0.pauseDuration = 1
            $0.duration = 3

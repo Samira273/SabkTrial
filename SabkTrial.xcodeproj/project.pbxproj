@@ -242,25 +242,10 @@
 				CE09B5A2235C8D1C00979FF1 /* HeaderSliderCell.xib */,
 				CEE73803235F53750070C482 /* NewsSectionCell.swift */,
 				CEE73804235F53750070C482 /* NewsSectionCell.xib */,
-				CE10742E23607BB1002C71E4 /* VideosAdaptor.swift */,
-				CE1074222360634A002C71E4 /* VideosCell.swift */,
-				CE1074232360634A002C71E4 /* VideosCell.xib */,
-				CE10742623606631002C71E4 /* VideosCollectionViewCell.swift */,
-				CE10742723606631002C71E4 /* VideosCollectionViewCell.xib */,
-				CE1074302360A093002C71E4 /* ImagesAdaptor.swift */,
-				CE10742A2360792C002C71E4 /* ImagesCell.swift */,
-				CE10742B2360792C002C71E4 /* ImagesCell.xib */,
-				CE1074322360A16E002C71E4 /* ImagesCollectionViewCell.swift */,
-				CE1074332360A16E002C71E4 /* ImagesCollectionViewCell.xib */,
-				CE0F18192361A79C003FE11D /* ArticlesAdaptor.swift */,
-				CE0F18152361A78E003FE11D /* ArticlesCell.swift */,
-				CE0F18162361A78E003FE11D /* ArticlesCell.xib */,
-				CE0F181B2361AA21003FE11D /* ArticlesCollectionViewCell.swift */,
-				CE0F181C2361AA21003FE11D /* ArticlesCollectionViewCell.xib */,
-				CEFE022A2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift */,
-				CEFE022B2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib */,
-				CEFE022E2369CECE004A70E7 /* ShimmerSliderTableViewCell.swift */,
-				CEFE022F2369CECE004A70E7 /* ShimmerSliderTableViewCell.xib */,
+				CE14FBEE2372DB500037F1DE /* Videos Cell */,
+				CE14FBED2372DB3D0037F1DE /* Images Cell */,
+				CE14FBEC2372DB2A0037F1DE /* Articles Cell */,
+				CE14FBEB2372DB1A0037F1DE /* Shimmer Cells */,
 			);
 			path = NewsScreenCells;
 			sourceTree = "<group>";
@@ -271,6 +256,53 @@
 				CE0F18122361A0CC003FE11D /* ArticlesResponse.swift */,
 			);
 			path = Articles;
+			sourceTree = "<group>";
+		};
+		CE14FBEB2372DB1A0037F1DE /* Shimmer Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE022A2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift */,
+				CEFE022B2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib */,
+				CEFE022E2369CECE004A70E7 /* ShimmerSliderTableViewCell.swift */,
+				CEFE022F2369CECE004A70E7 /* ShimmerSliderTableViewCell.xib */,
+			);
+			path = "Shimmer Cells";
+			sourceTree = "<group>";
+		};
+		CE14FBEC2372DB2A0037F1DE /* Articles Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE0F18192361A79C003FE11D /* ArticlesAdaptor.swift */,
+				CE0F18152361A78E003FE11D /* ArticlesCell.swift */,
+				CE0F18162361A78E003FE11D /* ArticlesCell.xib */,
+				CE0F181B2361AA21003FE11D /* ArticlesCollectionViewCell.swift */,
+				CE0F181C2361AA21003FE11D /* ArticlesCollectionViewCell.xib */,
+			);
+			path = "Articles Cell";
+			sourceTree = "<group>";
+		};
+		CE14FBED2372DB3D0037F1DE /* Images Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE1074302360A093002C71E4 /* ImagesAdaptor.swift */,
+				CE10742A2360792C002C71E4 /* ImagesCell.swift */,
+				CE10742B2360792C002C71E4 /* ImagesCell.xib */,
+				CE1074322360A16E002C71E4 /* ImagesCollectionViewCell.swift */,
+				CE1074332360A16E002C71E4 /* ImagesCollectionViewCell.xib */,
+			);
+			path = "Images Cell";
+			sourceTree = "<group>";
+		};
+		CE14FBEE2372DB500037F1DE /* Videos Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE10742E23607BB1002C71E4 /* VideosAdaptor.swift */,
+				CE1074222360634A002C71E4 /* VideosCell.swift */,
+				CE1074232360634A002C71E4 /* VideosCell.xib */,
+				CE10742623606631002C71E4 /* VideosCollectionViewCell.swift */,
+				CE10742723606631002C71E4 /* VideosCollectionViewCell.xib */,
+			);
+			path = "Videos Cell";
 			sourceTree = "<group>";
 		};
 		CE4D4723235DE1100041B94C /* Base Protocols */ = {

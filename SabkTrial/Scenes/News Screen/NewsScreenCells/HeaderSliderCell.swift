@@ -10,8 +10,8 @@ import UIKit
 
 class HeaderSliderCell: UICollectionViewCell {
     
-    @IBOutlet private weak var sliderPager: UIPageControl!
-    @IBOutlet private weak var title: UITextView!
+    @IBOutlet private weak var title: UILabel!
+    
     @IBOutlet private weak var timingLabel: UILabel!
     @IBOutlet private weak var hotviewsNumberLabel: UILabel!
     @IBOutlet private weak var discriptionText: UILabel!
@@ -19,13 +19,11 @@ class HeaderSliderCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        sliderPager.numberOfPages = 5
-        
+        // Initialization code  
     }
     
     func configureCell(item: Slider, index: Int) {
-        sliderPager.currentPage = index
+        
         timingLabel.text = item.timeApart ?? "unknown"
         title.text = item.title ?? ""
         hotviewsNumberLabel.text = "\(item.noOfViews ?? 0)"
