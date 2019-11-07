@@ -67,6 +67,8 @@
 		CEF748D423587A680023FD9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF748D223587A680023FD9B /* LaunchScreen.storyboard */; };
 		CEF748DF23587A680023FD9B /* SabkTrialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF748DE23587A680023FD9B /* SabkTrialTests.swift */; };
 		CEF748EA23587A680023FD9B /* SabkTrialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF748E923587A680023FD9B /* SabkTrialUITests.swift */; };
+		CEF8C57923742DCC00CB06E7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8C57723742DCC00CB06E7 /* SignInViewController.swift */; };
+		CEF8C57A23742DCC00CB06E7 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF8C57823742DCC00CB06E7 /* SignInViewController.xib */; };
 		CEF98B7E2370237D008295C3 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF98B7D2370237D008295C3 /* BaseResponse.swift */; };
 		CEFE022C2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE022A2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift */; };
 		CEFE022D2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE022B2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib */; };
@@ -165,6 +167,8 @@
 		CEF748E523587A680023FD9B /* SabkTrialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SabkTrialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF748E923587A680023FD9B /* SabkTrialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabkTrialUITests.swift; sourceTree = "<group>"; };
 		CEF748EB23587A680023FD9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF8C57723742DCC00CB06E7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CEF8C57823742DCC00CB06E7 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		CEF98B7D2370237D008295C3 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		CEFE022A2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerNewsTableViewCell.swift; sourceTree = "<group>"; };
 		CEFE022B2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShimmerNewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -417,6 +421,7 @@
 		CEB15DE42358908F00659D1A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CEF8C57623742DA200CB06E7 /* Sign In */,
 				CE6ADF602358A2040051C879 /* News Screen */,
 			);
 			path = Scenes;
@@ -500,6 +505,15 @@
 			path = SabkTrialUITests;
 			sourceTree = "<group>";
 		};
+		CEF8C57623742DA200CB06E7 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8C57723742DCC00CB06E7 /* SignInViewController.swift */,
+				CEF8C57823742DCC00CB06E7 /* SignInViewController.xib */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -513,6 +527,7 @@
 				CEF748C423587A670023FD9B /* Resources */,
 				B71364569E8E1EE2C65F7081 /* [CP] Embed Pods Frameworks */,
 				CEE9EAAA2366E6440033A93A /* ShellScript */,
+				3609F2408C11D9FD466E4DF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -610,6 +625,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF8C57A23742DCC00CB06E7 /* SignInViewController.xib in Resources */,
 				CE0F18182361A78E003FE11D /* ArticlesCell.xib in Resources */,
 				CE0F181E2361AA21003FE11D /* ArticlesCollectionViewCell.xib in Resources */,
 				CEFE022D2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib in Resources */,
@@ -645,6 +661,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3609F2408C11D9FD466E4DF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SabkTrial/Pods-SabkTrial-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SabkTrial/Pods-SabkTrial-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SabkTrial/Pods-SabkTrial-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6F7D400264E5D8E648F028D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -796,6 +829,7 @@
 				CE0F18172361A78E003FE11D /* ArticlesCell.swift in Sources */,
 				CE6ADF6A2358A2730051C879 /* NewsScreenProtocols.swift in Sources */,
 				CE6ADF59235897CF0051C879 /* NetworkDefaults.swift in Sources */,
+				CEF8C57923742DCC00CB06E7 /* SignInViewController.swift in Sources */,
 				CE6ADF5B2358981A0051C879 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

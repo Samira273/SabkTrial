@@ -12,6 +12,7 @@ target 'SabkTrial' do
   pod 'Localize-Swift'
   pod 'SwiftDate'
   pod 'Windless'
+  pod 'GoogleSignIn'
 
   target 'SabkTrialTests' do
     inherit! :search_paths
