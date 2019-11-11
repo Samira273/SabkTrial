@@ -8,21 +8,25 @@
 
 import UIKit
 import FittedSheets
+import AuthenticationServices
 
+@available(iOS 13.0, *)
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet private weak var signInWithAppleView: UIView!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var userNameTextField: UITextField!
     @IBOutlet private weak var signInButton: UIButton!
     @IBOutlet private weak var forgetPAsswordBtn: UIButton!
     var sheetController: SheetViewController?
-    var socialMediaPopUPViewController: SocialMediaPopUPViewController?
+    var socialMediaPopUPViewController: SocialMediaSheetViewController?
+    
     @IBAction func signInBySocialMedia(_ sender: Any) {
         // init YourViewController
        socialMediaPopUPViewController =
-            SocialMediaPopUPViewController(nibName: "SocialMediaPopUPViewController", bundle: nil)
+            SocialMediaSheetViewController(nibName: "SocialMediaPopUPViewController", bundle: nil)
         sheetController =
-            SheetViewController(controller: socialMediaPopUPViewController ?? SocialMediaPopUPViewController(),
+            SheetViewController(controller: socialMediaPopUPViewController ?? SocialMediaSheetViewController(),
                                 sizes: [.fixed(212), .fixed(200), .halfScreen, .fullScreen])
 
         // Adjust how the bottom safe area is handled on iPhone X screens
@@ -30,10 +34,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         sheetController?.adjustForBottomSafeArea = true
         // Turn off rounded corners
         sheetController?.topCornersRadius = 0
-        
+      
         // Make corners more round
         sheetController?.topCornersRadius = 15
-
+       
         // Disable the dismiss on background tap functionality
         sheetController?.dismissOnBackgroundTap = true
 
@@ -42,9 +46,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         self.present(sheetController ?? SheetViewController(), animated: false, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
+        setupAppleSignin()
         prepareTextFields()
         prepareNavigationBar()
         makeShadowForButton()
@@ -60,7 +66,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     func makeShadowForButton() {
         //make shadow for button
         signInButton.layer.shadowColor = UIColor.black.cgColor
-        signInButton.layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
+        signInButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         signInButton.layer.shadowRadius = 8
         signInButton.layer.shadowOpacity = 0.5
         signInButton.layer.masksToBounds = false
@@ -122,6 +128,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
+    
     @objc func keyboardWillShow(sender: NSNotification) {
         if let keyboardSize = (sender.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0 {
@@ -136,6 +143,28 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @available(iOS 13.0, *)
+    func setupAppleSignin() {
+        let btnAuthorization = ASAuthorizationAppleIDButton()
+
+               btnAuthorization.frame = CGRect(x: 0, y: 0, width: 200, height: 40)
+
+               btnAuthorization.center = self.view.center
+
+               btnAuthorization.addTarget(self, action: #selector(actionHandleAppleSignin), for: .touchUpInside)
+                signInWithAppleView.addSubview(btnAuthorization)
+    }
+    
+    @available(iOS 13.0, *)
+    @objc func actionHandleAppleSignin() {
+            let appleIDProvider = ASAuthorizationAppleIDProvider()
+            let request = appleIDProvider.createRequest()
+            request.requestedScopes = [.fullName, .email]
+            let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+            authorizationController.delegate = self
+            authorizationController.presentationContextProvider = self
+            authorizationController.performRequests()
+    }
     /*
      // MARK: - Navigation
      

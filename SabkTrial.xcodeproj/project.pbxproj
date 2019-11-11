@@ -49,6 +49,7 @@
 		CE4D4772235DF0900041B94C /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D476C235DF0900041B94C /* Slider.swift */; };
 		CE4D4773235DF0900041B94C /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D476D235DF0900041B94C /* Videos.swift */; };
 		CE4D4775235DF0D80041B94C /* Attachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D4774235DF0D80041B94C /* Attachments.swift */; };
+		CE56DA292379A77B00D829C6 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE56DA282379A77B00D829C6 /* AuthenticationServices.framework */; };
 		CE6ADF57235897A30051C879 /* StaticHeaderPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ADF56235897A30051C879 /* StaticHeaderPlugin.swift */; };
 		CE6ADF59235897CF0051C879 /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ADF58235897CF0051C879 /* NetworkDefaults.swift */; };
 		CE6ADF5B2358981A0051C879 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ADF5A2358981A0051C879 /* NetworkError.swift */; };
@@ -57,7 +58,7 @@
 		CE6ADF662358A2400051C879 /* NewsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ADF652358A2400051C879 /* NewsScreenPresenter.swift */; };
 		CE6ADF682358A24D0051C879 /* NewsScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ADF672358A24D0051C879 /* NewsScreenModel.swift */; };
 		CE6ADF6A2358A2730051C879 /* NewsScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ADF692358A2730051C879 /* NewsScreenProtocols.swift */; };
-		CE92C5262379760B000F1594 /* SocialMediaPopUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92C5242379760B000F1594 /* SocialMediaPopUPViewController.swift */; };
+		CE92C5262379760B000F1594 /* SocialMediaSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92C5242379760B000F1594 /* SocialMediaSheetViewController.swift */; };
 		CE92C5272379760B000F1594 /* SocialMediaPopUPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE92C5252379760B000F1594 /* SocialMediaPopUPViewController.xib */; };
 		CEB15DD7235883F600659D1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEB15DD9235883F600659D1A /* Localizable.strings */; };
 		CEE73805235F53750070C482 /* NewsSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73803235F53750070C482 /* NewsSectionCell.swift */; };
@@ -143,6 +144,7 @@
 		CE4D476C235DF0900041B94C /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		CE4D476D235DF0900041B94C /* Videos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
 		CE4D4774235DF0D80041B94C /* Attachments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachments.swift; sourceTree = "<group>"; };
+		CE56DA282379A77B00D829C6 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		CE6ADF56235897A30051C879 /* StaticHeaderPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticHeaderPlugin.swift; sourceTree = "<group>"; };
 		CE6ADF58235897CF0051C879 /* NetworkDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDefaults.swift; sourceTree = "<group>"; };
 		CE6ADF5A2358981A0051C879 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -151,7 +153,7 @@
 		CE6ADF652358A2400051C879 /* NewsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenPresenter.swift; sourceTree = "<group>"; };
 		CE6ADF672358A24D0051C879 /* NewsScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenModel.swift; sourceTree = "<group>"; };
 		CE6ADF692358A2730051C879 /* NewsScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenProtocols.swift; sourceTree = "<group>"; };
-		CE92C5242379760B000F1594 /* SocialMediaPopUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaPopUPViewController.swift; sourceTree = "<group>"; };
+		CE92C5242379760B000F1594 /* SocialMediaSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaSheetViewController.swift; sourceTree = "<group>"; };
 		CE92C5252379760B000F1594 /* SocialMediaPopUPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialMediaPopUPViewController.xib; sourceTree = "<group>"; };
 		CE92C52823798B70000F1594 /* SabkTrial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SabkTrial.entitlements; sourceTree = "<group>"; };
 		CEB15DD423587F8400659D1A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE56DA292379A77B00D829C6 /* AuthenticationServices.framework in Frameworks */,
 				09759A42FD8EA20B6A44D1AC /* Pods_SabkTrial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +216,7 @@
 		7220250AFB9572B3526B8671 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE56DA282379A77B00D829C6 /* AuthenticationServices.framework */,
 				C44CD89E684A0BEE3BC37FAB /* Pods_SabkTrial.framework */,
 				53D6DE0EA891A18D48AEF9C2 /* Pods_SabkTrialTests.framework */,
 				9E345034EB2250D7200DF2F4 /* Pods_SabkTrialUITests.framework */,
@@ -516,7 +520,7 @@
 			children = (
 				CEF8C57723742DCC00CB06E7 /* SignInViewController.swift */,
 				CEF8C57823742DCC00CB06E7 /* SignInViewController.xib */,
-				CE92C5242379760B000F1594 /* SocialMediaPopUPViewController.swift */,
+				CE92C5242379760B000F1594 /* SocialMediaSheetViewController.swift */,
 				CE92C5252379760B000F1594 /* SocialMediaPopUPViewController.xib */,
 			);
 			path = "Sign In";
@@ -796,7 +800,7 @@
 			files = (
 				CEF98B7E2370237D008295C3 /* BaseResponse.swift in Sources */,
 				CE01FD91235DD11200090A0E /* NewsService.swift in Sources */,
-				CE92C5262379760B000F1594 /* SocialMediaPopUPViewController.swift in Sources */,
+				CE92C5262379760B000F1594 /* SocialMediaSheetViewController.swift in Sources */,
 				CE6ADF5D23589A740051C879 /* NetworkManager.swift in Sources */,
 				CE0DB340235F13FB00340A60 /* Extentions.swift in Sources */,
 				CE4D4771235DF0900041B94C /* Materials.swift in Sources */,
@@ -1114,7 +1118,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabkTrialUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabqTrialUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
@@ -1137,7 +1141,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabkTrialUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabqTrialUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";

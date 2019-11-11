@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocialMediaPopUPViewController" customModule="SabkTrial" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SocialMediaSheetViewController" customModule="SabkTrial" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,7 +29,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" name="background"/>
                     <constraints>
                         <constraint firstItem="TB9-VE-c57" firstAttribute="width" secondItem="VgL-up-QUB" secondAttribute="width" multiplier="0.8" constant="34.199999999999989" id="6fX-2S-mFN"/>
                         <constraint firstItem="TB9-VE-c57" firstAttribute="top" secondItem="VgL-up-QUB" secondAttribute="top" constant="20" id="ago-uz-YrD"/>
@@ -45,7 +45,12 @@
                 <constraint firstItem="VgL-up-QUB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UPr-lG-FXo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="92"/>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="background">
+            <color red="0.17254901960784313" green="0.17254901960784313" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

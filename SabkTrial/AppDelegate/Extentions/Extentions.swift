@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AuthenticationServices
 extension Data {
     var html2AttributedString: NSAttributedString? {
         do {
@@ -101,5 +102,44 @@ enum Sections: Int, CaseIterable {
             guard let color = layer.borderColor else { return nil }
             return UIColor(cgColor: color)
         }
+    }
+}
+
+@available(iOS 13.0, *)
+extension SignInViewController: ASAuthorizationControllerDelegate {
+     // ASAuthorizationControllerDelegate function for authorization failed
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print(error.localizedDescription)
+}
+     // ASAuthorizationControllerDelegate function for successful authorization
+    
+    func authorizationController(controller: ASAuthorizationController,
+                                 didCompleteWithAuthorization authorization: ASAuthorization) {
+    
+    if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+//               Create an account as per your requirement
+//              let appleId = appleIDCredential.user
+              let appleUserFirstName = appleIDCredential.fullName?.givenName
+        print(appleUserFirstName ?? "no user name")
+//              let appleUserLastName = appleIDCredential.fullName?.familyName
+//              let appleUserEmail = appleIDCredential.email
+              //Write your code
+          } else if let passwordCredential = authorization.credential as? ASPasswordCredential {
+              
+//              let appleUsername = passwordCredential.user
+              let applePassword = passwordCredential.password
+        print(applePassword)
+              //Write your code
+          }
+     }
+}
+
+@available(iOS 13.0, *)
+extension SignInViewController:
+ASAuthorizationControllerPresentationContextProviding {
+
+    //For present window
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window ?? UIWindow()
     }
 }
