@@ -6,6 +6,7 @@ PODS:
   - AppAuth/Core (1.2.0)
   - AppAuth/ExternalUserAgent (1.2.0)
   - DateToolsSwift (4.0.0)
+  - FittedSheets (1.4.5)
   - GoogleSignIn (5.0.0):
     - AppAuth (~> 1.1)
     - GTMAppAuth (~> 1.0)
@@ -33,6 +34,7 @@ PODS:
 
 DEPENDENCIES:
   - DateToolsSwift
+  - FittedSheets
   - GoogleSignIn
   - Localize-Swift
   - Moya
@@ -45,6 +47,7 @@ SPEC REPOS:
     - Alamofire
     - AppAuth
     - DateToolsSwift
+    - FittedSheets
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
@@ -59,6 +62,7 @@ SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   AppAuth: bce82c76043657c99d91e7882e8a9e1a93650cd4
   DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
+  FittedSheets: 7f754c9f6fb4ea330cbc57c652b594255f2a6819
   GoogleSignIn: a62edd0516721d2a3db1259a5681b91f9b41c06a
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
@@ -69,6 +73,6 @@ SPEC CHECKSUMS:
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
   Windless: c6b7d63ac3a0c7e6b241e316650d4605abf71894
 
-PODFILE CHECKSUM: 2b996eddc7ac141725296faf9b35d7bca0b0bafd
+PODFILE CHECKSUM: f6924b1ddef2753600e7ba88377126b374ab1c00
 
 COCOAPODS: 1.7.5

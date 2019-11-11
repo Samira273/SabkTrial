@@ -57,6 +57,8 @@
 		CE6ADF662358A2400051C879 /* NewsScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ADF652358A2400051C879 /* NewsScreenPresenter.swift */; };
 		CE6ADF682358A24D0051C879 /* NewsScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ADF672358A24D0051C879 /* NewsScreenModel.swift */; };
 		CE6ADF6A2358A2730051C879 /* NewsScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6ADF692358A2730051C879 /* NewsScreenProtocols.swift */; };
+		CE92C5262379760B000F1594 /* SocialMediaPopUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92C5242379760B000F1594 /* SocialMediaPopUPViewController.swift */; };
+		CE92C5272379760B000F1594 /* SocialMediaPopUPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE92C5252379760B000F1594 /* SocialMediaPopUPViewController.xib */; };
 		CEB15DD7235883F600659D1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEB15DD9235883F600659D1A /* Localizable.strings */; };
 		CEE73805235F53750070C482 /* NewsSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE73803235F53750070C482 /* NewsSectionCell.swift */; };
 		CEE73806235F53750070C482 /* NewsSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE73804235F53750070C482 /* NewsSectionCell.xib */; };
@@ -149,6 +151,9 @@
 		CE6ADF652358A2400051C879 /* NewsScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenPresenter.swift; sourceTree = "<group>"; };
 		CE6ADF672358A24D0051C879 /* NewsScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenModel.swift; sourceTree = "<group>"; };
 		CE6ADF692358A2730051C879 /* NewsScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreenProtocols.swift; sourceTree = "<group>"; };
+		CE92C5242379760B000F1594 /* SocialMediaPopUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaPopUPViewController.swift; sourceTree = "<group>"; };
+		CE92C5252379760B000F1594 /* SocialMediaPopUPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialMediaPopUPViewController.xib; sourceTree = "<group>"; };
+		CE92C52823798B70000F1594 /* SabkTrial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SabkTrial.entitlements; sourceTree = "<group>"; };
 		CEB15DD423587F8400659D1A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CEB15DD8235883F600659D1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEB15DDA235883FC00659D1A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -475,6 +480,7 @@
 		CEF748C823587A670023FD9B /* SabkTrial */ = {
 			isa = PBXGroup;
 			children = (
+				CE92C52823798B70000F1594 /* SabkTrial.entitlements */,
 				CEB15DDB23588EB200659D1A /* AppDelegate */,
 				CEB15DE42358908F00659D1A /* Scenes */,
 				CEB15DE12358905900659D1A /* Base */,
@@ -510,6 +516,8 @@
 			children = (
 				CEF8C57723742DCC00CB06E7 /* SignInViewController.swift */,
 				CEF8C57823742DCC00CB06E7 /* SignInViewController.xib */,
+				CE92C5242379760B000F1594 /* SocialMediaPopUPViewController.swift */,
+				CE92C5252379760B000F1594 /* SocialMediaPopUPViewController.xib */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -639,6 +647,7 @@
 				CEF748D423587A680023FD9B /* LaunchScreen.storyboard in Resources */,
 				CE10742923606631002C71E4 /* VideosCollectionViewCell.xib in Resources */,
 				CEE73806235F53750070C482 /* NewsSectionCell.xib in Resources */,
+				CE92C5272379760B000F1594 /* SocialMediaPopUPViewController.xib in Resources */,
 				CEB15DD7235883F600659D1A /* Localizable.strings in Resources */,
 				CEF748D123587A680023FD9B /* Assets.xcassets in Resources */,
 			);
@@ -787,6 +796,7 @@
 			files = (
 				CEF98B7E2370237D008295C3 /* BaseResponse.swift in Sources */,
 				CE01FD91235DD11200090A0E /* NewsService.swift in Sources */,
+				CE92C5262379760B000F1594 /* SocialMediaPopUPViewController.swift in Sources */,
 				CE6ADF5D23589A740051C879 /* NetworkManager.swift in Sources */,
 				CE0DB340235F13FB00340A60 /* Extentions.swift in Sources */,
 				CE4D4771235DF0900041B94C /* Materials.swift in Sources */,
@@ -1010,15 +1020,18 @@
 			baseConfigurationReference = 2712416DDC708D3E687C0616 /* Pods-SabkTrial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SabkTrial/SabkTrial.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CFBSFN395Z;
+				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = "$(SRCROOT)/SabkTrial/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ibtikar.SabkTrial;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabqTrial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1029,6 +1042,8 @@
 			baseConfigurationReference = 8BFA054A62CCE14C21F141BC /* Pods-SabkTrial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SabkTrial/SabkTrial.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = "$(SRCROOT)/SabkTrial/Supporting Files/Info.plist";
@@ -1036,8 +1051,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ibtikar.SabkTrial;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabqTrial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1056,7 +1072,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ibtikar.SabkTrialTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabqTrialTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1077,7 +1093,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ibtikar.SabkTrialTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabqTrialTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1090,15 +1106,18 @@
 			baseConfigurationReference = 026B78E834FD521ABCA68388 /* Pods-SabkTrialUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SabkTrialUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ibtikar.SabkTrialUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabkTrialUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SabkTrial;
@@ -1110,15 +1129,18 @@
 			baseConfigurationReference = 7556A7BD12E7B5A681438BC9 /* Pods-SabkTrialUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SabkTrialUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ibtikar.SabkTrialUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibtikar.sabkTrialUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SabkTrial;

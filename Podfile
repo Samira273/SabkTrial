@@ -13,6 +13,7 @@ target 'SabkTrial' do
   pod 'SwiftDate'
   pod 'Windless'
   pod 'GoogleSignIn'
+  pod 'FittedSheets'
 
   target 'SabkTrialTests' do
     inherit! :search_paths
