@@ -12,8 +12,8 @@ import AuthenticationServices
 
 @available(iOS 13.0, *)
 class SignInViewController: UIViewController, UITextFieldDelegate {
-    
-    @IBOutlet private weak var signInWithAppleView: UIView!
+
+    @IBOutlet private weak var signInWithAppleBtn: UIButton!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var userNameTextField: UITextField!
     @IBOutlet private weak var signInButton: UIButton!
@@ -27,7 +27,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             SocialMediaSheetViewController(nibName: "SocialMediaPopUPViewController", bundle: nil)
         sheetController =
             SheetViewController(controller: socialMediaPopUPViewController ?? SocialMediaSheetViewController(),
-                                sizes: [.fixed(212), .fixed(200), .halfScreen, .fullScreen])
+                                sizes: [.fixed(212), .fixed(200), .fixed(212), .fixed(200)])
 
         // Adjust how the bottom safe area is handled on iPhone X screens
         sheetController?.blurBottomSafeArea = false
@@ -36,11 +36,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         sheetController?.topCornersRadius = 0
       
         // Make corners more round
-        sheetController?.topCornersRadius = 15
+        sheetController?.topCornersRadius = 7
        
         // Disable the dismiss on background tap functionality
         sheetController?.dismissOnBackgroundTap = true
-
         // Extend the background behind the pull bar instead of having it transparent
         sheetController?.extendBackgroundBehindHandle = true
         
@@ -61,6 +60,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         userNameTextField.becomeFirstResponder()
         self.userNameTextField.delegate = self
         self.passwordTextField.delegate = self
+   
     }
     
     func makeShadowForButton() {
@@ -129,34 +129,31 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                                                object: nil)
     }
     
-    @objc func keyboardWillShow(sender: NSNotification) {
+    @objc
+    func keyboardWillShow(sender: NSNotification) {
         if let keyboardSize = (sender.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+                self.view.frame.origin.y -= keyboardSize.height * 0.5
             }
         }
     }
     
-    @objc func keyboardWillHide(sender: NSNotification) {
+    @objc
+    func keyboardWillHide(sender: NSNotification) {
         if view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
     }
     
-    @available(iOS 13.0, *)
     func setupAppleSignin() {
-        let btnAuthorization = ASAuthorizationAppleIDButton()
-
-               btnAuthorization.frame = CGRect(x: 0, y: 0, width: 200, height: 40)
-
-               btnAuthorization.center = self.view.center
-
-               btnAuthorization.addTarget(self, action: #selector(actionHandleAppleSignin), for: .touchUpInside)
-                signInWithAppleView.addSubview(btnAuthorization)
+        signInWithAppleBtn.contentHorizontalAlignment = .fill
+        signInWithAppleBtn.contentVerticalAlignment = .fill
+        signInWithAppleBtn.addTarget(self, action: #selector(actionHandleAppleSignin), for: .touchUpInside)
     }
     
     @available(iOS 13.0, *)
-    @objc func actionHandleAppleSignin() {
+    @objc
+    func actionHandleAppleSignin() {
             let appleIDProvider = ASAuthorizationAppleIDProvider()
             let request = appleIDProvider.createRequest()
             request.requestedScopes = [.fullName, .email]

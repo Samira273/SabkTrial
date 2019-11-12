@@ -8,17 +8,18 @@
 
 import UIKit
 import GoogleSignIn
-import AuthenticationServices
 
-@available(iOS 13.0, *)
 class SocialMediaSheetViewController: UIViewController {
-    
+  
+    @IBAction func signInWithGoogle(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.signIn()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        // Automatically sign in the user.
+              // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-
         // Do any additional setup after loading the view.
     }
 }

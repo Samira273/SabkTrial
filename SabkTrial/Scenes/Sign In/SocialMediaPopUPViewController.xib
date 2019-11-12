@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,34 +22,81 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgL-up-QUB">
                     <rect key="frame" x="0.0" y="44" width="414" height="200"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TB9-VE-c57" customClass="GIDSignInButton">
-                            <rect key="frame" x="24.5" y="20" width="365" height="44"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QO-2i-rMG">
+                            <rect key="frame" x="38" y="102" width="339" height="45"/>
+                            <subviews>
+                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5j-Wt-XQv">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="4v7-9S-tqo"/>
+                                        <constraint firstAttribute="height" constant="45" id="uSH-9G-L6h"/>
+                                    </constraints>
+                                    <state key="normal" image="google image"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiR-Qc-Fbq">
+                                    <rect key="frame" x="50" y="0.0" width="289" height="45"/>
+                                    <state key="normal" title="التسجيل من خلال جوجل">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="signInWithGoogle:" destination="-1" eventType="touchUpInside" id="Xfw-7q-lcE"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="background"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="z81-NH-kpc"/>
+                                <constraint firstAttribute="bottom" secondItem="AiR-Qc-Fbq" secondAttribute="bottom" id="Ed3-WV-CYz"/>
+                                <constraint firstItem="AiR-Qc-Fbq" firstAttribute="top" secondItem="0QO-2i-rMG" secondAttribute="top" id="MI4-JC-oGj"/>
+                                <constraint firstItem="f5j-Wt-XQv" firstAttribute="top" secondItem="0QO-2i-rMG" secondAttribute="top" id="Y5Z-Xe-O4t"/>
+                                <constraint firstItem="f5j-Wt-XQv" firstAttribute="leading" secondItem="0QO-2i-rMG" secondAttribute="leading" id="p1S-ok-Frv"/>
+                                <constraint firstAttribute="trailing" secondItem="AiR-Qc-Fbq" secondAttribute="trailing" id="vvz-Lc-M7h"/>
+                                <constraint firstAttribute="bottom" secondItem="f5j-Wt-XQv" secondAttribute="bottom" id="zzW-Ag-b9c"/>
                             </constraints>
-                        </view>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" name="background"/>
                     <constraints>
-                        <constraint firstItem="TB9-VE-c57" firstAttribute="width" secondItem="VgL-up-QUB" secondAttribute="width" multiplier="0.8" constant="34.199999999999989" id="6fX-2S-mFN"/>
-                        <constraint firstItem="TB9-VE-c57" firstAttribute="top" secondItem="VgL-up-QUB" secondAttribute="top" constant="20" id="ago-uz-YrD"/>
-                        <constraint firstItem="TB9-VE-c57" firstAttribute="centerX" secondItem="VgL-up-QUB" secondAttribute="centerX" id="uIo-60-8Jt"/>
-                        <constraint firstAttribute="height" constant="200" id="x0v-Uo-6wm"/>
+                        <constraint firstAttribute="bottom" secondItem="0QO-2i-rMG" secondAttribute="bottom" constant="53" id="Gur-PE-zjQ"/>
+                        <constraint firstAttribute="trailing" secondItem="0QO-2i-rMG" secondAttribute="trailing" constant="37" id="idT-dc-fkk"/>
+                        <constraint firstItem="0QO-2i-rMG" firstAttribute="leading" secondItem="VgL-up-QUB" secondAttribute="leading" constant="38" id="ncd-JP-sti"/>
+                        <constraint firstAttribute="height" constant="200" id="uxj-gW-jBS"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="VgL-up-QUB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6bm-FF-SUT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VgL-up-QUB" secondAttribute="trailing" id="7Xx-U1-iXk"/>
-                <constraint firstItem="VgL-up-QUB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UPr-lG-FXo"/>
+                <constraint firstItem="VgL-up-QUB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HAl-OS-ImJ"/>
+                <constraint firstItem="VgL-up-QUB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Kkc-gG-qho"/>
+                <constraint firstItem="VgL-up-QUB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bHv-85-jzb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </view>
     </objects>
     <resources>
+        <image name="google image" width="25" height="25"/>
         <namedColor name="background">
             <color red="0.17254901960784313" green="0.17254901960784313" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
