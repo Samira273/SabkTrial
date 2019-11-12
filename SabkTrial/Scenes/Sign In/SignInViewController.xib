@@ -59,10 +59,10 @@
                     <state key="normal" title="Button" image="ic_eye"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47Y-9M-Sd8">
-                    <rect key="frame" x="38" y="250" width="300" height="44"/>
+                    <rect key="frame" x="38" y="250" width="300" height="50"/>
                     <color key="backgroundColor" name="blueBackGround"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="j7p-sI-a8g"/>
+                        <constraint firstAttribute="height" constant="50" id="j7p-sI-a8g"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <state key="normal" title="تسجيل دخول">
@@ -81,7 +81,7 @@
                     </userDefinedRuntimeAttributes>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="WLs-oc-S53">
-                    <rect key="frame" x="38" y="364" width="300" height="33"/>
+                    <rect key="frame" x="38" y="370" width="300" height="33"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rf0-6j-WFM">
                             <rect key="frame" x="0.0" y="0.0" width="104" height="33"/>
@@ -141,7 +141,7 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5H-J6-OdP">
-                    <rect key="frame" x="73" y="314" width="225" height="30"/>
+                    <rect key="frame" x="73" y="320" width="225" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="TW7-jh-wo8"/>
                     </constraints>
@@ -150,14 +150,14 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofa-2k-3oh">
-                    <rect key="frame" x="38" y="410" width="300" height="44"/>
+                    <rect key="frame" x="38" y="416" width="300" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="RnQ-u6-1xq"/>
                     </constraints>
                     <state key="normal" image="appleButton"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrE-NQ-KTK">
-                    <rect key="frame" x="38" y="474" width="300" height="44"/>
+                    <rect key="frame" x="38" y="480" width="300" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="a7r-VX-iuN"/>
                     </constraints>

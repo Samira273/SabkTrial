@@ -143,3 +143,9 @@ ASAuthorizationControllerPresentationContextProviding {
         return self.view.window ?? UIWindow()
     }
 }
+
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+    }
+}

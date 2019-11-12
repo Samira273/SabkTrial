@@ -25,6 +25,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         // init YourViewController
        socialMediaPopUPViewController =
             SocialMediaSheetViewController(nibName: "SocialMediaPopUPViewController", bundle: nil)
+    socialMediaPopUPViewController?.signInViewControllerReference = self
         sheetController =
             SheetViewController(controller: socialMediaPopUPViewController ?? SocialMediaSheetViewController(),
                                 sizes: [.fixed(212), .fixed(200), .fixed(212), .fixed(200)])
@@ -52,7 +53,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         setupAppleSignin()
         prepareTextFields()
         prepareNavigationBar()
-        makeShadowForButton()
     }
     
     func prepareTextFields() {
@@ -62,16 +62,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
    
     }
-    
-    func makeShadowForButton() {
-        //make shadow for button
-        signInButton.layer.shadowColor = UIColor.black.cgColor
-        signInButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        signInButton.layer.shadowRadius = 8
-        signInButton.layer.shadowOpacity = 0.5
-        signInButton.layer.masksToBounds = false
-    }
-    
+  
     func prepareNavigationBar() {
         let leftButton = UIButton(type: .custom)
         leftButton.setImage(#imageLiteral(resourceName: "ic_back"), for: .normal)
