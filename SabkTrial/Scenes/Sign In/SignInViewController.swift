@@ -10,7 +10,6 @@ import UIKit
 import FittedSheets
 import AuthenticationServices
 
-@available(iOS 13.0, *)
 class SignInViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet private weak var signInWithAppleBtn: UIButton!
@@ -22,35 +21,17 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     var socialMediaPopUPViewController: SocialMediaSheetViewController?
     
     @IBAction func signInBySocialMedia(_ sender: Any) {
-        // init YourViewController
-       socialMediaPopUPViewController =
-            SocialMediaSheetViewController(nibName: "SocialMediaPopUPViewController", bundle: nil)
-    socialMediaPopUPViewController?.signInViewControllerReference = self
-        sheetController =
-            SheetViewController(controller: socialMediaPopUPViewController ?? SocialMediaSheetViewController(),
-                                sizes: [.fixed(212), .fixed(200), .fixed(212), .fixed(200)])
-
-        // Adjust how the bottom safe area is handled on iPhone X screens
-        sheetController?.blurBottomSafeArea = false
-        sheetController?.adjustForBottomSafeArea = true
-        // Turn off rounded corners
-        sheetController?.topCornersRadius = 0
-      
-        // Make corners more round
-        sheetController?.topCornersRadius = 7
-       
-        // Disable the dismiss on background tap functionality
-        sheetController?.dismissOnBackgroundTap = true
-        // Extend the background behind the pull bar instead of having it transparent
-        sheetController?.extendBackgroundBehindHandle = true
-        
-        self.present(sheetController ?? SheetViewController(), animated: false, completion: nil)
+      presentButtomSheet()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
-        setupAppleSignin()
+        if #available(iOS 13.0, *) {
+            setupAppleSignin()
+        } else {
+            // Fallback on earlier versions
+        }
         prepareTextFields()
         prepareNavigationBar()
     }
@@ -61,6 +42,30 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         self.userNameTextField.delegate = self
         self.passwordTextField.delegate = self
    
+    }
+    
+    func presentButtomSheet() {
+        // init YourViewController
+             socialMediaPopUPViewController =
+                  SocialMediaSheetViewController(nibName: "SocialMediaPopUPViewController", bundle: nil)
+              socialMediaPopUPViewController?.signInViewController = self
+              sheetController =
+                  SheetViewController(controller: socialMediaPopUPViewController ?? SocialMediaSheetViewController(),
+                                      sizes: [.fixed(212), .fixed(200), .fixed(212), .fixed(200)])
+              // Adjust how the bottom safe area is handled on iPhone X screens
+              sheetController?.blurBottomSafeArea = false
+              sheetController?.adjustForBottomSafeArea = true
+              // Turn off rounded corners
+              sheetController?.topCornersRadius = 0
+            
+              // Make corners more round
+              sheetController?.topCornersRadius = 7
+             
+              // Disable the dismiss on background tap functionality
+              sheetController?.dismissOnBackgroundTap = true
+              // Extend the background behind the pull bar instead of having it transparent
+              sheetController?.extendBackgroundBehindHandle = true
+              self.present(sheetController ?? SheetViewController(), animated: false, completion: nil)
     }
   
     func prepareNavigationBar() {
@@ -136,6 +141,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @available(iOS 13.0, *)
     func setupAppleSignin() {
         signInWithAppleBtn.contentHorizontalAlignment = .fill
         signInWithAppleBtn.contentVerticalAlignment = .fill
@@ -153,14 +159,5 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             authorizationController.presentationContextProvider = self
             authorizationController.performRequests()
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

@@ -10,7 +10,6 @@ import UIKit
 import GoogleSignIn
 import TwitterKit
 
-@available(iOS 13.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
@@ -20,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     let tabBarController = UITabBarController()
     var navBetweenScreens: UINavigationController?
     
+    //sign in with google call back
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
@@ -29,13 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
             return
         }
-        
-        navBetweenScreens = UINavigationController(rootViewController: newsScreenView)
-        navBetweenScreens?.tabBarItem =
-            UITabBarItem(title: "news".localized, image: #imageLiteral(resourceName: "ic_newspaper_active"), tag: 1)
-        //Make : add other controllers with their navbars here
-        tabBarController.viewControllers = [(navBetweenScreens ?? UINavigationController())]
-        window?.rootViewController = tabBarController
+       prepareHomeScreen()
     }
     
     func application(_ application: UIApplication,
@@ -43,6 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Override point for customization after application launch.
         setupApp()
         return true
+    }
+    
+    func setupApp() {
+        setupNetworking()
+        setUpGoogleSignIn()
+        setUpTwitterSignIn()
+        prepareLogInScreen()
     }
     
     func application(_ app: UIApplication,
@@ -55,13 +56,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
         return false
     }
-    
-    func setupApp() {
-        setupNetworking()
+    //prepare home to be presented on window
+    func prepareHomeScreen() {
+        navBetweenScreens = UINavigationController(rootViewController: newsScreenView)
+        navBetweenScreens?.tabBarItem =
+            UITabBarItem(title: "news".localized, image: #imageLiteral(resourceName: "ic_newspaper_active"), tag: 1)
+        //Make : add other controllers with their navbars here
+        tabBarController.viewControllers = [(navBetweenScreens ?? UINavigationController())]
+        window?.rootViewController = tabBarController
+    }
+
+    func setUpGoogleSignIn() {
         GIDSignIn.sharedInstance().clientID = "732182052344-8bon8mu12od81muimmn9ebqb5hv5rghh.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+    }
+    
+    func setUpTwitterSignIn() {
         TWTRTwitter.sharedInstance().start(withConsumerKey: "yyAb8n7V0xM1sO9vAO2cAb4wf",
                                            consumerSecret: "eQLkaKxshQP2bZnX1kZsQMZZDrgH8EmMlYlQFuwijU1PdmX0MZ")
+    }
+    
+    func prepareLogInScreen() {
         window = UIWindow(frame: UIScreen.main.bounds)
         navBetweenScreens = UINavigationController(rootViewController: signInviewController)
         window?.rootViewController = navBetweenScreens

@@ -7,9 +7,8 @@
 //
 
 import Foundation
-@available(iOS 13.0, *)
-extension AppDelegate {
 
+extension AppDelegate {
     func setupNetworking() {
         NetworkManager.shared = NetworkManager(config: NetworkDefaults())
     }
