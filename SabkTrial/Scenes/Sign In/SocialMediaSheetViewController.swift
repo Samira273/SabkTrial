@@ -12,7 +12,9 @@ import TwitterKit
 
 class SocialMediaSheetViewController: UIViewController {
   
+    @IBOutlet private weak var signInByGoogleBtnImg: UIButton!
     @IBOutlet private weak var signInWithTwitter: UIView!
+    @IBOutlet private weak var signInByGoogleBtnText: UIButton!
     @IBOutlet private weak var stackView: UIStackView!
     var signInViewController: SignInViewController?
     @IBAction func signInWithGoogle(_ sender: Any) {
@@ -21,7 +23,12 @@ class SocialMediaSheetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        signInByGoogleBtnText.layer.borderColor = UIColor(named: "borderColor")?.cgColor
+        signInByGoogleBtnText.layer.borderWidth = 1
+        signInByGoogleBtnText.layer.cornerRadius = 2
+        signInByGoogleBtnImg.layer.borderColor = UIColor(named: "borderColor")?.cgColor
+        signInByGoogleBtnImg.layer.borderWidth = 1
+        signInByGoogleBtnImg.layer.cornerRadius = 2
         GIDSignIn.sharedInstance()?.presentingViewController = self
             // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()

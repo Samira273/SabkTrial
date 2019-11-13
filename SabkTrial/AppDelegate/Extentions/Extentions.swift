@@ -62,48 +62,39 @@ extension UIColor {
 enum Sections: Int, CaseIterable {
     case sliderSection = 0
     case firstNewsSection = 1
-    //    case videoSection = 2
-    //    case latestArticle = 3
-    //    case secondNewsSection = 4
-    //    case photosSlider = 5
-    //    case thirdNewsSection = 6
-    //    case articles = 7
-    //    case forthNewsSection = 8
-    //    case footer = 9
-
 }
 
-@IBDesignable extension UIButton {
-
-     @IBInspectable var cornerRadius: CGFloat {
-        set {
-            layer.cornerRadius = newValue
-        }
-        get {
-            return layer.cornerRadius
-        }
-    }
-    
-    @IBInspectable var borderWidth: CGFloat {
-           set {
-               layer.borderWidth = newValue
-           }
-           get {
-               return layer.borderWidth
-           }
-    }
-
-    @IBInspectable var borderColor: UIColor? {
-        set {
-            guard let uiColor = newValue else { return }
-            layer.borderColor = uiColor.cgColor
-        }
-        get {
-            guard let color = layer.borderColor else { return nil }
-            return UIColor(cgColor: color)
-        }
-    }
-}
+//@IBDesignable extension UIButton {
+//
+//     @IBInspectable var cornerRadius: CGFloat {
+//        set {
+//            layer.cornerRadius = newValue
+//        }
+//        get {
+//            return layer.cornerRadius
+//        }
+//    }
+//
+//    @IBInspectable var borderWidth: CGFloat {
+//           set {
+//               layer.borderWidth = newValue
+//           }
+//           get {
+//               return layer.borderWidth
+//           }
+//    }
+//
+//    @IBInspectable var borderColor: UIColor? {
+//        set {
+//            guard let uiColor = newValue else { return }
+//            layer.borderColor = uiColor.cgColor
+//        }
+//        get {
+//            guard let color = layer.borderColor else { return nil }
+//            return UIColor(cgColor: color)
+//        }
+//    }
+//}
 
 @available(iOS 13.0, *)
 extension SignInViewController: ASAuthorizationControllerDelegate {
@@ -124,6 +115,8 @@ extension SignInViewController: ASAuthorizationControllerDelegate {
 //              let appleUserLastName = appleIDCredential.fullName?.familyName
 //              let appleUserEmail = appleIDCredential.email
               //Write your code
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        appDelegate.prepareHomeScreen()
           } else if let passwordCredential = authorization.credential as? ASPasswordCredential {
               
 //              let appleUsername = passwordCredential.user

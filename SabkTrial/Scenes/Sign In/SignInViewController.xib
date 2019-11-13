@@ -15,6 +15,7 @@
                 <outlet property="passwordTextField" destination="jOx-yK-y6U" id="eH3-y5-GWY"/>
                 <outlet property="signInButton" destination="47Y-9M-Sd8" id="fVQ-0M-9fY"/>
                 <outlet property="signInWithAppleBtn" destination="Ofa-2k-3oh" id="Lj2-BT-iic"/>
+                <outlet property="signInWithSocialMediaBtn" destination="BrE-NQ-KTK" id="2IP-q1-qMb"/>
                 <outlet property="userNameTextField" destination="eik-VB-kUt" id="fDz-Pw-LhY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,6 +34,7 @@
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اسم المستخدم" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="eik-VB-kUt">
                     <rect key="frame" x="38" y="115" width="300" height="50"/>
+                    <color key="backgroundColor" name="background"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="1SB-WJ-Ewd"/>
                     </constraints>
@@ -44,6 +46,7 @@
                 </textField>
                 <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="كلمة المرور" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jOx-yK-y6U">
                     <rect key="frame" x="38" y="182" width="300" height="50"/>
+                    <color key="backgroundColor" name="background"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Ktk-Tg-MfX"/>
                     </constraints>
@@ -68,17 +71,6 @@
                     <state key="normal" title="تسجيل دخول">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" name="blueBackGround"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="WLs-oc-S53">
                     <rect key="frame" x="38" y="370" width="300" height="33"/>
@@ -94,7 +86,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="background"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="LDE-vz-FKX" secondAttribute="trailing" id="1oY-Rl-Ug6"/>
                                 <constraint firstItem="LDE-vz-FKX" firstAttribute="centerY" secondItem="Rf0-6j-WFM" secondAttribute="centerY" id="IoO-N4-xgX"/>
@@ -119,7 +111,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="background"/>
                             <constraints>
                                 <constraint firstItem="9Y9-x8-qhY" firstAttribute="centerX" secondItem="zwM-Bk-Hix" secondAttribute="centerX" id="9Nl-4A-9U7"/>
                                 <constraint firstAttribute="trailing" secondItem="9Y9-x8-qhY" secondAttribute="trailing" id="TKa-uh-GMe"/>
@@ -128,6 +120,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" name="background"/>
                     <constraints>
                         <constraint firstItem="Rf0-6j-WFM" firstAttribute="top" secondItem="WLs-oc-S53" secondAttribute="top" id="247-z0-jeZ"/>
                         <constraint firstItem="Rf0-6j-WFM" firstAttribute="leading" secondItem="WLs-oc-S53" secondAttribute="leading" id="8iB-pX-QW0"/>
@@ -164,17 +157,6 @@
                     <state key="normal" title="التسجيل بواسطة التواصل الاجتماعي">
                         <color key="titleColor" name="BlueSocialButton"/>
                     </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" name="BlueSocialButton"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="signInBySocialMedia:" destination="-1" eventType="touchUpInside" id="Q1Y-vN-Yxv"/>
                     </connections>

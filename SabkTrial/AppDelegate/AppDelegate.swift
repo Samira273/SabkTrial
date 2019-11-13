@@ -9,6 +9,7 @@
 import UIKit
 import GoogleSignIn
 import TwitterKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -44,8 +45,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         setUpGoogleSignIn()
         setUpTwitterSignIn()
         prepareLogInScreen()
+        registerForPushNotifications()
     }
     
+    func registerForPushNotifications() {
+     UNUserNotificationCenter.current()
+        .requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] granted, error in
+            print("Permission granted: \(granted)")
+            guard granted else { return }
+            self?.getNotificationSettings()
+        }
+    }
+    func getNotificationSettings() {
+      UNUserNotificationCenter.current().getNotificationSettings { settings in
+        print("Notification settings: \(settings)")
+        guard settings.authorizationStatus == .authorized else { return }
+        DispatchQueue.main.async {
+          UIApplication.shared.registerForRemoteNotifications()
+        }
+      }
+    }
     func application(_ app: UIApplication,
                      open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
@@ -81,6 +100,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         navBetweenScreens = UINavigationController(rootViewController: signInviewController)
         window?.rootViewController = navBetweenScreens
         window?.makeKeyAndVisible()
+    }
+    
+    func application(
+      _ application: UIApplication,
+      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+    ) {
+      let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+      let token = tokenParts.joined()
+      print("Device Token: \(token)")
+    }
+
+    func application(
+      _ application: UIApplication,
+      didFailToRegisterForRemoteNotificationsWithError error: Error) {
+      print("Failed to register: \(error)")
     }
     
 }

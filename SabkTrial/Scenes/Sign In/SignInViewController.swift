@@ -12,6 +12,7 @@ import AuthenticationServices
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet private weak var signInWithSocialMediaBtn: UIButton!
     @IBOutlet private weak var signInWithAppleBtn: UIButton!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var userNameTextField: UITextField!
@@ -19,7 +20,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet private weak var forgetPAsswordBtn: UIButton!
     var sheetController: SheetViewController?
     var socialMediaPopUPViewController: SocialMediaSheetViewController?
-    
+
     @IBAction func signInBySocialMedia(_ sender: Any) {
       presentButtomSheet()
     }
@@ -27,6 +28,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
+       prepareButtonsUI()
         if #available(iOS 13.0, *) {
             setupAppleSignin()
         } else {
@@ -34,6 +36,15 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
         prepareTextFields()
         prepareNavigationBar()
+    }
+    
+    func prepareButtonsUI() {
+        signInButton.layer.borderColor = UIColor(named: "blueBackGround")?.cgColor
+               signInButton.layer.cornerRadius = 5
+               signInButton.layer.borderWidth = 1
+               signInWithSocialMediaBtn.layer.borderColor = UIColor(named: "BlueSocialButton")?.cgColor
+               signInWithSocialMediaBtn.layer.cornerRadius = 5
+               signInWithSocialMediaBtn.layer.borderWidth = 1
     }
     
     func prepareTextFields() {
