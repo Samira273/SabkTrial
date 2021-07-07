@@ -15,22 +15,22 @@ typealias StatusCode = Int
 //typealias Completion<T: Codable> = (_ result:NetworkResult<T>, _ statusCode:StatusCode) -> Void
 
 class NetworkManager {
-    
+
     static var shared: NetworkManager!
-    
+
     var networkConfig: NetworkDefaults!
-    
+
     let provider: MoyaProvider<MultiTarget>
-    
+
     init(config: NetworkDefaults = NetworkDefaults.defaults) {
         self.networkConfig = config
-        
-//        let headerPlugin = StaticHeaderPlugin(
-//            headers: [:])
+
+        //        let headerPlugin = StaticHeaderPlugin(
+        //            headers: [:])
         provider = MoyaProvider<MultiTarget>()
-//        provider = MoyaProvider<MultiTarget>(//manager: ,
-//            plugins: [headerPlugin, NetworkLoggerPlugin(verbose: true)])
-     
+        //        provider = MoyaProvider<MultiTarget>(//manager: ,
+        //            plugins: [headerPlugin, NetworkLoggerPlugin(verbose: true)])
+
     }
-    
+
 }

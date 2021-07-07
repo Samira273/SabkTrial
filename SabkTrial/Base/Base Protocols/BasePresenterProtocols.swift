@@ -9,7 +9,7 @@
 import Foundation
 @objc
 protocol PresenterLifeCycleProtocol {
-    
+
     @objc
     optional func viewDidLoad()
     @objc
@@ -23,20 +23,18 @@ protocol PresenterLifeCycleProtocol {
 }
 
 protocol BasePresenterAssembable {
-    
-    associatedtype View where View : BaseViewProtocol
-    associatedtype Model where Model : BaseModelProtocol
-    
+
+    associatedtype View where View: BaseViewProtocol
+    associatedtype Model where Model: BaseModelProtocol
+
     /// weak refrance to view
     var view: View? { get set }
     /// strong refrance to model
     var model: Model { get set }
-    
+
     init(view: View, model: Model)
 }
 
-protocol BasePresenterProtocol:PresenterLifeCycleProtocol {
-    
+protocol BasePresenterProtocol: PresenterLifeCycleProtocol {
+
 }
-
-

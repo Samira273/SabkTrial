@@ -67,6 +67,11 @@
 		CEF748D423587A680023FD9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF748D223587A680023FD9B /* LaunchScreen.storyboard */; };
 		CEF748DF23587A680023FD9B /* SabkTrialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF748DE23587A680023FD9B /* SabkTrialTests.swift */; };
 		CEF748EA23587A680023FD9B /* SabkTrialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF748E923587A680023FD9B /* SabkTrialUITests.swift */; };
+		CEF98B7E2370237D008295C3 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF98B7D2370237D008295C3 /* BaseResponse.swift */; };
+		CEFE022C2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE022A2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift */; };
+		CEFE022D2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE022B2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib */; };
+		CEFE02302369CECE004A70E7 /* ShimmerSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE022E2369CECE004A70E7 /* ShimmerSliderTableViewCell.swift */; };
+		CEFE02312369CECE004A70E7 /* ShimmerSliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFE022F2369CECE004A70E7 /* ShimmerSliderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +165,11 @@
 		CEF748E523587A680023FD9B /* SabkTrialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SabkTrialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF748E923587A680023FD9B /* SabkTrialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabkTrialUITests.swift; sourceTree = "<group>"; };
 		CEF748EB23587A680023FD9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF98B7D2370237D008295C3 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		CEFE022A2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerNewsTableViewCell.swift; sourceTree = "<group>"; };
+		CEFE022B2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShimmerNewsTableViewCell.xib; sourceTree = "<group>"; };
+		CEFE022E2369CECE004A70E7 /* ShimmerSliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerSliderTableViewCell.swift; sourceTree = "<group>"; };
+		CEFE022F2369CECE004A70E7 /* ShimmerSliderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShimmerSliderTableViewCell.xib; sourceTree = "<group>"; };
 		DBB3DAB342B2D484F7CE0456 /* Pods-SabkTrialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SabkTrialTests.debug.xcconfig"; path = "Target Support Files/Pods-SabkTrialTests/Pods-SabkTrialTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,21 +242,10 @@
 				CE09B5A2235C8D1C00979FF1 /* HeaderSliderCell.xib */,
 				CEE73803235F53750070C482 /* NewsSectionCell.swift */,
 				CEE73804235F53750070C482 /* NewsSectionCell.xib */,
-				CE10742E23607BB1002C71E4 /* VideosAdaptor.swift */,
-				CE1074222360634A002C71E4 /* VideosCell.swift */,
-				CE1074232360634A002C71E4 /* VideosCell.xib */,
-				CE10742623606631002C71E4 /* VideosCollectionViewCell.swift */,
-				CE10742723606631002C71E4 /* VideosCollectionViewCell.xib */,
-				CE1074302360A093002C71E4 /* ImagesAdaptor.swift */,
-				CE10742A2360792C002C71E4 /* ImagesCell.swift */,
-				CE10742B2360792C002C71E4 /* ImagesCell.xib */,
-				CE1074322360A16E002C71E4 /* ImagesCollectionViewCell.swift */,
-				CE1074332360A16E002C71E4 /* ImagesCollectionViewCell.xib */,
-				CE0F18192361A79C003FE11D /* ArticlesAdaptor.swift */,
-				CE0F18152361A78E003FE11D /* ArticlesCell.swift */,
-				CE0F18162361A78E003FE11D /* ArticlesCell.xib */,
-				CE0F181B2361AA21003FE11D /* ArticlesCollectionViewCell.swift */,
-				CE0F181C2361AA21003FE11D /* ArticlesCollectionViewCell.xib */,
+				CE14FBEE2372DB500037F1DE /* Videos Cell */,
+				CE14FBED2372DB3D0037F1DE /* Images Cell */,
+				CE14FBEC2372DB2A0037F1DE /* Articles Cell */,
+				CE14FBEB2372DB1A0037F1DE /* Shimmer Cells */,
 			);
 			path = NewsScreenCells;
 			sourceTree = "<group>";
@@ -257,6 +256,53 @@
 				CE0F18122361A0CC003FE11D /* ArticlesResponse.swift */,
 			);
 			path = Articles;
+			sourceTree = "<group>";
+		};
+		CE14FBEB2372DB1A0037F1DE /* Shimmer Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE022A2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift */,
+				CEFE022B2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib */,
+				CEFE022E2369CECE004A70E7 /* ShimmerSliderTableViewCell.swift */,
+				CEFE022F2369CECE004A70E7 /* ShimmerSliderTableViewCell.xib */,
+			);
+			path = "Shimmer Cells";
+			sourceTree = "<group>";
+		};
+		CE14FBEC2372DB2A0037F1DE /* Articles Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE0F18192361A79C003FE11D /* ArticlesAdaptor.swift */,
+				CE0F18152361A78E003FE11D /* ArticlesCell.swift */,
+				CE0F18162361A78E003FE11D /* ArticlesCell.xib */,
+				CE0F181B2361AA21003FE11D /* ArticlesCollectionViewCell.swift */,
+				CE0F181C2361AA21003FE11D /* ArticlesCollectionViewCell.xib */,
+			);
+			path = "Articles Cell";
+			sourceTree = "<group>";
+		};
+		CE14FBED2372DB3D0037F1DE /* Images Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE1074302360A093002C71E4 /* ImagesAdaptor.swift */,
+				CE10742A2360792C002C71E4 /* ImagesCell.swift */,
+				CE10742B2360792C002C71E4 /* ImagesCell.xib */,
+				CE1074322360A16E002C71E4 /* ImagesCollectionViewCell.swift */,
+				CE1074332360A16E002C71E4 /* ImagesCollectionViewCell.xib */,
+			);
+			path = "Images Cell";
+			sourceTree = "<group>";
+		};
+		CE14FBEE2372DB500037F1DE /* Videos Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE10742E23607BB1002C71E4 /* VideosAdaptor.swift */,
+				CE1074222360634A002C71E4 /* VideosCell.swift */,
+				CE1074232360634A002C71E4 /* VideosCell.xib */,
+				CE10742623606631002C71E4 /* VideosCollectionViewCell.swift */,
+				CE10742723606631002C71E4 /* VideosCollectionViewCell.xib */,
+			);
+			path = "Videos Cell";
 			sourceTree = "<group>";
 		};
 		CE4D4723235DE1100041B94C /* Base Protocols */ = {
@@ -362,6 +408,7 @@
 				CE4D472A235DE1B60041B94C /* BaseViewController.swift */,
 				CE4D472C235DE1C40041B94C /* BaseModel.swift */,
 				CE4D472E235DE1DC0041B94C /* BasePresenter.swift */,
+				CEF98B7D2370237D008295C3 /* BaseResponse.swift */,
 				CE4D4723235DE1100041B94C /* Base Protocols */,
 			);
 			path = Base;
@@ -423,10 +470,10 @@
 		CEF748C823587A670023FD9B /* SabkTrial */ = {
 			isa = PBXGroup;
 			children = (
-				CE4D475D235DEF860041B94C /* Entity */,
 				CEB15DDB23588EB200659D1A /* AppDelegate */,
 				CEB15DE42358908F00659D1A /* Scenes */,
 				CEB15DE12358905900659D1A /* Base */,
+				CE4D475D235DEF860041B94C /* Entity */,
 				CEB15DE02358904500659D1A /* Networking */,
 				CEB15DDE23588F3600659D1A /* Resources */,
 				CEB15DDD23588EF700659D1A /* UI */,
@@ -465,6 +512,7 @@
 				CEF748C323587A670023FD9B /* Frameworks */,
 				CEF748C423587A670023FD9B /* Resources */,
 				B71364569E8E1EE2C65F7081 /* [CP] Embed Pods Frameworks */,
+				CEE9EAAA2366E6440033A93A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -564,10 +612,12 @@
 			files = (
 				CE0F18182361A78E003FE11D /* ArticlesCell.xib in Resources */,
 				CE0F181E2361AA21003FE11D /* ArticlesCollectionViewCell.xib in Resources */,
+				CEFE022D2369CD1D004A70E7 /* ShimmerNewsTableViewCell.xib in Resources */,
 				CE09B5A4235C8D1C00979FF1 /* HeaderSliderCell.xib in Resources */,
 				CE1074352360A16E002C71E4 /* ImagesCollectionViewCell.xib in Resources */,
 				CE1074252360634A002C71E4 /* VideosCell.xib in Resources */,
 				CE01FD78235D98F800090A0E /* SliderSectionCell.xib in Resources */,
+				CEFE02312369CECE004A70E7 /* ShimmerSliderTableViewCell.xib in Resources */,
 				CE10742D2360792C002C71E4 /* ImagesCell.xib in Resources */,
 				CE09B59A235C682800979FF1 /* NewsScreenViewController.xib in Resources */,
 				CEF748D423587A680023FD9B /* LaunchScreen.storyboard in Resources */,
@@ -656,6 +706,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CEE9EAAA2366E6440033A93A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		F673AA2BA7AFC77AF742D8CF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -685,10 +752,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF98B7E2370237D008295C3 /* BaseResponse.swift in Sources */,
 				CE01FD91235DD11200090A0E /* NewsService.swift in Sources */,
 				CE6ADF5D23589A740051C879 /* NetworkManager.swift in Sources */,
 				CE0DB340235F13FB00340A60 /* Extentions.swift in Sources */,
 				CE4D4771235DF0900041B94C /* Materials.swift in Sources */,
+				CEFE02302369CECE004A70E7 /* ShimmerSliderTableViewCell.swift in Sources */,
 				CEE7380C235F5F500070C482 /* Comics.swift in Sources */,
 				CEE7380D235F5F500070C482 /* VideosAndImagesResponse.swift in Sources */,
 				CE4D472D235DE1C40041B94C /* BaseModel.swift in Sources */,
@@ -719,6 +788,7 @@
 				CE4D4725235DE1380041B94C /* BaseViewProtocol.swift in Sources */,
 				CE6ADF682358A24D0051C879 /* NewsScreenModel.swift in Sources */,
 				CE10742F23607BB1002C71E4 /* VideosAdaptor.swift in Sources */,
+				CEFE022C2369CD1D004A70E7 /* ShimmerNewsTableViewCell.swift in Sources */,
 				CE0F181A2361A79C003FE11D /* ArticlesAdaptor.swift in Sources */,
 				CEE73805235F53750070C482 /* NewsSectionCell.swift in Sources */,
 				CE1074312360A093002C71E4 /* ImagesAdaptor.swift in Sources */,
@@ -907,6 +977,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CFBSFN395Z;
 				INFOPLIST_FILE = "$(SRCROOT)/SabkTrial/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -925,6 +996,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = "$(SRCROOT)/SabkTrial/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

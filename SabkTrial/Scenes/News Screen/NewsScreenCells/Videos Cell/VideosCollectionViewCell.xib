@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideosCollectionViewCell" id="gTV-IL-0wX" customClass="VideosCollectionViewCell" customModule="SabkTrial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="343"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="343"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSr-Ff-i6p">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="343"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kwx-Jh-vYE">
+                                <rect key="frame" x="20" y="0.0" width="160" height="240"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSD-LD-FS2">
+                                <rect key="frame" x="20" y="240" width="160" height="103"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 دقيقة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-2T-CDo">
+                                        <rect key="frame" x="8" y="48" width="49" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.67727898320000002" green="0.67727898320000002" blue="0.67727898320000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbE-VI-ki8">
+                                        <rect key="frame" x="8" y="20" width="136" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Pnj-7e-OLp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_save" translatesAutoresizingMaskIntoConstraints="NO" id="H25-do-cPz">
+                                        <rect key="frame" x="118" y="35" width="34" height="42"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="videos_background"/>
+                                <constraints>
+                                    <constraint firstItem="MbE-VI-ki8" firstAttribute="top" secondItem="uSD-LD-FS2" secondAttribute="top" constant="20" id="4ZV-0E-lHN"/>
+                                    <constraint firstItem="H25-do-cPz" firstAttribute="centerY" secondItem="bMo-2T-CDo" secondAttribute="centerY" id="C5y-hq-51d"/>
+                                    <constraint firstItem="bMo-2T-CDo" firstAttribute="top" secondItem="MbE-VI-ki8" secondAttribute="bottom" constant="8" id="F9f-Cp-2iq"/>
+                                    <constraint firstAttribute="trailing" secondItem="H25-do-cPz" secondAttribute="trailing" constant="8" id="cPb-k9-rf8"/>
+                                    <constraint firstItem="MbE-VI-ki8" firstAttribute="leading" secondItem="uSD-LD-FS2" secondAttribute="leading" constant="8" id="eEc-Jc-ZAd"/>
+                                    <constraint firstAttribute="trailing" secondItem="MbE-VI-ki8" secondAttribute="trailing" constant="16" id="qes-Le-Mso"/>
+                                    <constraint firstItem="bMo-2T-CDo" firstAttribute="leading" secondItem="uSD-LD-FS2" secondAttribute="leading" constant="8" id="ukD-up-hB4"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play" translatesAutoresizingMaskIntoConstraints="NO" id="YIF-jl-Aj9">
+                                <rect key="frame" x="150" y="0.0" width="30" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="14I-WI-dge"/>
+                                    <constraint firstAttribute="height" constant="28" id="pNo-xF-ilj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="videos_background"/>
+                        <constraints>
+                            <constraint firstItem="Kwx-Jh-vYE" firstAttribute="leading" secondItem="NSr-Ff-i6p" secondAttribute="leading" constant="20" id="7Wd-QP-eOk"/>
+                            <constraint firstItem="YIF-jl-Aj9" firstAttribute="top" secondItem="Kwx-Jh-vYE" secondAttribute="top" id="Bw1-ra-Q4z"/>
+                            <constraint firstItem="YIF-jl-Aj9" firstAttribute="trailing" secondItem="Kwx-Jh-vYE" secondAttribute="trailing" id="N6N-w4-xfd"/>
+                            <constraint firstAttribute="trailing" secondItem="Kwx-Jh-vYE" secondAttribute="trailing" constant="20" id="a6n-hn-wPz"/>
+                            <constraint firstItem="uSD-LD-FS2" firstAttribute="height" secondItem="NSr-Ff-i6p" secondAttribute="height" multiplier="0.3" id="bbS-WA-ggj"/>
+                            <constraint firstAttribute="trailing" secondItem="uSD-LD-FS2" secondAttribute="trailing" constant="20" id="eak-aV-ki3"/>
+                            <constraint firstItem="uSD-LD-FS2" firstAttribute="top" secondItem="Kwx-Jh-vYE" secondAttribute="bottom" id="ic7-Bu-MFk"/>
+                            <constraint firstAttribute="bottom" secondItem="uSD-LD-FS2" secondAttribute="bottom" id="j63-j7-s7g"/>
+                            <constraint firstItem="Kwx-Jh-vYE" firstAttribute="top" secondItem="NSr-Ff-i6p" secondAttribute="top" id="lsI-DP-lZU"/>
+                            <constraint firstItem="uSD-LD-FS2" firstAttribute="leading" secondItem="NSr-Ff-i6p" secondAttribute="leading" constant="20" id="tBs-7n-fKC"/>
+                            <constraint firstItem="Kwx-Jh-vYE" firstAttribute="centerX" secondItem="NSr-Ff-i6p" secondAttribute="centerX" id="yLS-Jn-MqZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NSr-Ff-i6p" secondAttribute="trailing" id="4v9-L6-IQe"/>
+                <constraint firstAttribute="bottom" secondItem="NSr-Ff-i6p" secondAttribute="bottom" id="Aiy-ek-nYC"/>
+                <constraint firstItem="NSr-Ff-i6p" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZJ4-9u-e6y"/>
+                <constraint firstItem="NSr-Ff-i6p" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dpz-ae-swK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="200" height="343"/>
+            <connections>
+                <outlet property="videoImage" destination="Kwx-Jh-vYE" id="CH8-XY-HX6"/>
+                <outlet property="videoTime" destination="bMo-2T-CDo" id="jcd-ot-fY9"/>
+                <outlet property="videoTitle" destination="MbE-VI-ki8" id="b3U-pg-kRx"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="65.959821428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_play" width="30" height="31"/>
+        <image name="ic_save" width="17" height="21"/>
+        <namedColor name="videos_background">
+            <color red="0.12156862745098039" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

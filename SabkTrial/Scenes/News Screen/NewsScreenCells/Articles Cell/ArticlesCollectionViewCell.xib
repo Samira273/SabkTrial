@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArticlesCollectionViewCell" id="gTV-IL-0wX" customClass="ArticlesCollectionViewCell" customModule="SabkTrial" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="264"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="264"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjI-Db-wLh">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="264"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncl-cb-4p8">
+                                <rect key="frame" x="31" y="107.5" width="218" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" name="title_color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw8-nJ-imc">
+                                <rect key="frame" x="102" y="196" width="170" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XaH-y7-seM">
+                                <rect key="frame" x="31" y="179" width="56" height="53"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="Gw8-nJ-imc" firstAttribute="leading" secondItem="XaH-y7-seM" secondAttribute="trailing" constant="15" id="0Ou-7F-Xob"/>
+                            <constraint firstAttribute="trailing" secondItem="ncl-cb-4p8" secondAttribute="trailing" constant="31" id="4lF-ya-IDb"/>
+                            <constraint firstItem="XaH-y7-seM" firstAttribute="top" secondItem="ncl-cb-4p8" secondAttribute="bottom" constant="50" id="C1j-26-6Yf"/>
+                            <constraint firstItem="ncl-cb-4p8" firstAttribute="leading" secondItem="sjI-Db-wLh" secondAttribute="leading" constant="31" id="CJC-vL-j2E"/>
+                            <constraint firstAttribute="bottom" secondItem="XaH-y7-seM" secondAttribute="bottom" constant="32" id="OfT-Ln-bVP"/>
+                            <constraint firstItem="XaH-y7-seM" firstAttribute="leading" secondItem="sjI-Db-wLh" secondAttribute="leading" constant="31" id="ZAa-vI-PoD"/>
+                            <constraint firstAttribute="trailing" secondItem="Gw8-nJ-imc" secondAttribute="trailing" constant="8" id="h18-VT-06Y"/>
+                            <constraint firstItem="XaH-y7-seM" firstAttribute="height" secondItem="sjI-Db-wLh" secondAttribute="height" multiplier="0.2" id="jYI-OI-hEw"/>
+                            <constraint firstItem="XaH-y7-seM" firstAttribute="width" secondItem="sjI-Db-wLh" secondAttribute="width" multiplier="0.2" id="tZK-2a-Nfw"/>
+                            <constraint firstItem="Gw8-nJ-imc" firstAttribute="centerY" secondItem="XaH-y7-seM" secondAttribute="centerY" id="wHw-jI-tfV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" name="background"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sjI-Db-wLh" secondAttribute="bottom" id="5sV-OD-SLE"/>
+                <constraint firstAttribute="trailing" secondItem="sjI-Db-wLh" secondAttribute="trailing" id="Loi-pI-koq"/>
+                <constraint firstItem="sjI-Db-wLh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b0e-db-sEc"/>
+                <constraint firstItem="sjI-Db-wLh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ghp-kr-Eni"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="316" height="264"/>
+            <connections>
+                <outlet property="articleTitle" destination="ncl-cb-4p8" id="VUx-V4-327"/>
+                <outlet property="authorImage" destination="XaH-y7-seM" id="xq1-oj-q3u"/>
+                <outlet property="authorName" destination="Gw8-nJ-imc" id="4Ou-BX-3KK"/>
+            </connections>
+            <point key="canvasLocation" x="181.15942028985509" y="149.33035714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="background">
+            <color red="0.17254901960784313" green="0.17254901960784313" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title_color">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -10,7 +10,11 @@ import Foundation
 extension Data {
     var html2AttributedString: NSAttributedString? {
         do {
-            return try NSAttributedString(data: self, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+            return try NSAttributedString(
+                data: self,
+                options: [.documentType: NSAttributedString.DocumentType.html,
+                          .characterEncoding: String.Encoding.utf8.rawValue],
+                documentAttributes: nil)
         } catch {
             print("error:", error)
             return  nil
@@ -30,16 +34,16 @@ extension String {
     }
 }
 
-enum Sections : Int, CaseIterable{
+enum Sections: Int, CaseIterable {
     case sliderSection = 0
     case firstNewsSection = 1
-//    case videoSection = 2
-//    case latestArticle = 3
-//    case secondNewsSection = 4
-//    case photosSlider = 5
-//    case thirdNewsSection = 6
-//    case articles = 7
-//    case forthNewsSection = 8
-//    case footer = 9
-    
+    //    case videoSection = 2
+    //    case latestArticle = 3
+    //    case secondNewsSection = 4
+    //    case photosSlider = 5
+    //    case thirdNewsSection = 6
+    //    case articles = 7
+    //    case forthNewsSection = 8
+    //    case footer = 9
+
 }

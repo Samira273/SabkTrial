@@ -8,17 +8,17 @@
 
 import Foundation
 struct Attachments: Codable {
-    let name : String?
-    let url : String?
-    let caption : String?
-    let type : String?
-    let downloadCount : Int?
+    let name: String?
+    let url: String?
+    let caption: String?
+    let type: String?
+    let downloadCount: Int?
     enum CodingKeys: String, CodingKey {
-        case name = "name"
-        case url = "url"
-        case caption = "caption"
-        case type = "type"
-        case downloadCount = "downloadCount"
+        case name
+        case url
+        case caption
+        case type
+        case downloadCount 
     }
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)

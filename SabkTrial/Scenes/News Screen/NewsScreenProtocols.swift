@@ -8,32 +8,30 @@
 
 import Foundation
 
-
-import Foundation
 protocol NewsScreenPresenterProtocol: BasePresenterProtocol {
-   
+
 }
 
-protocol NewsScreenViewProtocol:BaseViewProtocol {
-    func setSliders(sliders : [Slider]) -> Void
-    func setMaterials(materials : [Materials]) -> Void
-    func setVideos(videos : [Comics]) -> Void
-    func setImages(images: [Comics]) -> Void
-    func setArticles(articles : [Materials]) -> Void
+protocol NewsScreenViewProtocol: BaseViewProtocol {
+    func setSliders(sliders: [Slider])
+    func setMaterials(materials: [Materials])
+    func setVideos(videos: [Comics])
+    func setImages(images: [Comics])
+    func setArticles(articles: [Materials])
 }
 
-protocol NewsScreenModelProtocol:BaseModelProtocol {
+protocol NewsScreenModelProtocol: BaseModelProtocol {
     func fetchNewsData(compelation: @escaping (Bool) -> Void)
     func fetchVideosData(compelation: @escaping (Bool) -> Void)
     func fetchImagesData(compelation: @escaping (Bool) -> Void)
     func fetchArticlesData(compelation: @escaping (Bool) -> Void)
-    func bringSliders() -> [Slider]
-    func bringMaterials() -> [Materials]
-    func bringVideos() -> [Comics]
+    func getSliders() -> [Slider]
+    func getMaterials() -> [Materials]
+    func getVideos() -> [Comics]
     func bringImages() -> [Comics]
-    func bringArticles() -> [Materials] 
+    func bringArticles() -> [Materials]
 }
 
 //protocol NewsScreenPresenterAssembable : BasePresenterAssembable{
-//    
+//
 //}

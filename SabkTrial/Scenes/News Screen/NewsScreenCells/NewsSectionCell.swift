@@ -10,13 +10,17 @@ import UIKit
 
 class NewsSectionCell: UITableViewCell {
 
-    @IBOutlet weak var noOfViews: UILabel!
-    @IBOutlet weak var videoPlay: UIImageView!
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet private weak var noOfViews: UILabel!
+    @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet private weak var videoPlay: UIImageView!
+    @IBOutlet private weak var newsImage: UIImageView!
+    @IBOutlet private weak var title: UILabel!
+    @IBOutlet private weak var timeApart: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        saveButton.contentMode = .center
+        saveButton.imageView?.contentMode = .scaleAspectFit
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,4 +29,15 @@ class NewsSectionCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureCell(item: Materials) {
+        noOfViews.text = "\(item.noOfViews ?? 0)"
+        timeApart.text = item.timeApart ?? ""
+        newsImage.sd_setImage(with: URL(
+            string: item.coverPhoto ?? ""), placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
+        title.text = item.title
+        if(item.videosCount ?? 0 > 0) {
+                    videoPlay.isHidden = false
+        }
+    }
+
 }

@@ -17,10 +17,11 @@ enum  NewsService {
 }
 
 extension NewsService: TargetType {
+//    swiftlint:disable force_unwrapping
     var baseURL: URL {
         return URL(string: NetworkManager.shared.networkConfig.baseUrl)!
     }
-    
+
     var path: String {
         switch self {
         case .slider:
@@ -33,7 +34,7 @@ extension NewsService: TargetType {
             return "material/articles"
         }
     }
-    
+
     var method: Moya.Method {
         switch self {
         case .slider:
@@ -45,9 +46,9 @@ extension NewsService: TargetType {
         case .articles:
             return .get
         }
-        
+
     }
-    
+
     var sampleData: Data {
         switch self {
         case .slider:
@@ -60,22 +61,21 @@ extension NewsService: TargetType {
             return Data()
         }
     }
-    
+
     var task: Task {
         switch self {
         case .slider :
-            return .requestParameters(parameters: ["" : ""], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["": ""], encoding: URLEncoding.default)
         case .images :
-            return .requestParameters(parameters: ["type" : "image"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["type": "image"], encoding: URLEncoding.default)
         case .videos :
-            return .requestParameters(parameters: ["type" : "video"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["type": "video"], encoding: URLEncoding.default)
         case .articles:
-            return .requestParameters(parameters: ["" : ""], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["": ""], encoding: URLEncoding.default)
         }
     }
-    
+
     var headers: [String: String]? {
-        return ["X-Api-Key":NetworkManager.shared.networkConfig.apiKey]
+        return ["X-Api-Key": NetworkManager.shared.networkConfig.apiKey]
     }
 }
-

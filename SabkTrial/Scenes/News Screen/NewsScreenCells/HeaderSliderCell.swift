@@ -8,19 +8,28 @@
 
 import UIKit
 
-
 class HeaderSliderCell: UICollectionViewCell {
     
-    @IBOutlet weak var title: UITextView!
-    @IBOutlet weak var timingLabel: UILabel!
-    @IBOutlet weak var hotviewsNumberLabel: UILabel!
-    @IBOutlet weak var discriptionText: UILabel!
-    @IBOutlet weak var coverPhoto: UIImageView!
+    @IBOutlet private weak var title: UILabel!
+    
+    @IBOutlet private weak var timingLabel: UILabel!
+    @IBOutlet private weak var hotviewsNumberLabel: UILabel!
+    @IBOutlet private weak var discriptionText: UILabel!
+    @IBOutlet private weak var coverPhoto: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
+        // Initialization code  
     }
-
+    
+    func configureCell(item: Slider, index: Int) {
+        
+        timingLabel.text = item.timeApart ?? "unknown"
+        title.text = item.title ?? ""
+        hotviewsNumberLabel.text = "\(item.noOfViews ?? 0)"
+        discriptionText.text = item.description?.html2String ?? ""
+        coverPhoto.sd_setImage(
+            with: URL(string: item.coverPhoto ?? ""),
+            placeholderImage: #imageLiteral(resourceName: "img_placeholder"))
+    }
 }
